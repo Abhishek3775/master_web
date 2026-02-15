@@ -185,48 +185,38 @@
 }
 
 /* ===== REDEFINING PRIVATE AIR TRAVEL SECTION ===== */
+/* ===== REDEFINING PRIVATE AIR TRAVEL SECTION ===== */
+
 .redefine-section {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   background: #f5f4ef;
-  padding: 20px;
-  flex-wrap: wrap;
+  padding: 100px 8%;
+  gap: 60px;
 }
+
+/* ===== LEFT CONTENT ===== */
 
 .redefine-content {
-  flex: 0.5;
-  min-width: 320px;
+  flex: 0 0 45%;
   max-width: 550px;
-  margin-left: 130px;
-  font-size: 13px;
-
 }
 
-.redefine-image {
-  flex: 0.4;
-  width: 200px;
-  height: 560px;
-  background-image: url("../../assets2/Services/aviation/2.jpg");
-  background-size: cover;
-  background-position: center;
-  border-radius: 3px;
-}
-
-/* Text styles */
 .redefine-subtitle {
   color: #b58a2f;
   font-weight: 700;
   font-size: 15px;
   letter-spacing: 1px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .redefine-title {
   font-size: 42px;
   font-weight: 700;
   color: #111;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  line-height: 1.2;
 }
 
 .redefine-desc {
@@ -236,9 +226,12 @@
   margin-bottom: 18px;
 }
 
+/* ===== LIST ===== */
+
 .redefine-list {
   list-style: none;
-  margin: 25px 0 45px;
+  margin: 30px 0 45px;
+  padding: 0;
 }
 
 .redefine-list li {
@@ -256,47 +249,38 @@
   left: 0;
 }
 
-/* Trusted box */
-.trusted-box {
-  background: #fff;
-  /* border-left: 3px solid #b58a2f; */
-  padding: 15px 20px;
+/* ===== RIGHT IMAGE ===== */
+
+.redefine-image {
+  flex: 0 0 50%;
+  height: 560px;
+  background-image: url("../../assets2/Services/aviation/2.jpg");
+  background-size: cover;
+  background-position: center;
   border-radius: 3px;
-  width: fit-content;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
-  position: absolute;
-  left: 840px;
-  top: 1490px;
 }
 
-.trusted-title {
-  color: #b58a2f;
-  font-weight: 500;
-  font-size: 14px;
-}
+/* ========================== */
+/* ===== RESPONSIVE ===== */
+/* ========================== */
 
-.trusted-text {
-  font-size: 13.5px;
-  color: #444;
-  margin-top: 4px;
-}
-
-/* ===== RESPONSIVE DESIGN ===== */
-@media (max-width: 1024px) {
+/* Large Tablets */
+@media (max-width: 1200px) {
   .redefine-title {
-    font-size: 34px;
+    font-size: 36px;
   }
 
   .redefine-image {
-    height: 400px;
+    height: 480px;
   }
 }
 
-@media (max-width: 768px) {
+/* Tablets */
+@media (max-width: 992px) {
   .redefine-section {
-    flex-direction: column-reverse;
+    flex-direction: column;
+    padding: 80px 6%;
     text-align: center;
-    padding: 60px 5%;
   }
 
   .redefine-content {
@@ -305,14 +289,52 @@
 
   .redefine-image {
     width: 100%;
-    height: 320px;
-    margin-bottom: 40px;
+    height: 420px;
   }
 
-  .trusted-box {
-    margin: 0 auto;
+  .redefine-list li {
+    padding-left: 0;
+  }
+
+  .redefine-list li::before {
+    display: none;
   }
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  .redefine-title {
+    font-size: 28px;
+  }
+
+  .redefine-desc {
+    font-size: 15px;
+  }
+
+  .redefine-image {
+    height: 320px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .redefine-section {
+    padding: 60px 5%;
+  }
+
+  .redefine-title {
+    font-size: 24px;
+  }
+
+  .redefine-desc {
+    font-size: 14px;
+  }
+
+  .redefine-image {
+    height: 260px;
+  }
+}
+
 
  /* the fleet  */
 

@@ -107,6 +107,7 @@ export default function PrivateAviation() {
       </section>
 
       {/* ===== REDEFINING PRIVATE AIR TRAVEL SECTION ===== */}
+      
       <section className="redefine-section">
         <div className="redefine-content">
           <h5 className="redefine-subtitle">YOUR SKY, YOUR RULES</h5>
@@ -128,12 +129,12 @@ export default function PrivateAviation() {
             <li>Customized in-flight experience</li>
           </ul>
 
-          <div className="trusted-box">
+          {/* <div className="trusted-box">
             <p className="trusted-title">Trusted by Elite Travelers</p>
             <p className="trusted-text">
               15+ years of excellence in luxury <br /> aviation services worldwide.
             </p>
-          </div>
+          </div> */}
         </div>
 
         <div className="redefine-image"></div>
