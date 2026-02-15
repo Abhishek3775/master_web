@@ -14,6 +14,7 @@ import RahinoDetails from './pages/RahinoDetails';
 import JapanHome from './pages/Japan/Japan';
 import JapanGuide from './pages/Japan/JapanGuide';
 import SumoExperience from './pages/Japan/SumoExperience';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
         />
         
         <main>
+          <ScrollToTop/>
           <Routes>
             <Route path="/" element={<Contact />} />
             <Route path="/contact" element={<Contact />} />

@@ -2,33 +2,34 @@ import React from "react";
 import "./JapanHome.css";
 import heroImage from "../../assets/japanHero.jpg";
 
-const JapanHero = () => {
+const JapanHeroSection = () => {
   return (
     <section
-      className="jph-hero"
+      className="japan-hero-section"
       style={{ backgroundImage: `url(${heroImage})` }}
     >
-      <div className="jph-overlay"></div>
+      <div className="japan-hero-overlay"></div>
 
-      <div className="jph-content">
-        <p className="jph-subtitle">AN ODYSSEY OF REFINEMENT</p>
-
-        <h1 className="jph-title">Japan</h1>
-
-        <p className="jph-description">
-          Where ancient traditions meet with modern
-          <br />
-          elegance, creating moments that transcend time itself.
+      <div className="japan-hero-inner">
+        <p className="japan-hero-subtitle">
+          AN ODYSSEY OF REFINEMENT
         </p>
-      </div>
 
-      <div className="jph-button-wrapper">
-        <button className="jph-btn">
-          BEGIN YOUR JOURNEY →
-        </button>
+        <h1 className="japan-hero-title">Japan</h1>
+
+        <p className="japan-hero-description">
+          Where ancient traditions meet with modern elegance,
+          creating moments that transcend time itself.
+        </p>
+
+        <div className="japan-hero-button-wrap">
+          <button className="japan-hero-button">
+            BEGIN YOUR JOURNEY →
+          </button>
+        </div>
       </div>
     </section>
   );
 };
 
-export default JapanHero;
+export default JapanHeroSection;

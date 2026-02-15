@@ -10,6 +10,7 @@ import "./SeeDoJapan.css";
 import img1 from "../../assets/Japan1.jpg";
 import img2 from "../../assets/Japan2.jpg";
 import img3 from "../../assets/Japan3.jpg";
+import { useNavigate } from "react-router-dom";
 
 const cards = [
   {
@@ -30,17 +31,13 @@ const cards = [
     title: "Sumo Experience",
     desc: "Witness the power and tradition of sumo wrestling, where ancient rituals meet raw strength in the heart of Japan.",
   },
-  {
-    id: 3,
-    image: img3,
-    title: "Sumo Experience",
-    desc: "Witness the power and tradition of sumo wrestling, where ancient rituals meet raw strength in the heart of Japan.",
-  },
+
 ];
 
 const SeeDoJapan = () => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+  const navigate = useNavigate();
 
   return (
     <section className="see-section">
@@ -87,9 +84,13 @@ const SeeDoJapan = () => {
               1100: { slidesPerView: 3 },
             }}
           >
-            {cards.map((card) => (
+            {cards.map((card,index) => (
               <SwiperSlide key={card.id}>
-                <div className="see-card">
+                <div className="see-card" onClick={()=>{
+                  if(index === 2){
+                      navigate("/sumo-guide")
+                  }
+                }}>
                   <div className="see-image">
                     <img src={card.image} alt={card.title} />
                   </div>

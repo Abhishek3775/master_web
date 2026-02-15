@@ -1,43 +1,88 @@
-.japan-section {
+/* ================= SECTION ================= */
+
+.wtv-section {
   background: #f5f4ef;
-  padding: 100px 0;   /* REMOVE SIDE PADDING */
+  padding: 120px 0;
 }
 
-.japan-container {
-  max-width: 1200px;
+.wtv-container {
+  max-width: 1300px;
   margin: auto;
   padding: 0 20px;
 }
 
-/* REMOVE DEFAULT SWIPER SPACING */
-.japan-swiper {
-  width: 100%;
-}
+/* ================= HEADER ================= */
 
-.custom-slide {
+.wtv-header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 80px;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
-/* CARD */
-.season-card {
+.wtv-left {
+  max-width: 650px;
+}
+
+.wtv-subtitle {
+  color: #C09551;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.wtv-left h2 {
+  font-size: 42px;
+  font-weight: 300;
+  margin: 15px 0 20px;
+}
+
+.wtv-left p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.7;
+}
+
+.wtv-right {
+  border: 1px solid #C09551;
+  padding: 25px 40px;
+  display: flex;
+  gap: 60px;
+  background: #f5f4ef;
+}
+
+.wtv-label{
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #C09551;
+}
+
+.wtv-right span {
+  font-size: 14px;
+  color: #555;
+}
+
+/* ================= SLIDER ================= */
+
+.wtv-slider-wrapper {
   position: relative;
-  width: 100%;
-  height: 550px;
-  overflow: hidden;
-  padding: 0;
-  margin: 0;
 }
 
-.season-card img {
+.wtv-card {
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+}
+
+.wtv-card img {
   width: 100%;
   height: 100%;
-  object-fit: cover;   /* FULL FILL */
-  display: block;
+  object-fit: cover;
 }
 
-/* OVERLAY */
-.overlay {
+.wtv-overlay {
   position: absolute;
   inset: 0;
   padding: 30px;
@@ -45,72 +90,28 @@
   flex-direction: column;
   justify-content: flex-end;
   background: linear-gradient(to top, rgba(0,0,0,0.75), transparent 60%);
-  color: #fff;
+  color: white;
 }
 
-.temp {
+.wtv-temp {
   color: #C09551;
   font-size: 14px;
   margin-bottom: 6px;
 }
 
-.months {
+.wtv-months {
   font-size: 14px;
   margin-bottom: 8px;
 }
 
-.overlay h3 {
-  font-size: 30px;
+.wtv-overlay h3 {
+  font-size: 28px;
   font-weight: 400;
 }
 
-/* NAV BUTTONS */
-.nav-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 50px;
-  height: 50px;
-  background: #fff;
-  border-radius: 50%;
-  border: 1px solid #ddd;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: 0.3s ease;
-  z-index: 10;
-}
+/* ================= NAV ================= */
 
-.nav-btn:hover {
-  background: #C09551;
-  color: #fff;
-  border-color: #C09551;
-}
-
-.left {
-  left: -60px;
-}
-
-.right {
-  right: -60px;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .season-card {
-    height: 450px;
-  }
-
-  .nav-btn {
-    display: none;
-  }
-}
-.swiper-wrapper-custom {
-  position: relative;
-}
-
-.nav-btn {
+.wtv-nav {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -123,24 +124,47 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 999;  /* IMPORTANT */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  z-index: 10;
+  transition: 0.3s ease;
 }
 
-.nav-btn svg {
-  font-size: 22px;
-}
-
-.nav-btn:hover {
+.wtv-nav:hover {
   background: #C09551;
   color: white;
   border-color: #C09551;
 }
 
-.left {
+.wtv-nav.left {
   left: -70px;
 }
 
-.right {
+.wtv-nav.right {
   right: -70px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1200px) {
+  .wtv-nav.left { left: -40px; }
+  .wtv-nav.right { right: -40px; }
+}
+
+@media (max-width: 992px) {
+  .wtv-header {
+    flex-direction: column;
+  }
+
+  .wtv-card {
+    height: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .wtv-card {
+    height: 450px;
+  }
+
+  .wtv-nav {
+    display: none;
+  }
 }

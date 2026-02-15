@@ -1,6 +1,9 @@
 import React from "react";
 import "./PrivateRhinoTrek.css";
-import rhinoImage from "../../assets/rahinoFron.jpg"; // 👈 apni image ka naam yaha daalo
+import rhinoImage from "../../assets/rahinoFron.jpg";
+import time from "../../assets/time.png";
+import people from "../../assets/people.png";
+import calender from "../../assets/calender.png";
 
 const PrivateRhinoTrek = () => {
   return (
@@ -32,9 +35,11 @@ const PrivateRhinoTrek = () => {
           </p>
 
           <div className="private-info">
-            <span>3 hours</span>
-            <span>2–6 guests</span>
-            <span>Year-round, advance booking required</span>
+         
+            <span style={{display:"flex",justifyContent:"center",gap:"4px"}}><img src={time} alt="" style={{height:"15px",width:"15px"}} /> 3 hours</span>
+                          <span style={{display:"flex",justifyContent:"center",gap:"4px"}}><img src={people} alt="" style={{height:"15px",width:"15px"}} />2-6 Guests</span>
+                          <span style={{display:"flex",justifyContent:"center",gap:"4px"}}><img src={calender} alt="" style={{height:"15px",width:"15px"}} />Year-round, advance booking required</span>
+                        
           </div>
 
           <div className="private-buttons">

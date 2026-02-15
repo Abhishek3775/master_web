@@ -41,6 +41,9 @@
 .see-card {
   background: #fff;
 }
+.see-card:hover{
+  cursor: pointer;
+}
 
 .see-image {
   height: 520px;

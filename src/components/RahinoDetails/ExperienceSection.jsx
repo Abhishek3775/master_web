@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import "./ExperienceSection.css";
 import rhinoImg from "../../assets/rahinoEx.jpg";
 import ReserveModal from "./ReserveModal";
+import time from "../../assets/time.png";
+import people from "../../assets/people.png";
+import calender from "../../assets/calender.png";
 
 const ExperienceSection = () => {
     const [openModal, setOpenModal] = useState(false);
@@ -48,9 +51,9 @@ const ExperienceSection = () => {
             </p>
 
             <div className="exp-meta">
-              <span>⏱ 4 hours</span>
-              <span>👥 2–4 guests</span>
-              <span>📅 Daily, weather permitting</span>
+              <span style={{display:"flex",justifyContent:"center",gap:"4px"}}><img src={time} alt="" style={{height:"15px",width:"15px"}} /> 4 hours</span>
+              <span style={{display:"flex",justifyContent:"center",gap:"4px"}}><img src={people} alt="" style={{height:"15px",width:"15px"}} />2-4 Guests</span>
+              <span style={{display:"flex",justifyContent:"center",gap:"4px"}}><img src={calender} alt="" style={{height:"15px",width:"15px"}} />Daily, weather permitting</span>
             </div>
 
             <div className="exp-includes">

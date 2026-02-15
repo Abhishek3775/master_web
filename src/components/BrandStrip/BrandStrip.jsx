@@ -20,12 +20,14 @@ const logos = [
 const BrandStrip = () => {
   return (
     <section className="brand-strip">
-      <div className="brand-track">
-        {logos.map((logo, index) => (
-          <div className="brand-item" key={index}>
-            <img src={logo} alt="brand-logo" />
-          </div>
-        ))}
+      <div className="brand-slider">
+        <div className="brand-track">
+          {[...logos, ...logos].map((logo, index) => (
+            <div className="brand-item" key={index}>
+              <img src={logo} alt="brand-logo" />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

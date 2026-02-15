@@ -33,7 +33,8 @@ const seasons = [
     temp: "10°C - 22°C",
     image: autumn,
   },
-  {
+
+    {
     id: 4,
     title: "Natsu",
     months: "June - August",
@@ -47,55 +48,78 @@ const WhenToVisitJapan = () => {
   const nextRef = useRef(null);
 
   return (
-    <section className="japan-section">
-      <div className="japan-container">
+    <section className="wtv-section">
+      <div className="wtv-container">
+        {/* HEADER */}
+        <div className="wtv-header">
+          <div className="wtv-left">
+            <span className="wtv-subtitle">THE PERFECT MOMENT</span>
+            <h2>When to Visit Japan</h2>
+            <p>
+              Japan transforms with breathtaking drama throughout the year. Each
+              season unveils new wonders — from ethereal cherry blossoms to
+              vibrant summer festivals.
+            </p>
+          </div>
 
-        <div className="swiper-wrapper-custom">
+          <div className="wtv-right">
+            <div>
+              <strong class="wtv-label">Best Overall</strong>
+              <span>Spring & Autumn</span>
+            </div>
+            <div>
+              <strong class="wtv-label">Fewest Crowds</strong>
+              <span>January - February</span>
+            </div>
+          </div>
+        </div>
 
-          {/* Custom Buttons */}
-          <div ref={prevRef} className="nav-btn left">
+        {/* SLIDER */}
+        <div className="wtv-slider-wrapper">
+          <div ref={prevRef} className="wtv-nav left">
             <FiChevronLeft />
           </div>
 
-          <div ref={nextRef} className="nav-btn right">
+          <div ref={nextRef} className="wtv-nav right">
             <FiChevronRight />
           </div>
 
           <Swiper
             modules={[Navigation]}
-            spaceBetween={30}
+            spaceBetween={40}
             slidesPerView={3}
             loop={true}
+            speed={900}
+            grabCursor={true}
+            watchSlidesProgress={true}
             navigation={{
               prevEl: prevRef.current,
               nextEl: nextRef.current,
             }}
-            onInit={(swiper) => {
+            onBeforeInit={(swiper) => {
               swiper.params.navigation.prevEl = prevRef.current;
               swiper.params.navigation.nextEl = nextRef.current;
-              swiper.navigation.init();
-              swiper.navigation.update();
             }}
             breakpoints={{
               0: { slidesPerView: 1 },
               768: { slidesPerView: 2 },
-              1100: { slidesPerView: 3 },
+              1200: { slidesPerView: 3 },
             }}
           >
             {seasons.map((season) => (
               <SwiperSlide key={season.id}>
-                <div className="season-card">
+                <div className="wtv-card">
                   <img src={season.image} alt={season.title} />
-                  <div className="overlay">
-                    <span className="temp">{season.temp}</span>
-                    <p className="months">{season.months}</p>
+
+                  <div className="wtv-overlay">
+                    <span className="wtv-temp">{season.temp}</span>
+                    <span className="wtv-months">{season.months}</span>
                     <h3>{season.title}</h3>
                   </div>
                 </div>
               </SwiperSlide>
             ))}
           </Swiper>
-
         </div>
       </div>
     </section>
