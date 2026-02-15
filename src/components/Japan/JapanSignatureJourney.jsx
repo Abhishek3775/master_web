@@ -65,7 +65,7 @@ const JapanSignatureJourneys = () => {
             <div className="japan-signature-card" 
             
             onClick={()=>{
-              if(i==0){
+              if(i===0){
                 navigate("/imperial-odyssey");
               }
             }}
