@@ -2,7 +2,7 @@ import React from "react";
 import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import "./JourneySection.css";
 
-import pattern from "../../assets/linepattern.png"; 
+
 
 const JourneySection = () => {
   return (

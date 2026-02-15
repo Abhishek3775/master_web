@@ -11,10 +11,6 @@ const BlogSingle = () => {
   const [relatedBlogs, setRelatedBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    fetchBlog();
-    window.scrollTo(0, 0);
-  }, [slug]);
 
   const fetchBlog = async () => {
     try {
@@ -30,6 +26,12 @@ const BlogSingle = () => {
       setLoading(false);
     }
   };
+
+  
+  useEffect(() => {
+    fetchBlog();
+    window.scrollTo(0, 0);
+  }, [slug]);
 
   const fetchRelatedBlogs = async (category) => {
     try {
