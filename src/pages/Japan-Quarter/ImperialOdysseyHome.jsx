@@ -177,9 +177,9 @@ const ImperialOdysseyHome = () => {
               <li> All entrance fees and experiences</li>
               <li> 24/7 concierge support</li>
             </ul>
-            <a href="#" className="view-link">
+            <button  className="view-link" >
               View all inclusions →
-            </a>
+            </button>
           </div>
         </div>
       </div>
@@ -390,10 +390,10 @@ const ImperialOdysseyHome = () => {
               </li>
             ))}
           </ul>
-          <a href="#" className="inclu-download-link">
+          <button  className="inclu-download-link">
             <DownloadIcon />
             DOWNLOAD FULL ITINERARY PDF
-          </a>
+          </button>
         </div>
       </div>
     </section>
