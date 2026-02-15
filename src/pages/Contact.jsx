@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaPaperPlane, FaClock, FaGlobe } from 'react-icons/fa';
+import { FaPhone, FaEnvelope, FaPaperPlane, FaClock, FaGlobe } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 import axios from 'axios';
 import './Contact.css';

@@ -1,5 +1,4 @@
 import React from "react";
-import { FiSun, FiDroplet, FiThermometer } from "react-icons/fi";
 import wetSeason from "../../assets/wet-season.png";
 import summer from "../../assets/dry.png";
 import humidity from "../../assets/humidity.png";
