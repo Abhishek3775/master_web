@@ -1,0 +1,146 @@
+.japan-section {
+  background: #f5f4ef;
+  padding: 100px 0;   /* REMOVE SIDE PADDING */
+}
+
+.japan-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* REMOVE DEFAULT SWIPER SPACING */
+.japan-swiper {
+  width: 100%;
+}
+
+.custom-slide {
+  display: flex;
+  justify-content: center;
+}
+
+/* CARD */
+.season-card {
+  position: relative;
+  width: 100%;
+  height: 550px;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+.season-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* FULL FILL */
+  display: block;
+}
+
+/* OVERLAY */
+.overlay {
+  position: absolute;
+  inset: 0;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: linear-gradient(to top, rgba(0,0,0,0.75), transparent 60%);
+  color: #fff;
+}
+
+.temp {
+  color: #C09551;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.months {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.overlay h3 {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+/* NAV BUTTONS */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+  z-index: 10;
+}
+
+.nav-btn:hover {
+  background: #C09551;
+  color: #fff;
+  border-color: #C09551;
+}
+
+.left {
+  left: -60px;
+}
+
+.right {
+  right: -60px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .season-card {
+    height: 450px;
+  }
+
+  .nav-btn {
+    display: none;
+  }
+}
+.swiper-wrapper-custom {
+  position: relative;
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 55px;
+  height: 55px;
+  background: white;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 999;  /* IMPORTANT */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.nav-btn svg {
+  font-size: 22px;
+}
+
+.nav-btn:hover {
+  background: #C09551;
+  color: white;
+  border-color: #C09551;
+}
+
+.left {
+  left: -70px;
+}
+
+.right {
+  right: -70px;
+}

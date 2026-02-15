@@ -1,0 +1,51 @@
+.brand-strip {
+  background: #ffffff;
+  padding: 30px 6%;
+  overflow: hidden;
+}
+
+/* Track */
+.brand-track {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: nowrap;
+}
+
+/* Logo */
+.brand-item img {
+  height: 150px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0);
+  opacity: 0.9;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .brand-track {
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .brand-item img {
+  height: 100px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .brand-strip {
+    padding: 25px 5%;
+  }
+
+  .brand-track {
+    gap: 30px;
+  }
+
+  .brand-item img {
+  height: 100px;
+  }
+}

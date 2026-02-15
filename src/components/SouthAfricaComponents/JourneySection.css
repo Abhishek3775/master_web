@@ -1,0 +1,145 @@
+/* SECTION */
+.journey-section {
+  width: 100%;
+  padding: 120px 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-color: #f5f4ef; */
+  text-align: center;
+  box-sizing: border-box;
+  
+}
+
+/* CONTAINER */
+.journey-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* SUBTITLE */
+.journey-subtitle {
+  color: #b48a45;
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* TITLE */
+.journey-title {
+  font-size: 48px;
+  font-weight: 300;
+  color: #131313;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+/* DESCRIPTION */
+.journey-description {
+  font-size: 15px;
+  color: #555;
+  max-width: 650px;
+  margin: 0 auto 50px auto;
+  line-height: 1.8;
+}
+
+/* CONTACT WRAPPER */
+.journey-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+/* CONTACT ITEM */
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #131313;
+  font-size: 14px;
+}
+
+/* ICON BOX */
+.icon-box {
+  width: 45px;
+  height: 45px;
+  border: 1px solid #d8d3cb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  color: #131313;
+}
+
+/* DIVIDER */
+.divider {
+  width: 1px;
+  height: 40px;
+  background: #d8d3cb;
+}
+
+/* BUTTON */
+.journey-btn {
+  background: #b48a45;
+  color: white;
+  border: none;
+  padding: 16px 40px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.journey-btn:hover {
+  background: #9f773a;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+  .journey-title {
+    font-size: 38px;
+  }
+
+  .journey-description {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .journey-section {
+    padding: 90px 20px;
+  }
+
+  .journey-title {
+    font-size: 32px;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .journey-contact {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .journey-title {
+    font-size: 26px;
+  }
+
+  .journey-description {
+    font-size: 13px;
+  }
+
+  .journey-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}

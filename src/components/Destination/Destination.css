@@ -1,0 +1,112 @@
+.destinations {
+  padding: 80px 6%;
+  background-color: #faf9f6;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Header */
+.destinations-header {
+  max-width: 700px;
+  margin-bottom: 50px;
+}
+
+.destinations-header .tag {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: #caa15a;
+  font-weight: 600;
+}
+
+.destinations-header h2 {
+  font-size: 2.4rem;
+  margin: 10px 0;
+  font-weight: 400;
+}
+
+.destinations-header p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Grid */
+.destinations-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 260px;
+  gap: 20px;
+}
+
+/* Cards */
+.destination-card {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.destination-card.large {
+  grid-row: span 2;
+}
+
+/* Overlay */
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0)
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  color: #fff;
+}
+
+.card-overlay span {
+  font-size: 0.7rem;
+  letter-spacing: 1.5px;
+  opacity: 0.85;
+}
+
+.card-overlay h3 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+/* Hover */
+.destination-card:hover .card-overlay {
+  background: rgba(0, 0, 0, 0.55);
+  transition: 0.3s ease;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .destinations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .destination-card.large {
+    grid-row: span 1;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .destinations {
+    padding: 60px 5%;
+  }
+
+  .destinations-header h2 {
+    font-size: 2rem;
+  }
+
+  .destinations-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 220px;
+  }
+}

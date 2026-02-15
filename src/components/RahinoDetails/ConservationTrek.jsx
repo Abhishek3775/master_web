@@ -1,0 +1,56 @@
+import React from "react";
+import "./ConservationTrek.css";
+import trekImage from "../../assets/rahinoSide.jpg"; // 👈 apni image ka naam yaha daalo
+
+const ConservationTrek = () => {
+  return (
+    <section className="trek-section">
+      <div className="trek-container">
+
+        {/* LEFT CONTENT */}
+        <div className="trek-content">
+
+          <p className="trek-label">CONSERVATION SIGNATURE</p>
+
+          <h2>Rhino Conservation VIP Trek</h2>
+
+          <p className="trek-description">
+            Experience an extraordinary day at the forefront of rhino conservation.
+            Enjoy private transfers to an exclusive reserve, followed by a guided walking safari
+            with conservation specialists and trackers. Witness real-time anti-poaching efforts,
+            learn about rhino protection programmes, and enjoy a gourmet bush lunch overlooking
+            the savannah. Your journey concludes with a private discussion with conservation
+            leaders shaping the future of Africa’s wildlife.
+          </p>
+
+          <div className="trek-info">
+            <span>Full Day</span>
+            <span>2–6 guests</span>
+            <span>Year-round (subject to weather conditions)</span>
+          </div>
+
+          <div className="trek-buttons">
+            <button className="btn-outline">VIEW MORE</button>
+            <button className="btn-filled">
+              RESERVE EXPERIENCE →
+            </button>
+          </div>
+
+        </div>
+
+        {/* RIGHT IMAGE */}
+        <div className="trek-image-wrapper">
+          <img src={trekImage} alt="Rhino Trek" />
+
+          <div className="price-badge">
+            <span className="from-text">FROM</span>
+            <span className="price">£5,500 per person</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  );
+};
+
+export default ConservationTrek;

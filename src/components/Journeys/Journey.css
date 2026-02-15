@@ -1,0 +1,129 @@
+.journeys {
+  padding: 90px 6%;
+  background-color: #f9f8f4;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Header */
+.journeys-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+.journeys-header .tag {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: #caa15a;
+  font-weight: 600;
+}
+
+.journeys-header h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin: 12px 0;
+}
+
+.journeys-header p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Grid */
+.journeys-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+/* Card */
+.journey-card {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Image */
+.journey-image {
+  height: 260px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.journey-days {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #caa15a;
+  color: #000;
+  font-size: 0.7rem;
+  padding: 4px 8px;
+  font-weight: 600;
+}
+
+/* Content */
+.journey-content {
+  padding: 22px;
+}
+
+.journey-content .price {
+  font-size: 0.75rem;
+  color: #caa15a;
+  letter-spacing: 1px;
+}
+
+.journey-content h3 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 8px 0 10px;
+}
+
+.journey-content p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Button */
+.journey-btn {
+  margin-top: 15px;
+  background: none;
+  border: none;
+  color: #caa15a;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.journey-btn:hover {
+  text-decoration: underline;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .journeys-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .journey-image {
+    height: 240px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .journeys {
+    padding: 70px 5%;
+  }
+
+  .journeys-header h2 {
+    font-size: 2rem;
+  }
+
+  .journey-image {
+    height: 200px;
+  }
+}

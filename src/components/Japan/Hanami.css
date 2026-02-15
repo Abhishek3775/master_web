@@ -1,0 +1,177 @@
+/* ===== SECTION ===== */
+.hanami-section {
+  background-color: #fff;
+  padding: 60px 20px 80px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* ===== CONTAINER ===== */
+.hanami-container {
+  max-width: 1200px;
+  margin: auto;
+  background: #F5F4EF;
+  padding: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* ===== LEFT SIDE ===== */
+.hanami-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.hanami-subtitle {
+  color: #b58b45;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.hanami-title {
+  font-size: 48px;
+  font-weight: 400;
+  margin: 10px 0 20px;
+  color: #1f1f1f;
+}
+
+.hanami-description {
+  font-size: 16px;
+  color: #444;
+  max-width: 520px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* ===== TAGS ===== */
+.hanami-tags {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.hanami-tags span {
+  background: #f5f4ef;
+  padding: 10px 16px;
+  font-size: 14px;
+  color: #555;
+  border-radius: 4px;
+}
+
+/* ===== RIGHT SIDE ===== */
+.hanami-right {
+  flex: 0 0 320px;
+  display: flex;
+  justify-content: center;
+}
+
+.date-card {
+  background: #f5f4ef;
+  padding: 40px 30px;
+  text-align: center;
+  border: 1px solid #e0d9cc;
+  width: 100%;
+}
+
+.date-card h2 {
+  font-size: 32px;
+  color: #b58b45;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.date-card .divider {
+  width: 40px;
+  height: 2px;
+  background: #b58b45;
+  margin: 0 auto 15px;
+}
+
+.date-card p {
+  font-size: 14px;
+  color: #444;
+}
+
+/* ===== BUTTON ===== */
+.hanami-btn-wrapper {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.hanami-btn {
+  background: #b58b45;
+  color: #fff;
+  padding: 14px 36px;
+  border: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.hanami-btn:hover {
+  background: #a17935;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .hanami-container {
+    padding: 40px;
+  }
+
+  .hanami-title {
+    font-size: 40px;
+  }
+
+  .date-card {
+    padding: 30px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hanami-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hanami-left {
+    align-items: center;
+  }
+
+  .hanami-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hanami-right {
+    width: 100%;
+  }
+
+  .date-card {
+    max-width: 300px;
+  }
+
+  .hanami-tags {
+    justify-content: center;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .hanami-title {
+    font-size: 32px;
+  }
+
+  .hanami-description {
+    font-size: 14px;
+  }
+
+  .hanami-btn {
+    width: 100%;
+  }
+}
