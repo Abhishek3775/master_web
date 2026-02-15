@@ -42,13 +42,12 @@ function App() {
         <main>
           <ScrollToTop />
           <Routes>
-            <Route path="/" element={<Contact />} />
+            <Route path="/" element={<Home />} />
+            {/* <Route path="/" element={<Contact />} /> */}
             <Route path="/contact" element={<Contact />} />
             <Route path="/blog/:slug" element={<BlogSingle />} />
             <Route path="/blog" element={<Blog />} />
             {/* Add more routes as needed */}
-            {/* adding the route for the home page */}
-            <Route path="/home" element={<Home />} />
 
             {/* routes for the south africa home */}
             <Route path="/south-africa" element={<SouthAfrica />} />

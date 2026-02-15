@@ -2,9 +2,9 @@ import React from "react";
 import "./Destination.css";
 import asia from "../../assets/asia.jpg";
 import europe from "../../assets/europe.jpg";
-import Caribbean from "../../assets/caribian.jpg";
-import Africa from "../../assets/africa.jpg";
-import Middle from "../../assets/middle.jpg";
+import caribbean from "../../assets/caribian.jpg";
+import africa from "../../assets/africa.jpg";
+import middle from "../../assets/middle.jpg";
 
 const destinations = [
   {
@@ -21,42 +21,44 @@ const destinations = [
   {
     title: "Caribbean",
     subtitle: "ISLAND PARADISE",
-    image: Caribbean,
+    image: caribbean,
   },
   {
     title: "Africa",
     subtitle: "WILD LUXURY",
-    image: Africa,
+    image: africa,
   },
   {
     title: "Middle East",
     subtitle: "DESERT OPULENCE",
-    image: Middle,
+    image: middle,
   },
 ];
 
 const Destinations = () => {
   return (
-    <section className="destinations">
-      <div className="destinations-header">
-        <span className="tag">DESTINATIONS</span>
-        <h2>Browse Our Destinations</h2>
-        <p>
+    <section className="egc-dest-section">
+      <div className="egc-dest-header">
+        <span className="egc-dest-tag">DESTINATIONS</span>
+        <h2 className="egc-dest-title">Browse Our Destinations</h2>
+        <p className="egc-dest-description">
           From the cobbled streets of Europe to the untamed wilderness of Africa,
           discover our curated collection of the world’s most exclusive destinations.
         </p>
       </div>
 
-      <div className="destinations-grid">
+      <div className="egc-dest-grid">
         {destinations.map((item, index) => (
           <div
             key={index}
-            className={`destination-card ${item.large ? "large" : ""}`}
+            className={`egc-dest-card ${
+              item.large ? "egc-dest-large" : ""
+            }`}
             style={{ backgroundImage: `url(${item.image})` }}
           >
-            <div className="card-overlay">
-              <span>{item.subtitle}</span>
-              <h3>{item.title}</h3>
+            <div className="egc-dest-overlay">
+              <span className="egc-dest-subtitle">{item.subtitle}</span>
+              <h3 className="egc-dest-card-title">{item.title}</h3>
             </div>
           </div>
         ))}

@@ -1,6 +1,6 @@
 import React from "react";
 import "./Awards.css";
-
+import awardImg from "../../assets/award.png";
 const awards = [
   {
     year: "2025",
@@ -48,7 +48,7 @@ const Awards = () => {
       <div className="awards-grid">
         {awards.map((award, index) => (
           <div className="award-card" key={index}>
-            <div className="award-icon">🏅</div>
+            <div className="award-icon"> <img src={awardImg} alt="" style={{height:"20px",width:"15px"}}  /> </div>
             <span className="award-year">{award.year}</span>
             <h3>{award.title}</h3>
             <p>{award.source}</p>

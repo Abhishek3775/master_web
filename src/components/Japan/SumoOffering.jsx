@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import "./SumoOffering.css";
-import offeringImg from "../../assets/sumoOffer.jpg"; // apni image path
+import offeringImg from "../../assets/sumoOffer.jpg"; 
 import SumoBookingModal from "./SumoBookingModal";
+import time from "../../assets/time.png";
+import people from "../../assets/people.png";
+import calender from "../../assets/calender.png";
+
 
 const includes = [
   "Private access to authentic sumo stable",
@@ -56,9 +60,10 @@ const SumoOffering = () => {
 
             {/* Meta Info */}
             <div className="so-meta">
-              <span>⏱ 4 hours</span>
-              <span>👥 2-4 guests</span>
-              <span>📅 Daily except tournament periods</span>
+               <span style={{display:"flex",justifyContent:"center",gap:"4px"}}><img src={time} alt="" style={{height:"15px",width:"15px"}} /> 4 hours</span>
+             <span style={{display:"flex",justifyContent:"center",gap:"4px"}}><img src={people} alt="" style={{height:"15px",width:"15px"}} />2-4 Guests</span>
+               <span style={{display:"flex",justifyContent:"center",gap:"4px"}}><img src={calender} alt="" style={{height:"15px",width:"15px"}} />Daily except tournament periods</span>
+
             </div>
 
             {/* Includes */}
@@ -68,7 +73,7 @@ const SumoOffering = () => {
               <div className="so-includes-list">
                 {includes.map((item, index) => (
                   <div key={index} className="so-include-item">
-                    ✓ {item}
+                    <span style={{color:"orange"}}>✓</span> {item}
                   </div>
                 ))}
               </div>

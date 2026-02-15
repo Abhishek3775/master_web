@@ -15,18 +15,19 @@ import relatedj_ourneys_1 from "../../assets2/japan/Imperial Odyssey/Related Jou
 import relatedj_ourneys_2 from "../../assets2/japan/Imperial Odyssey/Related Journeys/2.png";
 import relatedj_ourneys_3 from "../../assets2/japan/Imperial Odyssey/Related Journeys/3.jpg";
 
+import logo_1 from "../../assets2/Services/New folder/1.png"
+import logo_2 from "../../assets2/Services/New folder/2.png"
+import logo_3 from "../../assets2/Services/New folder/3.png"
 
 
 import { GrLocation } from "react-icons/gr";
 import { FiUsers } from "react-icons/fi";
 import { MdOutlineDateRange } from "react-icons/md";
 import { FaBed } from "react-icons/fa";
-import { FiCheck, FiX, FiDownload } from "react-icons/fi";
 import { FiCalendar } from "react-icons/fi";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaRegEnvelope } from "react-icons/fa";
-import BrandStrip from "../../components/BrandStrip/BrandStrip";
 
 
 const ImperialOdysseyHome = () => {
@@ -38,7 +39,7 @@ const ImperialOdysseyHome = () => {
     const hotels = staysData[activeCity];
     const selectedHotel = hotels[selectedHotelIndex];
 
-    // const stay = staysData[activeCity];
+
     const allHotels = Object.entries(staysData).flatMap(([city, hotels]) =>
     hotels.map((hotel) => ({ ...hotel, city }))
   );
@@ -362,42 +363,35 @@ const ImperialOdysseyHome = () => {
     {/* ~~~~~~~~~~~~~~~~~~~~~~~~ inclusions-section ~~~~~~~~~~~~~~~~~~~ */}
 
     <section className="inclu-section">
-      <div className="inclu-container">
-        {/* LEFT COLUMN - INCLUSIONS */}
-        <div className="inclu-box">
-          <p className="inclu-section-subtitle">WHAT'S INCLUDED</p>
-          <h2 className="inclu-section-title">Inclusions</h2>
-
+      <div className="inclu-wrapper">
+        {/* LEFT – Inclusions */}
+        <div className="inclu-col">
+          <p className="inclu-label">WHAT'S INCLUDED</p>
+          <h2 className="inclu-heading">Inclusions</h2>
           <ul className="inclu-list">
-            {inclusions.map((item, index) => (
-              <li key={index}>
-                <div className="icon check">
-                  <FiCheck />
-                </div>
+            {inclusions.map((item, i) => (
+              <li key={i} className="inclu-list-item">
+                <CheckIcon />
                 <span>{item}</span>
               </li>
             ))}
           </ul>
         </div>
 
-        {/* RIGHT COLUMN - EXCLUSIONS */}
-        <div className="inclu-box">
-          <p className="inclu-section-subtitle right">NOT INCLUDED</p>
-          <h2 className="inclu-section-title">Exclusions</h2>
-
+        {/* RIGHT – Exclusions */}
+        <div className="inclu-col">
+          <p className="inclu-label">NOT INCLUDED</p>
+          <h2 className="inclu-heading">Exclusions</h2>
           <ul className="inclu-list">
-            {exclusions.map((item, index) => (
-              <li key={index}>
-                <div className="icon cross">
-                  <FiX />
-                </div>
+            {exclusions.map((item, i) => (
+              <li key={i} className="inclu-list-item">
+                <CrossIcon />
                 <span>{item}</span>
               </li>
             ))}
           </ul>
-
-          <a href="#" className="download-link">
-            <FiDownload className="download-icon" />
+          <a href="#" className="inclu-download-link">
+            <DownloadIcon />
             DOWNLOAD FULL ITINERARY PDF
           </a>
         </div>
@@ -533,7 +527,14 @@ const ImperialOdysseyHome = () => {
 
         <button className="journey-btn">BEGIN YOUR JOURNEY →</button>
 
-    {<BrandStrip/>}
+        <div className="partners">
+          <img src={logo_1} alt="logo1" />
+          <img src={logo_2} alt="logo2" />
+          <img src={logo_3} alt="logo3" />
+          <img src={logo_1} alt="logo4" />
+          <img src={logo_2} alt="logo5" />
+          <img src={logo_3} alt="logo6" />
+        </div>
       </section>
 
    </div>  
@@ -586,12 +587,12 @@ const itineraryData = [
     ],
     hotel: "Aman Tokyo",
     meals: "Breakfast, Lunch",
-   image: arivetokyo,
+    // image: tokyoImg,
   },
   {
     day: "04",
-    city: "Hakone",
-    title: "Artisan Tokyo",
+    city: "Tokyo",
+    title: "Imperial Tokyo",
     description:
       "Explore the Imperial Palace, Meiji Shrine, and Tokyo's contemporary art scene with your local expert guide.",
     highlights: [
@@ -601,12 +602,12 @@ const itineraryData = [
     ],
     hotel: "Aman Tokyo",
     meals: "Breakfast, Lunch",
-    image: arivetokyo,
+    // image: tokyoImg,
   },
   {
     day: "05",
-    city: "Hakone",
-    title: "Hakone Exploration",
+    city: "Tokyo",
+    title: "Imperial Tokyo",
     description:
       "Explore the Imperial Palace, Meiji Shrine, and Tokyo's contemporary art scene with your local expert guide.",
     highlights: [
@@ -616,12 +617,12 @@ const itineraryData = [
     ],
     hotel: "Aman Tokyo",
     meals: "Breakfast, Lunch",
-    image: arivetokyo,
+    // image: tokyoImg,
   },
   {
     day: "06",
-    city: "Hakone",
-    title: "Hakone to Kyoto",
+    city: "Tokyo",
+    title: "Imperial Tokyo",
     description:
       "Explore the Imperial Palace, Meiji Shrine, and Tokyo's contemporary art scene with your local expert guide.",
     highlights: [
@@ -631,12 +632,12 @@ const itineraryData = [
     ],
     hotel: "Aman Tokyo",
     meals: "Breakfast, Lunch",
-    image: arivetokyo,
+    // image: tokyoImg,
   },
   {
     day: "07",
-    city: "Kyoto",
-    title: "Temples of Kyoto",
+    city: "Tokyo",
+    title: "Imperial Tokyo",
     description:
       "Explore the Imperial Palace, Meiji Shrine, and Tokyo's contemporary art scene with your local expert guide.",
     highlights: [
@@ -644,14 +645,14 @@ const itineraryData = [
       "Tea ceremony with master",
       "Michelin-starred lunch",
     ],
-    hotel: "Sowaka Tokyo",
+    hotel: "Aman Tokyo",
     meals: "Breakfast, Lunch",
-    image: arivetokyo,
+    // image: tokyoImg,
   },
   {
     day: "08",
-      city: "Kyoto",
-    title: "Nara Excursion",
+    city: "Tokyo",
+    title: "Imperial Tokyo",
     description:
       "Explore the Imperial Palace, Meiji Shrine, and Tokyo's contemporary art scene with your local expert guide.",
     highlights: [
@@ -661,12 +662,12 @@ const itineraryData = [
     ],
     hotel: "Aman Tokyo",
     meals: "Breakfast, Lunch",
-     image: arivetokyo,
+    // image: tokyoImg,
   },
   {
     day: "09",
-    city: "Kyoto",
-    title: "Kyoto to Kanazawa",
+    city: "Tokyo",
+    title: "Imperial Tokyo",
     description:
       "Explore the Imperial Palace, Meiji Shrine, and Tokyo's contemporary art scene with your local expert guide.",
     highlights: [
@@ -676,12 +677,12 @@ const itineraryData = [
     ],
     hotel: "Aman Tokyo",
     meals: "Breakfast, Lunch",
-     image: arivetokyo,
+    // image: tokyoImg,
   },
   {
     day: "10",
-  city: "Kanazawa",
-    title: "Kyoto to Kanazawa",
+    city: "Tokyo",
+    title: "Imperial Tokyo",
     description:
       "Explore the Imperial Palace, Meiji Shrine, and Tokyo's contemporary art scene with your local expert guide.",
     highlights: [
@@ -691,7 +692,7 @@ const itineraryData = [
     ],
     hotel: "Aman Tokyo",
     meals: "Breakfast, Lunch",
-   image: arivetokyo,
+    // image: tokyoImg,
   },
   {
     day: "11",
@@ -706,7 +707,7 @@ const itineraryData = [
     ],
     hotel: "Aman Tokyo",
     meals: "Breakfast, Lunch",
-     image: arivetokyo,
+    // image: tokyoImg,
   },
   {
     day: "12",
@@ -721,7 +722,7 @@ const itineraryData = [
     ],
     hotel: "Aman Tokyo",
     meals: "Breakfast, Lunch",
-    image: arivetokyo,
+    // image: tokyoImg,
   },
   {
     day: "13",
@@ -736,7 +737,7 @@ const itineraryData = [
     ],
     hotel: "Aman Tokyo",
     meals: "Breakfast, Lunch",
-    image: arivetokyo,
+    // image: tokyoImg,
   },
   {
     day: "14",
@@ -751,7 +752,7 @@ const itineraryData = [
     ],
     hotel: "Aman Tokyo",
     meals: "Breakfast, Lunch",
-   image: arivetokyo,
+    // image: tokyoImg,
   },
   
   
@@ -815,7 +816,7 @@ const inclusions = [
   "13 nights accommodation at luxury properties",
   "All meals as specified (daily breakfast, 8 lunches, 10 dinners)",
   "Private English-speaking guide throughout",
-  "Helicopter transfer Tokyo–Hakone over Mt Fuji",
+  "Helicopter transfer Tokyo-Hakone over Mt Fuji",
   "First-class shinkansen rail travel",
   "All private ground transportation",
   "Airport meet and greet with private transfers",
@@ -832,6 +833,70 @@ const exclusions = [
   "Meals not specified",
   "Optional activities",
 ];
+
+const CheckIcon = () => (
+  <span className="inclu-icon inclu-icon--check" aria-hidden="true">
+    <svg
+      width="11"
+      height="9"
+      viewBox="0 0 11 9"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M1 4L4 7.5L10 1"
+        stroke="#b58a2f"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  </span>
+);
+
+const CrossIcon = () => (
+  <span className="inclu-icon inclu-icon--cross" aria-hidden="true">
+    <svg
+      width="10"
+      height="10"
+      viewBox="0 0 10 10"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M1.5 1.5L8.5 8.5M8.5 1.5L1.5 8.5"
+        stroke="#b58a2f"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
+    </svg>
+  </span>
+);
+
+const DownloadIcon = () => (
+  <svg
+    className="inclu-download-icon"
+    width="14"
+    height="14"
+    viewBox="0 0 14 14"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M7 1V9M7 9L4 6M7 9L10 6"
+      stroke="#b58a2f"
+      strokeWidth="1.4"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M1 11H13"
+      stroke="#b58a2f"
+      strokeWidth="1.4"
+      strokeLinecap="round"
+    />
+  </svg>
+);
 
 // ~~~~~~~~~~~~~~~~~~~~~ Dates and Prices ~~~~~~~~~~~~~~~~~~~~
 

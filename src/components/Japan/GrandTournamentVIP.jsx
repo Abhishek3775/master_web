@@ -2,6 +2,10 @@ import React from "react";
 import "./GrandTournamentVIP.css";
 import vipImg from "../../assets/tournament.png";
 
+import time from "../../assets/time.png";
+import people from "../../assets/people.png";
+import calender from "../../assets/calender.png";
+
 const GrandTournamentVIP = () => {
   return (
     <section className="gtv-section">
@@ -26,9 +30,10 @@ const GrandTournamentVIP = () => {
             </p>
 
             <div className="gtv-meta">
-              <span>🕒 Full Day</span>
-              <span>👥 2–6 guests</span>
-              <span>📅 January, May, September (Tokyo)</span>
+              <span style={{display:"flex",justifyContent:"center",gap:"4px"}}><img src={time} alt="" style={{height:"15px",width:"15px"}} />Full Day</span>
+  <span style={{display:"flex",justifyContent:"center",gap:"4px"}}><img src={people} alt="" style={{height:"15px",width:"15px"}} />2-6 Guests</span>
+  <span style={{display:"flex",justifyContent:"center",gap:"4px"}}><img src={calender} alt="" style={{height:"15px",width:"15px"}} />January, May, September (Tokyo)</span>
+
             </div>
 
             <div className="gtv-buttons">

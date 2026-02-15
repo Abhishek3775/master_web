@@ -1,4 +1,8 @@
-.hero {
+/* =========================
+   EGC HERO SECTION
+========================= */
+
+.egc-hero-section {
   position: relative;
   height: 100vh;
   width: 100%;
@@ -7,42 +11,45 @@
   align-items: center;
   justify-content: center;
   color: #ffffff;
-  font-family: "Segoe UI", sans-serif;
+  overflow: hidden;
 }
 
-/* Dark overlay */
-.overlay {
+/* Overlay */
+.egc-hero-overlay {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
 }
 
 /* Content */
-.hero-content {
+.egc-hero-content {
   position: relative;
   text-align: center;
   max-width: 800px;
   padding: 20px;
+  z-index: 2;
 }
 
-.hero-content h1 {
+.egc-hero-heading {
   font-size: 3rem;
   font-weight: 300;
   letter-spacing: 1px;
+  margin: 0;
 }
 
-.hero-content h1 span {
+.egc-hero-heading span {
   font-weight: 600;
 }
 
-.hero-content p {
+.egc-hero-subtext {
   margin-top: 15px;
   font-size: 1rem;
   opacity: 0.85;
 }
 
 /* Buttons */
-.hero-buttons {
+.egc-hero-buttons {
   margin-top: 30px;
   display: flex;
   gap: 15px;
@@ -50,7 +57,7 @@
   flex-wrap: wrap;
 }
 
-.btn {
+.egc-hero-btn {
   padding: 12px 22px;
   font-size: 0.9rem;
   border: none;
@@ -59,30 +66,61 @@
   transition: all 0.3s ease;
 }
 
-.btn.primary {
-  background-color: #d6a65c;
+.egc-hero-btn-primary {
+  background-color: #C09551;
   color: #000;
 }
 
-.btn.primary:hover {
-  background-color: #c29650;
+.egc-hero-btn-primary:hover {
+  background-color: #C09551;
 }
 
-.btn.secondary {
+.egc-hero-btn-secondary {
   background: transparent;
-  color: #fff;
-  border: 1px solid #fff;
+  color: #C09551;
+  border: 1px solid #C09551;
 }
 
-.btn.secondary:hover {
+.egc-hero-btn-secondary:hover {
   background-color: #fff;
   color: #000;
 }
 
-/* Scroll text */
-.scroll-indicator {
+/* Scroll Indicator */
+.egc-hero-scroll {
   position: absolute;
   bottom: 20px;
   font-size: 0.75rem;
   opacity: 0.7;
+  z-index: 2;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 992px) {
+  .egc-hero-heading {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .egc-hero-heading {
+    font-size: 2rem;
+  }
+
+  .egc-hero-subtext {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .egc-hero-heading {
+    font-size: 1.6rem;
+  }
+
+  .egc-hero-btn {
+    width: 100%;
+  }
 }

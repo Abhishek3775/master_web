@@ -9,6 +9,9 @@ import DiscoverMore from '../../components/Japan/DiscoverMore'
 import ReserveExperience from '../../components/Japan/ReserveExperience'
 import BrandStrip from '../../components/BrandStrip/BrandStrip'
 
+
+
+
 function SumoExperience() {
   return (
     <>

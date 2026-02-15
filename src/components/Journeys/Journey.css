@@ -1,58 +1,67 @@
-.journeys {
+/* ==================================
+   EGC JOURNEYS SECTION
+================================== */
+
+.egc-jour-section {
   padding: 90px 6%;
   background-color: #f9f8f4;
   font-family: "Segoe UI", sans-serif;
 }
 
 /* Header */
-.journeys-header {
+.egc-jour-header {
   text-align: center;
   max-width: 800px;
   margin: 0 auto 60px;
 }
 
-.journeys-header .tag {
+.egc-jour-tag {
   font-size: 0.75rem;
   letter-spacing: 2px;
   color: #caa15a;
   font-weight: 600;
 }
 
-.journeys-header h2 {
+.egc-jour-title {
   font-size: 2.5rem;
   font-weight: 400;
   margin: 12px 0;
 }
 
-.journeys-header p {
+.egc-jour-description {
   font-size: 0.95rem;
   color: #555;
   line-height: 1.6;
 }
 
 /* Grid */
-.journeys-grid {
+.egc-jour-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
 }
 
 /* Card */
-.journey-card {
+.egc-jour-card {
   background: #fff;
   display: flex;
   flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.egc-jour-card:hover {
+  transform: translateY(-5px);
 }
 
 /* Image */
-.journey-image {
+.egc-jour-image {
   height: 260px;
   background-size: cover;
   background-position: center;
   position: relative;
 }
 
-.journey-days {
+.egc-jour-days {
   position: absolute;
   top: 15px;
   right: 15px;
@@ -64,30 +73,30 @@
 }
 
 /* Content */
-.journey-content {
+.egc-jour-content {
   padding: 22px;
 }
 
-.journey-content .price {
+.egc-jour-price {
   font-size: 0.75rem;
   color: #caa15a;
   letter-spacing: 1px;
 }
 
-.journey-content h3 {
+.egc-jour-card-title {
   font-size: 1.3rem;
   font-weight: 500;
   margin: 8px 0 10px;
 }
 
-.journey-content p {
+.egc-jour-card-desc {
   font-size: 0.9rem;
   color: #555;
   line-height: 1.5;
 }
 
 /* Button */
-.journey-btn {
+.egc-jour-btn {
   margin-top: 15px;
   background: none;
   border: none;
@@ -96,34 +105,35 @@
   letter-spacing: 1px;
   cursor: pointer;
   padding: 0;
+  transition: 0.3s ease;
 }
 
-.journey-btn:hover {
+.egc-jour-btn:hover {
   text-decoration: underline;
 }
 
 /* Tablet */
 @media (max-width: 992px) {
-  .journeys-grid {
+  .egc-jour-grid {
     grid-template-columns: 1fr;
   }
 
-  .journey-image {
+  .egc-jour-image {
     height: 240px;
   }
 }
 
 /* Mobile */
 @media (max-width: 576px) {
-  .journeys {
+  .egc-jour-section {
     padding: 70px 5%;
   }
 
-  .journeys-header h2 {
+  .egc-jour-title {
     font-size: 2rem;
   }
 
-  .journey-image {
+  .egc-jour-image {
     height: 200px;
   }
 }

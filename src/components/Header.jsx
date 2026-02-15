@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FaSearch, FaUser, FaBars, FaTimes } from "react-icons/fa";
 import "./Header.css";
@@ -14,6 +14,15 @@ const Header = () => {
   const isActive = (path) => {
     return location.pathname === path ? "active" : "";
   };
+
+//   const closeMenu = () => {
+//   setMenuOpen(false);
+// };
+
+useEffect(() => {
+  setMenuOpen(false);
+}, [location.pathname]);
+
 
   return (
     <header className="main-header">

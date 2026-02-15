@@ -3,26 +3,30 @@ import "./Hero.css";
 
 const Hero = () => {
   return (
-    <section className="hero">
-      <div className="overlay"></div>
+    <section className="egc-hero-section">
+      <div className="egc-hero-overlay"></div>
 
-      <div className="hero-content">
-        <h1>
+      <div className="egc-hero-content">
+        <h1 className="egc-hero-heading">
           Come Explore the World <br />
-          <span>with EGC</span>
+          with EGC
         </h1>
 
-        <p>
+        <p className="egc-hero-subtext">
           And let our signature white glove luxury be your guide
         </p>
 
-        <div className="hero-buttons">
-          <button className="btn primary">BEGIN YOUR JOURNEY</button>
-          <button className="btn secondary">EXPLORE DESTINATIONS</button>
+        <div className="egc-hero-buttons">
+          <button className="egc-hero-btn egc-hero-btn-primary">
+            BEGIN YOUR JOURNEY
+          </button>
+          <button className="egc-hero-btn egc-hero-btn-secondary">
+            EXPLORE DESTINATIONS
+          </button>
         </div>
       </div>
 
-      <div className="scroll-indicator">
+      <div className="egc-hero-scroll">
         <span>Scroll</span>
       </div>
     </section>

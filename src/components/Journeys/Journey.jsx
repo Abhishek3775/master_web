@@ -1,7 +1,7 @@
 import React from "react";
 import "./Journey.css";
 
-/* Import images from assets */
+/* Import images */
 import europeImg from "../../assets/europe-odyssey.jpg";
 import safariImg from "../../assets/african-safari.jpg";
 import arabianImg from "../../assets/arabian-nights.jpg";
@@ -40,32 +40,34 @@ const journeys = [
 
 const Journeys = () => {
   return (
-    <section className="journeys">
-      <div className="journeys-header">
-        <span className="tag">CURATED EXCELLENCE</span>
-        <h2>EGC Signature Journeys</h2>
-        <p>
+    <section className="egc-jour-section">
+      <div className="egc-jour-header">
+        <span className="egc-jour-tag">CURATED EXCELLENCE</span>
+        <h2 className="egc-jour-title">EGC Signature Journeys</h2>
+        <p className="egc-jour-description">
           Meticulously crafted itineraries that represent the pinnacle of luxury
           travel. Each journey is a masterpiece of exclusivity, culture, and
           unforgettable moments.
         </p>
       </div>
 
-      <div className="journeys-grid">
+      <div className="egc-jour-grid">
         {journeys.map((item, index) => (
-          <div className="journey-card" key={index}>
+          <div className="egc-jour-card" key={index}>
             <div
-              className="journey-image"
+              className="egc-jour-image"
               style={{ backgroundImage: `url(${item.image})` }}
             >
-              <span className="journey-days">{item.days}</span>
+              <span className="egc-jour-days">{item.days}</span>
             </div>
 
-            <div className="journey-content">
-              <span className="price">{item.price}</span>
-              <h3>{item.title}</h3>
-              <p>{item.desc}</p>
-              <button className="journey-btn">VIEW JOURNEY →</button>
+            <div className="egc-jour-content">
+              <span className="egc-jour-price">{item.price}</span>
+              <h3 className="egc-jour-card-title">{item.title}</h3>
+              <p className="egc-jour-card-desc">{item.desc}</p>
+              <button className="egc-jour-btn">
+                VIEW JOURNEY →
+              </button>
             </div>
           </div>
         ))}
