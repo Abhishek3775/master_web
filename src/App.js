@@ -15,13 +15,18 @@ import JapanHome from './pages/Japan/Japan';
 import JapanGuide from './pages/Japan/JapanGuide';
 import SumoExperience from './pages/Japan/SumoExperience';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
+import Services from './pages/serviice/Services';
+import ExpenditionCruising from './pages/ServiceExpendition/ExpenditionCruising';
+import ImperialOdysseyHome from './pages/Japan-Quarter/ImperialOdysseyHome';
+import PrivateAviation from './pages/ServicePrivantAviation/PrivateAviation';
+
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Header />
-        
+
         <ToastContainer
           position="top-right"
           autoClose={5000}
@@ -33,9 +38,9 @@ function App() {
           draggable
           pauseOnHover
         />
-        
+
         <main>
-          <ScrollToTop/>
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Contact />} />
             <Route path="/contact" element={<Contact />} />
@@ -43,15 +48,22 @@ function App() {
             <Route path="/blog" element={<Blog />} />
             {/* Add more routes as needed */}
             {/* adding the route for the home page */}
-            <Route path="/home" element={<Home/>} />
+            <Route path="/home" element={<Home />} />
 
             {/* routes for the south africa home */}
-            <Route path="/south-africa" element={<SouthAfrica/>} />
-            <Route path="/south-africa/rhino-tracking" element={<RahinoDetails/>} />
-            <Route path="/japan" element={<JapanHome/>} />
-            <Route path="/japan-guide" element={<JapanGuide/>} />
-            <Route path="/sumo-guide" element={<SumoExperience/>} />
+            <Route path="/south-africa" element={<SouthAfrica />} />
+            <Route path="/south-africa/rhino-tracking" element={<RahinoDetails />} />
+            <Route path="/japan" element={<JapanHome />} />
+            <Route path="/japan-guide" element={<JapanGuide />} />
+            <Route path="/sumo-guide" element={<SumoExperience />} />
 
+            {/* routes for the  services */}
+            <Route path="/services" element={<Services/>} />
+            <Route path="/private-aviation" element={<PrivateAviation/>} />
+            <Route path="/expendition" element={<ExpenditionCruising/>} />
+
+            {/* routes for the  japan */}
+            <Route path="/imperial-odyssey" element={<ImperialOdysseyHome/>} />
 
 
 

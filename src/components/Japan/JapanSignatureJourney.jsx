@@ -1,20 +1,20 @@
 import React, { useRef } from "react";
 import "./JapanSignatureJourney.css";
-import { FaChevronLeft } from "react-icons/fa";
-import { FaChevronRight } from "react-icons/fa";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 import img1 from "../../assets/journey11.png";
 import img2 from "../../assets/journey22.png";
 import img3 from "../../assets/journey33.png";
+import { useNavigate } from "react-router-dom";
 
 const journeys = [
   {
     nights: "14 Nights",
     locations: "TOKYO · KYOTO · NARA",
     title: "Imperial Odyssey",
-    desc:"A14-day immersion into Japan's imperial heritage, from the modern grandeur of Tokyo to the ancient capitals where..",
+    desc: "A 14-day immersion into Japan's imperial heritage...",
     price: "From £28,500 per person",
     image: img1,
   },
@@ -22,8 +22,7 @@ const journeys = [
     nights: "10 Nights",
     locations: "KOYASAN · NAOSHIMA · KYOTO",
     title: "Zen & The Art of Stillness",
-    desc:
-      "A transformative journey through Japan's spiritual heartland, combining meditation retreats with contemporary art...",
+    desc: "A transformative journey through Japan's spiritual heartland...",
     price: "From £22,000 per person",
     image: img2,
   },
@@ -31,20 +30,19 @@ const journeys = [
     nights: "12 Nights",
     locations: "TOKYO · OSAKA · KANAZAWA",
     title: "The Connoisseur's Table",
-    desc:"An epicurean voyage through Japan's culinary featuring exclusive chef's tables and rare sake ta",
+    desc: "An epicurean voyage through Japan's culinary excellence...",
     price: "From £35,500 per person",
     image: img3,
   },
-
 ];
 
 const JapanSignatureJourneys = () => {
   const swiperRef = useRef(null);
+  const navigate = useNavigate();
 
   return (
-    <section className="signature-section">
-      {/* HEADER */}
-      <div className="signature-header">
+    <section className="japan-signature-section">
+      <div className="japan-signature-header">
         <h2>EGC Signature Journeys</h2>
         <p>
           These are simply suggestions. Yours will be tailored, altered, and
@@ -52,7 +50,6 @@ const JapanSignatureJourneys = () => {
         </p>
       </div>
 
-      {/* SLIDER */}
       <Swiper
         onSwiper={(swiper) => (swiperRef.current = swiper)}
         spaceBetween={40}
@@ -65,33 +62,50 @@ const JapanSignatureJourneys = () => {
       >
         {journeys.map((item, i) => (
           <SwiperSlide key={i}>
-            <div className="journey-card">
-              <div className="journey-image">
-                <img src={item.image} alt={item.title} />
-                <span className="nights">{item.nights}</span>
+            <div className="japan-signature-card" 
+            
+            onClick={()=>{
+              if(i==0){
+                navigate("/imperial-odyssey");
+              }
+            }}
 
-                {/* IMAGE OVERLAY CONTENT */}
-                <div className="image-overlay">
-                  <span className="locations">{item.locations}</span>
+            >
+              <div className="japan-signature-image">
+                <img src={item.image} alt={item.title} />
+                <span className="japan-signature-nights">
+                  {item.nights}
+                </span>
+
+                <div className="japan-signature-overlay">
+                  <span className="japan-signature-locations">
+                    {item.locations}
+                  </span>
                   <h3>{item.title}</h3>
                   <p>{item.desc}</p>
                 </div>
               </div>
 
-              {/* FOOTER */}
-              <div className="journey-footer">
-                <span className="price">{item.price}</span>
-                <span className="view">VIEW JOURNEY →</span>
+              <div className="japan-signature-footer">
+                <span className="japan-signature-price">
+                  {item.price}
+                </span>
+                <span className="japan-signature-view">
+                  VIEW JOURNEY →
+                </span>
               </div>
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
 
-      {/* CUSTOM NAV */}
-      <div className="slider-nav">
-        <button onClick={() => swiperRef.current.slidePrev()}><FaChevronLeft /></button>
-        <button onClick={() => swiperRef.current.slideNext()}><FaChevronRight /></button>
+      <div className="japan-signature-nav">
+        <button onClick={() => swiperRef.current.slidePrev()}>
+          <FaChevronLeft />
+        </button>
+        <button onClick={() => swiperRef.current.slideNext()}>
+          <FaChevronRight />
+        </button>
       </div>
     </section>
   );
