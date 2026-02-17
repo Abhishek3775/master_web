@@ -15,11 +15,6 @@ import relatedj_ourneys_1 from "../../assets2/japan/Imperial Odyssey/Related Jou
 import relatedj_ourneys_2 from "../../assets2/japan/Imperial Odyssey/Related Journeys/2.png";
 import relatedj_ourneys_3 from "../../assets2/japan/Imperial Odyssey/Related Journeys/3.jpg";
 
-import logo_1 from "../../assets2/Services/New folder/1.png"
-import logo_2 from "../../assets2/Services/New folder/2.png"
-import logo_3 from "../../assets2/Services/New folder/3.png"
-
-
 import { GrLocation } from "react-icons/gr";
 import { FiUsers } from "react-icons/fi";
 import { MdOutlineDateRange } from "react-icons/md";
@@ -28,6 +23,8 @@ import { FiCalendar } from "react-icons/fi";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaRegEnvelope } from "react-icons/fa";
+import BrandStrip from "../../components/BrandStrip/BrandStrip";
+
 
 
 const ImperialOdysseyHome = () => {
@@ -79,31 +76,39 @@ const ImperialOdysseyHome = () => {
     
   return (
    <div>
+
+    {/* ~~~~~~~~~~~~~~~~~~~~~~~Imperial-Hero~~~~~~~~~~~~~~~~ */}
     <section
-      className="imperial-hero"
+      className="imp-hero"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
-      <div className="imperial-overlay">
-        <div className="imperial-content">
-          <p className="imperial-subtitle">SIGNATURE JOURNEY</p>
-          <h1 className="imperial-title">Imperial Odyssey</h1>
-
-          <p className="imperial-locations">
+      <div className="imp-overlay">
+        <div className="imp-content">
+          <p className="imp-subtitle">SIGNATURE JOURNEY</p>
+          <h1 className="imp-title">Imperial Odyssey</h1>
+          <p className="imp-locations">
             Tokyo · Hakone · Kyoto · Nara · Kanazawa
           </p>
 
-          <div className="imperial-details">
-            <span><MdOutlineDateRange color="#d1a650"/>  14 Days</span>
-            <span><GrLocation color="#d1a650"/>  5 Cities</span>
-            <span><FiUsers color="#d1a650"/>  8 Guests</span>
+          <div className="imp-details">
+            <span>
+              <MdOutlineDateRange color="#d1a650" /> 14 Days
+            </span>
+            <span>
+              <GrLocation color="#d1a650" /> 5 Cities
+            </span>
+            <span>
+              <FiUsers color="#d1a650" /> 8 Guests
+            </span>
           </div>
 
-          <div className="imperial-pricing">
+          <div className="imp-pricing">
             FROM <span>£28,500</span> per person, based on double occupancy
           </div>
 
-          <button className="imperial-btn">VIEW DATES & PRICES →</button>
         </div>
+          <button className="imp-btn">VIEW DATES & PRICES →</button>
+
       </div>
     </section>
 
@@ -526,15 +531,7 @@ const ImperialOdysseyHome = () => {
         </div>
 
         <button className="journey-btn">BEGIN YOUR JOURNEY →</button>
-
-        <div className="partners">
-          <img src={logo_1} alt="logo1" />
-          <img src={logo_2} alt="logo2" />
-          <img src={logo_3} alt="logo3" />
-          <img src={logo_1} alt="logo4" />
-          <img src={logo_2} alt="logo5" />
-          <img src={logo_3} alt="logo6" />
-        </div>
+        <BrandStrip />
       </section>
 
    </div>  

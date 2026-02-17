@@ -1,185 +1,204 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Abel&display=swap"); */
 
-/* ============================
-   IMPERIAL HERO SECTION
-   ============================ */
 
-.imperial-hero {
+
+ html, body, #root {
+  margin: 0;
+  padding: 0;
   width: 100%;
-  height: 100vh;
-  min-height: 500px;
+  overflow-x: hidden;
+}
+
+/* section {
+  max-width: 100vw;
+  overflow-x: hidden;
+} */
+
+/* =========================
+   IMPERIAL HERO SECTION
+   ========================= */
+.imp-hero {
+  width: 100%;
+  height: 90vh;
+  min-height: 550px;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   position: relative;
-  /* font-family: "Abel", sans-serif; */
+  color: #fff;
   display: flex;
   align-items: center;
-  color: #fff;
+  justify-content: flex-start;
   overflow: hidden;
+  font-family: "Poppins", sans-serif;
 }
 
-.imperial-overlay {
+.imp-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
   background: linear-gradient(
     to right,
-    rgba(0, 0, 0, 0.65) 40%,
-    rgba(0, 0, 0, 0.35)
+    rgba(0, 0, 0, 0.75) 35%,
+    rgba(0, 0, 0, 0.25) 100%
   );
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 0 4%;
+  box-sizing: border-box;
 }
 
-.imperial-content {
+.imp-content {
+  position: relative;
+  z-index: 2;
+  top: 25px;
   max-width: 700px;
-  padding: 0 5%;
 }
 
-.imperial-subtitle {
+.imp-subtitle {
   color: #d1a650;
-  font-size: clamp(14px, 1.5vw, 17px);
+  font-size: clamp(14px, 1.5vw, 18px);
   letter-spacing: 2px;
   margin-bottom: 10px;
   font-weight: 600;
 }
 
-.imperial-title {
+.imp-title {
   font-size: clamp(32px, 6vw, 72px);
   font-weight: 400;
+  white-space: nowrap;
   margin-bottom: 10px;
   line-height: 1.1;
 }
 
-.imperial-locations {
+.imp-locations {
   font-size: clamp(14px, 1.6vw, 18px);
   color: #ddd;
+  margin-bottom: 25px;
+}
+
+.imp-details {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  font-size: clamp(13px, 1.4vw, 16px);
+  color: #f1f1f1;
   margin-bottom: 30px;
 }
 
-.imperial-details {
-  display: flex;
-  gap: 25px;
-  font-size: clamp(13px, 1.4vw, 16px);
-  color: #f1f1f1;
-  margin-bottom: 35px;
-  flex-wrap: wrap;
-}
-
-.imperial-pricing {
+.imp-pricing {
   font-size: clamp(13px, 1.4vw, 16px);
   color: #eee;
-  margin-bottom: 35px;
-  border: 2px solid rgba(255, 255, 255, 0.352);
+  margin-top: 80px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
   padding: 12px 20px;
   display: inline-block;
   border-radius: 2px;
 }
 
-.imperial-pricing span {
+.imp-pricing span {
   color: #d1a650;
   font-weight: 600;
 }
 
-.imperial-btn {
+/* Button aligned right on desktop */
+.imp-btn {
   background-color: #c59a3f;
   color: #fff;
   font-size: clamp(13px, 1.3vw, 15px);
-  padding: 15px 35px;
+  padding: 14px 32px;
   border: none;
   cursor: pointer;
   letter-spacing: 1px;
   transition: 0.3s ease;
   border-radius: 2px;
-  display: inline-block;
-  margin-top: 10px;
+  font-weight: 500;
+  position: absolute;
+  right: 50px;
+  bottom: 130px;
 }
 
-.imperial-btn:hover {
+.imp-btn:hover {
   background-color: #e1b85f;
   color: #111;
 }
 
-/* Tablet landscape */
-@media (max-width: 1024px) {
-  .imperial-pricing {
-    position: static;
-    margin-top: 20px;
-  }
+/* =========== Responsive ============ */
 
-  .imperial-btn {
-    position: static;
-    display: inline-block;
-    margin-top: 10px;
+@media (max-width: 1024px) {
+  .imp-overlay {
+    padding: 0 3%;
   }
 }
 
-/* Tablet portrait */
+/* Tablet */
 @media (max-width: 768px) {
-  .imperial-hero {
+  .imp-hero {
     height: auto;
     min-height: 100svh;
+    justify-content: center;
+    text-align: center;
   }
 
-  .imperial-overlay {
+  .imp-overlay {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 6% 100px;
     background: linear-gradient(
       to top,
-      rgba(0, 0, 0, 0.75) 600%,
-      rgba(0, 0, 0, 0.3)
+      rgba(0, 0, 0, 0.75) 50%,
+      rgba(0, 0, 0, 0.35) 100%
     );
-    align-items: flex-end;
-    height: 100%;
-   padding-top: 180px;
-   margin-bottom: 60px;
-    padding-bottom: 100px;
   }
 
-  .imperial-content {
-    width: 100%;
-    text-align: center;
-    padding: 30px 6% 20px;
+  .imp-content {
+    max-width: 90%;
+    padding: 0;
   }
 
-  .imperial-details {
+  .imp-details {
     justify-content: center;
     gap: 15px;
   }
 
-  .imperial-pricing {
-    position: static;
-    display: inline-block;
-    margin: 0 auto 20px;
+  .imp-pricing {
+    margin-top: 40px;
   }
 
-  .imperial-btn {
+  .imp-btn {
     position: static;
-    display: block;
+    margin-top: 40px;
     width: fit-content;
-    margin: 0 auto;
   }
 }
 
 /* Mobile */
 @media (max-width: 480px) {
-  .imperial-overlay {
-    padding-bottom: 30px;
+  .imp-content {
+    padding: 20px 5%;
   }
 
-  .imperial-content {
-    padding: 20px 5% 10px;
+  .imp-title {
+    font-size: clamp(28px, 7vw, 48px);
   }
 
-  .imperial-details {
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .imperial-btn {
+  .imp-btn {
     width: 100%;
-    text-align: center;
+    margin-top: 30px;
+    padding: 14px 0;
+  }
+
+  .imp-details {
+    flex-direction: column;
+    gap: 10px;
   }
 }
+
 
 /* ============================
    JOURNEY OVERVIEW SECTION

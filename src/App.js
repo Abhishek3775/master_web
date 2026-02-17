@@ -21,6 +21,7 @@ import ImperialOdysseyHome from './pages/Japan-Quarter/ImperialOdysseyHome';
 import PrivateAviation from './pages/ServicePrivantAviation/PrivateAviation';
 
 
+
 function App() {
   return (
     <Router>
@@ -63,9 +64,6 @@ function App() {
 
             {/* routes for the  japan */}
             <Route path="/imperial-odyssey" element={<ImperialOdysseyHome/>} />
-
-
-
           </Routes>
         </main>
 
