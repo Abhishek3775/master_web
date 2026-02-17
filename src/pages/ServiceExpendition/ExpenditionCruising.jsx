@@ -57,39 +57,43 @@ const ExpenditionCruising = () => {
 
       {/* ===== HERO SECTION ===== */}
       <section
-        className="ec-hero"
-        style={{ backgroundImage: `url(${heroImg})` }}
-      >
-        <div className="ec-hero-overlay">
+      className="expedition-hero"
+      style={{ backgroundImage: `url(${heroImg})` }}
+    >
+      <div className="expedition-overlay">
 
-          <h5 className="ec-hero-subtitle">REDEFINING</h5>
+        <div className="expedition-content">
 
-          <h1 className="ec-hero-title">
+          <h5 className="expedition-subtitle">REDEFINING</h5>
+
+          <h1 className="expedition-title">
             Expedition <br /> Cruising
           </h1>
 
-          <p className="ec-hero-desc">
+          <p className="expedition-desc">
             State-of-the-art vessels to Earth's last frontiers
           </p>
 
-          <div className="ec-hero-buttons">
-            <button className="ec-btn-gold">EXPLORE VOYAGES</button>
-            <button className="ec-btn-outline">CONTACT CONCIERGE</button>
+          <div className="expedition-buttons">
+            <button className="s-btn-gold">EXPLORE VOYAGES</button>
+            <button className="s-btn-outline">CONTACT CONCIERGE</button>
           </div>
 
-          <div className="ec-slider-lines">
-            <span className="ec-line ec-active"></span>
-            <span className="ec-line"></span>
+          <div className="slider-lines">
+            <span className="line active"></span>
+            <span className="line"></span>
           </div>
 
         </div>
 
-        <div className="ec-discover">
+        {/* DISCOVER — absolutely positioned at bottom center */}
+        <div className="s-discover">
           DISCOVER
-          <div className="ec-arrow">⌄</div>
+          <div className="s-arrow">⌄</div>
         </div>
 
-      </section>
+      </div>
+    </section>
 
       {/* ===== WAYS TO EXPLORE SECTION ===== */}
 

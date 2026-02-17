@@ -18,12 +18,12 @@ export default function Services() {
   return (
     <div className="services-page">
       {/* ===== HERO SECTION ===== */}
-      <section className="hero-section">
-        <div className="hero-overlay">
-          <h5 className="hero-subtitle">EXCELLENCE DEFINED</h5>
-          <p className="hero-title">Our Services</p>
-          <p className="hero-tagline">Curating Extraordinary Experiences Worldwide</p>
-          <p className="hero-desc">
+     <section className="services-hero-section">
+        <div className="services-hero-overlay">
+          <h5 className="services-hero-subtitle">EXCELLENCE DEFINED</h5>
+          <p className="services-hero-title">Our Services</p>
+          <p className="services-hero-tagline">Curating Extraordinary Experiences Worldwide</p>
+          <p className="services-hero-desc">
             From private aviation to bespoke travel management, we deliver unparalleled luxury <br />
             services tailored to discerning individuals and corporations seeking excellence in
             every detail.

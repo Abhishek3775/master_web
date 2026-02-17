@@ -15,11 +15,11 @@
 }
 
 /* ===== HERO SECTION ===== */
-.hero-section {
+.services-hero-section {
   background-image: url("../../assets2/Services/image 1.jpg");
   background-size: cover;
   background-position: center;
-  height: 60vh;
+  height: 90vh;
   position: relative;
   color: #fff;
   text-align: center;
@@ -28,7 +28,7 @@
   justify-content: center;
 }
 
-.hero-overlay {
+.services-hero-overlay {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.5);
@@ -40,7 +40,7 @@
   text-align: center;
 }
 
-.hero-subtitle {
+.services-hero-subtitle {
   color: #d1a650;
   font-size: 15px;
   letter-spacing: 2px;
@@ -48,19 +48,19 @@
   font-weight: 600;
 }
 
-.hero-title {
+.services-hero-title {
   font-size: 72px;
   font-weight: 700;
   margin-bottom: 15px;
 }
 
-.hero-tagline {
+.services-hero-tagline {
   color: #d1a650;
   font-size: 18px;
   margin-bottom: 25px;
 }
 
-.hero-desc {
+.services-hero-desc {
   font-size: 16px;
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.9);
@@ -68,7 +68,7 @@
   padding: 0 10px;
 }
 
-.hero-btn {
+.hero-btn{
   background: transparent;
   color: #fff;
   padding: 10px 24px;
@@ -80,7 +80,7 @@
 
 /* ===== NINE PILLARS SECTION ===== */
 .pillars-section {
-  background: #f5f4ef;
+  background: #F5F4EF;
   text-align: center;
   padding: 80px 20px;
 }
@@ -110,9 +110,9 @@
   background: #fff;
 }
 
-/* .service-section.reverse { */
-/* flex-direction: row-reverse; */
-/* } */
+.service-section.reverse {
+  /* flex-direction: row-reverse; */
+}
 
 .service-image {
   flex: 1;
@@ -123,33 +123,15 @@
 }
 
 /* SERVICE IMAGES */
-.page-1 {
-  background-image: url("../../assets2/Services/2.png");
-}
-.page-2 {
-  background-image: url("../../assets2/Services/3.jpg");
-}
-.page-3 {
-  background-image: url("../../assets2/Services/4.jpg");
-}
-.page-4 {
-  background-image: url("../../assets2/Services/5.jpg");
-}
-.page-5 {
-  background-image: url("../../assets2/Services/6.jpg");
-}
-.page-6 {
-  background-image: url("../../assets2/Services/7.jpg");
-}
-.page-7 {
-  background-image: url("../../assets2/Services/8.jpg");
-}
-.page-8 {
-  background-image: url("../../assets2/Services/9.jpg");
-}
-.page-9 {
-  background-image: url("../../assets2/Services/10.jpg");
-}
+.page-1 { background-image: url("../../assets2/Services/2.png"); }
+.page-2 { background-image: url("../../assets2/Services/3.jpg"); }
+.page-3 { background-image: url("../../assets2/Services/4.jpg"); }
+.page-4 { background-image: url("../../assets2/Services/5.jpg"); }
+.page-5 { background-image: url("../../assets2/Services/6.jpg"); }
+.page-6 { background-image: url("../../assets2/Services/7.jpg"); }
+.page-7 { background-image: url("../../assets2/Services/8.jpg"); }
+.page-8 { background-image: url("../../assets2/Services/9.jpg"); }
+.page-9 { background-image: url("../../assets2/Services/10.jpg"); }
 
 /* SERVICE CONTENT */
 .service-content {
