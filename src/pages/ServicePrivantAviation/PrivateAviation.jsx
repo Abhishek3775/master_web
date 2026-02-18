@@ -14,6 +14,11 @@ import journeysImg_2 from "../../assets2/Services/aviation/Jet Expeditions/2.png
 import journeysImg_3 from "../../assets2/Services/aviation/Jet Expeditions/3.png"
 import BrandStrip from "../../components/BrandStrip/BrandStrip";
 
+import { LuShield } from "react-icons/lu";
+import { FiChevronDown, FiChevronUp } from "react-icons/fi";
+
+
+
 export default function PrivateAviation() { 
 
   const [activeTab, setActiveTab] = useState("light");
@@ -68,6 +73,11 @@ export default function PrivateAviation() {
   };
 
   const activeJet = jetsData[activeTab];
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const toggleFAQ = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
 
   return (
     <div className="aviation-page">
@@ -312,7 +322,7 @@ export default function PrivateAviation() {
         <img src={egcImg} alt="Private Jet" />
     
         <div className="safety-box">
-          <div className="shield-icon">🛡</div>
+          <div className="shield-icon"><LuShield/></div>
           <div>
             <h5>Safety First</h5>
             <p>ARGUS Platinum Rated</p>
@@ -442,58 +452,32 @@ export default function PrivateAviation() {
 
 
 {/* ===== FAQ SECTION ===== */}
-<section className="faq-section">
-  <div className="faq-container">
+<section className="srv-faq-section">
+      <h5 className="srv-faq-subtitle">QUESTIONS</h5>
+      <h2 className="srv-faq-title">Frequently Asked</h2>
 
-    <h2 className="faq-title">Frequently Asked Questions</h2>
+      <div className="srv-faq-container">
+        {faqs.map((faq, index) => (
+          <div
+            key={index}
+            className={`srv-faq-item ${activeIndex === index ? "active" : ""}`}
+          >
+            <button className="srv-faq-question" onClick={() => toggleFAQ(index)}>
+              {faq.question}
+              <span className="srv-faq-icon">
+                {activeIndex === index ? <FiChevronUp /> : <FiChevronDown />}
+              </span>
+            </button>
 
-    <div className="faq-box">
-
-      {/* Active Item */}
-      <div className="faq-item active">
-        <div className="faq-question">
-          <span>How far in advance should I book?</span>
-          <span className="arrow">˄</span>
-        </div>
-        <p className="faq-answer">
-          While we can arrange flights within 4–6 hours for on-demand charter,
-          we recommend 48–72 hours notice for optimal aircraft selection.
-          For peak travel periods or specific aircraft requirements, earlier
-          booking is advisable.
-        </p>
+            {activeIndex === index && (
+              <div className="srv-faq-answer">
+                <p>{faq.answer}</p>
+              </div>
+            )}
+          </div>
+        ))}
       </div>
-
-      <div className="faq-item">
-        <div className="faq-question">
-          <span>What is included in the charter price?</span>
-          <span className="arrow">˅</span>
-        </div>
-      </div>
-
-      <div className="faq-item">
-        <div className="faq-question">
-          <span>Can I bring pets on board?</span>
-          <span className="arrow">˅</span>
-        </div>
-      </div>
-
-      <div className="faq-item">
-        <div className="faq-question">
-          <span>What about customs and immigration?</span>
-          <span className="arrow">˅</span>
-        </div>
-      </div>
-
-      <div className="faq-item">
-        <div className="faq-question">
-          <span>Is there a minimum booking requirement?</span>
-          <span className="arrow">˅</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
+    </section>
 
 {/* ===== READY TO TAKE OFF ===== */}
 <section className="cta-section">
@@ -538,3 +522,43 @@ export default function PrivateAviation() {
     </div>
   );
 }
+
+
+
+
+// ~~~~~~~~~~~~FAQ~~~~~~~~~~~~~~
+
+const faqs = [
+  {
+    id: 1,
+    question: "How far in advance should I book?",
+    answer:
+      "While we can arrange flights within 4–6 hours for on-demand charter, we recommend 48–72 hours notice for optimal aircraft selection. For peak travel periods or specific aircraft requirements, earlier booking is advisable.",
+  },
+  {
+    id: 2,
+    question: "What is included in the charter price?",
+    answer:
+      "Our charter price includes all flight crew, fuel surcharges, standard catering, ground handling, and landing fees. Additional services such as premium catering, ground transportation, and in-flight entertainment can be arranged upon request.",
+  },
+  {
+    id: 3,
+    question: "Can I bring pets on board?",
+    answer:
+      "Yes, pets are welcome on board our charter flights. We ask that you inform us in advance so we can make appropriate arrangements to ensure both your comfort and the safety of your furry companions throughout the journey.",
+  },
+  {
+    id: 4,
+    question: "What about customs and immigration?",
+    answer:
+      "We handle all customs and immigration arrangements on your behalf. Our concierge team coordinates with relevant authorities at departure and arrival airports to ensure a seamless, expedited process for all international travel.",
+  },
+  {
+    id: 5,
+    question: "Is there a minimum booking requirement?",
+    answer:
+      "There is no strict minimum booking requirement. Whether you need a short regional hop or a long-haul international journey, we tailor our services to meet your specific travel needs with the same level of luxury and attention to detail.",
+  },
+];
+
+

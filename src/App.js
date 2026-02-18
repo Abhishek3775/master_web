@@ -22,6 +22,7 @@ import PrivateAviation from './pages/ServicePrivantAviation/PrivateAviation';
 import About from './pages/About/About';
 
 
+
 function App() {
   return (
     <Router>
@@ -65,9 +66,6 @@ function App() {
             {/* routes for the  japan */}
             <Route path="/imperial-odyssey" element={<ImperialOdysseyHome/>} />
             <Route path="/about" element={<About/>} />
-
-
-
           </Routes>
         </main>
 
