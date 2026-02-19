@@ -85,6 +85,9 @@ useEffect(() => {
               <Link to="/japan" className="dropdown-link">
                 Japan
               </Link>
+              <Link to="/itinerary" className="dropdown-link">
+                Itinerary
+              </Link>
             </div>
           </div>
 

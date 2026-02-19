@@ -19,6 +19,7 @@ import Services from './pages/serviice/Services';
 import ExpenditionCruising from './pages/ServiceExpendition/ExpenditionCruising';
 import ImperialOdysseyHome from './pages/Japan-Quarter/ImperialOdysseyHome';
 import PrivateAviation from './pages/ServicePrivantAviation/PrivateAviation';
+import Itinerary from './pages/Itinerary/Itinerary';
 import About from './pages/About/About';
 import Calender from './pages/Calender/Calender';
 import MarchCalender from './pages/Calender/MarchCalender';
@@ -67,6 +68,11 @@ function App() {
 
             {/* routes for the  japan */}
             <Route path="/imperial-odyssey" element={<ImperialOdysseyHome/>} />
+
+            {/* routes for the  japan */}
+            <Route path="/itinerary" element={<Itinerary/>} />
+
+            {/* routes for the  japan */}
             <Route path="/about" element={<About/>} />
             <Route path="/calender" element={<Calender/>} />
             <Route path="/calender/march" element={<MarchCalender/>} />
