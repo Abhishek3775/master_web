@@ -19,6 +19,7 @@ import Services from './pages/serviice/Services';
 import ExpenditionCruising from './pages/ServiceExpendition/ExpenditionCruising';
 import ImperialOdysseyHome from './pages/Japan-Quarter/ImperialOdysseyHome';
 import PrivateAviation from './pages/ServicePrivantAviation/PrivateAviation';
+import Itinerary from './pages/Itinerary/Itinerary';
 
 
 
@@ -64,6 +65,9 @@ function App() {
 
             {/* routes for the  japan */}
             <Route path="/imperial-odyssey" element={<ImperialOdysseyHome/>} />
+
+            {/* routes for the  Itinerary */}
+            <Route path="/itinerary" element={<Itinerary/>} />
           </Routes>
         </main>
 
