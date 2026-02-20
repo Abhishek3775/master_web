@@ -21,7 +21,12 @@ import ImperialOdysseyHome from './pages/Japan-Quarter/ImperialOdysseyHome';
 import PrivateAviation from './pages/ServicePrivantAviation/PrivateAviation';
 import Itinerary from './pages/Itinerary/Itinerary';
 import About from './pages/About/About';
+<<<<<<< HEAD
 import Experience from './pages/Experience/Experience';
+=======
+import Calender from './pages/Calender/Calender';
+import MarchCalender from './pages/Calender/MarchCalender';
+>>>>>>> 5bcff50548bf19d8e6e6093cc9cd0d2e0b8c0b9a
 
 
 
@@ -73,10 +78,15 @@ function App() {
 
             {/* routes for the  about */}
             <Route path="/about" element={<About/>} />
+<<<<<<< HEAD
 
             {/* routes for the  about */}
             <Route path="/experience" element={<Experience/>} />
 
+=======
+            <Route path="/calender" element={<Calender/>} />
+            <Route path="/calender/march" element={<MarchCalender/>} />
+>>>>>>> 5bcff50548bf19d8e6e6093cc9cd0d2e0b8c0b9a
           </Routes>
         </main>
 
