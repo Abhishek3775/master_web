@@ -54,6 +54,8 @@
 
 .b-j-icon {
   font-size: 16px;
+  border: 1px solid black;
+  padding: 3px;
   color: #444;
 }
 
