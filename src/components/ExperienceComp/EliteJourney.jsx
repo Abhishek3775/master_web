@@ -1,6 +1,6 @@
 import React from "react";
 import "./EliteJourney.css";
-import { FiPhone, FiMail } from "react-icons/fi";
+import { FiPhone} from "react-icons/fi";
 import { FaRegEnvelope } from "react-icons/fa";
 
 
