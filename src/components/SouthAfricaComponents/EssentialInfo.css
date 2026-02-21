@@ -2,7 +2,6 @@
 .essential-section {
   background-color: #d7d3cc;
   padding: 90px 20px;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
 /* ===== CONTAINER ===== */
@@ -45,8 +44,12 @@
 
 .info-card {
   background-color: #ffffff;
-  padding: 26px;
+  padding: 15px;
   min-height: 120px;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .info-card h4 {
@@ -55,6 +58,7 @@
   letter-spacing: 1.5px;
   color: #C09551;
   margin-bottom: 12px;
+  text-align: left;
 }
 
 .info-card p {
@@ -73,6 +77,7 @@
 .tips-card {
   background-color: #ffffff;
   padding: 26px;
+  /* background-color: red; */
 }
 
 /* ===== TIPS HEADINGS ===== */
@@ -107,6 +112,7 @@
   font-size: 15px;
   color: #333;
   line-height: 1.6;
+  text-align: left;
 }
 
 /* Arrow icon */

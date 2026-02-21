@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
+
 import "swiper/css";
 import "swiper/css/navigation";
 import "./SeasonalSignature.css";
@@ -64,6 +65,7 @@ const SeasonalSignature = () => {
             modules={[Navigation]}
             spaceBetween={30}
             slidesPerView={3}
+            // centeredSlides={true} 
             loop={true}
             navigation={{
               prevEl: prevRef.current,

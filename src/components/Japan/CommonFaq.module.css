@@ -15,7 +15,7 @@
   left: 600px;
   width: 50%;
   height: 50%;
-  background-image: url("../../assets2/Services/background.png");
+  /* background-image: url("../../assets2/Services/background.png"); */
   transform: rotate(90deg) scale(6); /* ✅ Rotate image 90° clockwise */
 
   background-repeat: no-repeat;
