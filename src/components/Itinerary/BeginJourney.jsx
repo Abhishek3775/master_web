@@ -25,14 +25,14 @@ const BeginJourney = () => {
         {/* Contact Row */}
         <div className="b-j-contact-row">
           <div className="b-j-contact-item">
-            <FiPhone className="b-j-icon" />
+            <FiPhone size={25} className="b-j-icon" />
             <span>+44 2074269888</span>
           </div>
 
           <div className="divider"></div>
 
           <div className="b-j-contact-item">
-            <FaRegEnvelope className="b-j-icon" />
+            <FaRegEnvelope size={25} className="b-j-icon" />
             <span>southafrica@eliteconcierge.com</span>
           </div>
         </div>

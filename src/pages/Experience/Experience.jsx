@@ -6,6 +6,7 @@ import SeasonalInspiration from '../../components/ExperienceComp/SeasonalInspira
 import EliteDifference from '../../components/ExperienceComp/EliteDifference'
 import EliteStories from '../../components/ExperienceComp/EliteStories'
 import EliteJourney from '../../components/ExperienceComp/EliteJourney'
+import BrandStrip from '../../components/BrandStrip/BrandStrip'
 
 const Experience = () => {
   return (
@@ -17,6 +18,7 @@ const Experience = () => {
     {<EliteDifference/>}
     {<EliteStories/>}
     {<EliteJourney/>}
+    {<BrandStrip/>}
     </>
   )
 }

@@ -37,7 +37,7 @@
   color: #b88a44;
   font-weight: 600;
   letter-spacing: 2px;
-  font-size: clamp(10px, 1.1vw, 13px);
+  font-size: clamp(21px, 1.1vw, 13px);
   text-transform: uppercase;
 }
 

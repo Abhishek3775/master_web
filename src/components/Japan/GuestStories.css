@@ -7,6 +7,23 @@
   font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
+.gs-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 460px;
+  left: 600px;
+  width: 50%;
+  height: 50%;
+  background-image: url("../../assets2/Services/background.png");
+  transform: rotate(90deg) scale(6); /* ✅ Rotate image 90° clockwise */
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  opacity: 0.1; /* 👈 change this value (0.1–0.5) for desired lightness */
+  z-index: 0;
+}
+
 /* ================= CONTAINER ================= */
 
 .gs-container {

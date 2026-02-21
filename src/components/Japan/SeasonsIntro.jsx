@@ -1,69 +1,68 @@
 import React from "react";
-import "./SeasonsIntro.css";
+import styles from "./SeasonsIntro.module.css";
 
 // import bgLines from "../../assets/linepattern.png";
-import icon1 from "../../assets/icon11.png";
-import icon2 from "../../assets/icon22.png";
-import icon3 from "../../assets/icon33.png";
-import icon4 from "../../assets/icon44.png";
+// import icon1 from "../../assets/icon11.png";
+// import icon2 from "../../assets/icon22.png";
+// import icon3 from "../../assets/icon33.png";
+// import icon4 from "../../assets/icon44.png";
+import background from "../../assets2/Services/background.png"
+import { FaStar, FaUserFriends, FaCalendarAlt, FaMapMarkerAlt } from "react-icons/fa";
 
 const highlights = [
-  {
-    id: 1,
-    icon: icon1,
-    title: "BEST OVERALL",
-    text: "March to May (Spring) & October to November (Autumn)",
-  },
-  {
-    id: 2,
-    icon: icon2,
-    title: "PEAK TOURIST SEASON",
-    text: "Late March to Early April (Cherry Blossom) & November (Autumn Foliage)",
-  },
-  {
-    id: 3,
-    icon: icon3,
-    title: "BUDGET-FRIENDLY",
-    text: "June to August (Summer, excluding Obon) & January to February (Winter)",
-  },
-  {
-    id: 4,
-    icon: icon4,
-    title: "FEWEST CROWDS",
-    text: "January to February & June (Golden Week)",
-  },
-];
+    {
+      icon: <FaStar />,
+      title: "BEST OVERALL",
+      description: "March to May (Spring) & October to November (Autumn)",
+    },
+    {
+      icon: <FaUserFriends />,
+      title: "PEAK TOURIST SEASON",
+      description: "Late March to Early April (Cherry Blossom) & November (Autumn Foliage)",
+    },
+    {
+      icon: <FaCalendarAlt />,
+      title: "BUDGET-FRIENDLY",
+      description: "June to August (Summer, excluding Obon) & January to February (Winter)",
+    },
+    {
+      icon: <FaMapMarkerAlt />,
+      title: "FEWEST CROWDS",
+      description: "January to February & June (Golden Week)",
+    },
+  ];
 
 const SeasonsIntro = () => {
   return (
-    <section className="season-wrapper">
-
-  {/* TOP BOX */}
-  <div className="season-top">
-    {highlights.map((item) => (
-      <div className="season-item" key={item.id}>
-        <img src={item.icon} alt="" />
-        <div>
-          <h4>{item.title}</h4>
-          <p>{item.text}</p>
-        </div>
+    <section className={styles.seasonSection}>
+      {/* <img src={background} className={styles.seasonBG} alt="" /> */}
+      <div className={styles.highlights}>
+        {highlights.map((item, index) => (
+          <div key={index} className={styles.highlightCard}>
+            <div className={styles.icon}>{item.icon}</div>
+            <h4 className={styles.title}>{item.title}</h4>
+            <p className={styles.text}>{item.description}</p>
+          </div>
+        ))}
       </div>
-    ))}
-  </div>
 
-  {/* BOTTOM CONTENT */}
-  <div className="season-bottom">
-    <p className="season-subtitle">UNDERSTANDING JAPAN'S SEASONS</p>
-    <h2>A Land of Eternal Seasons</h2>
-    <p className="season-desc">
-      Japan transforms with breathtaking drama throughout the year...
-    </p>
-    <p className="season-quote">
-      "The best time to visit Japan depends not on when, but on what moves your soul."
-    </p>
-  </div>
+      <div className={styles.content}>
+        <h4 className={styles.subtitle}>UNDERSTANDING JAPAN'S SEASONS</h4>
+        <h2 className={styles.mainTitle}>A Land of Eternal Seasons</h2>
+        <p className={styles.description}>
+          Japan transforms with breathtaking drama throughout the year, each season unveiling new
+          wonders. From the ethereal beauty of cherry blossoms painting the land in soft pink to
+          fiery autumn maples framing ancient temples, from snow-draped villages that seem frozen in
+          time to vibrant summer festivals that ignite the night—every moment in Japan offers
+          something extraordinary. Understanding these seasonal rhythms is the key to crafting your
+          perfect journey.
+        </p>
 
-</section>
+        <p className={styles.quote}>
+          “The best time to visit Japan depends not on when, but on what moves your soul.”
+        </p>
+      </div>
+    </section>
 
   );
 };

@@ -41,7 +41,7 @@
 .elite-diff-subtitle {
   color: #c89c5d;
   font-weight: 600;
-  font-size: clamp(11px, 1.2vw, 14px);
+  font-size: clamp(21px, 1.2vw, 14px);
   letter-spacing: 1.5px;
   text-transform: uppercase;
   margin: 0 0 8px;

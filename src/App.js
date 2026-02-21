@@ -80,7 +80,7 @@ function App() {
             <Route path="/about" element={<About/>} />
 
             {/* routes for the  about */}
-            <Route path="/experience" element={<Experience/>} />
+            <Route path="/experiences" element={<Experience/>} />
 
 
             <Route path="/calender" element={<Calender/>} />

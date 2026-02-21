@@ -1,5 +1,5 @@
 .packing-section {
-  background: #f2f2f2;
+  background: #fff;
   padding: 80px 20px;
   font-family: 'Helvetica Neue', Arial, sans-serif;
 }
@@ -65,7 +65,7 @@
 /* ===== PACKING BOX ===== */
 
 .packing-box {
-  background: #dcd9d4;
+  background: #F5F4EE;
   padding: 50px 40px;
   margin-top: 40px;
 }

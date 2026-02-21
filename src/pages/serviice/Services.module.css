@@ -1,5 +1,5 @@
 /* =====================================================
-   Services.css
+   Services.module.css
    Desktop : CSS Grid 2-col, images connect seamlessly
    Mobile  : Each pair stacks — image top, content bottom
    ===================================================== */
@@ -8,7 +8,7 @@
   margin: 0; padding: 0; box-sizing: border-box;
 }
 
-.services-page {
+.servicesPage {
   width: 100%;
   overflow-x: hidden;
   background: #fff;
@@ -17,7 +17,7 @@
 /* =====================================================
    HERO
    ===================================================== */
-.services-hero-section {
+.servicesHeroSection {
   background-image: url("../../assets2/Services/image 1.jpg");
   background-size: cover;
   background-position: center;
@@ -30,7 +30,7 @@
   justify-content: center;
 }
 
-.services-hero-overlay {
+.servicesHeroOverlay {
   position: absolute;
   inset: 0;
   background: rgba(0,0,0,0.52);
@@ -42,7 +42,7 @@
   text-align: center;
 }
 
-.services-hero-subtitle {
+.servicesHeroSubtitle {
   color: #d1a650;
   font-size: 14px;
   letter-spacing: 3px;
@@ -51,20 +51,20 @@
   text-transform: uppercase;
 }
 
-.services-hero-title {
+.servicesHeroTitle {
   font-size: 72px;
   font-weight: 700;
   line-height: 1.1;
   margin-bottom: 16px;
 }
 
-.services-hero-tagline {
+.servicesHeroTagline {
   color: #d1a650;
   font-size: 18px;
   margin-bottom: 20px;
 }
 
-.services-hero-desc {
+.servicesHeroDesc {
   font-size: 16px;
   line-height: 1.7;
   color: rgba(255,255,255,0.88);
@@ -72,7 +72,7 @@
   margin-bottom: 32px;
 }
 
-.hero-btn {
+.heroBtn {
   background: transparent;
   color: #fff;
   border: 1px solid rgba(255,255,255,0.6);
@@ -83,14 +83,15 @@
   letter-spacing: 2px;
   transition: 0.3s;
 }
-.hero-btn:hover { background: rgba(255,255,255,0.15); }
+.heroBtn:hover { background: rgba(255,255,255,0.15); }
 
-.s-arrow {
+.sArrow {
   margin-top: 24px;
   font-size: 24px;
   color: rgba(255,255,255,0.7);
   animation: bounce 1.6s infinite;
 }
+
 @keyframes bounce {
   0%, 100% { transform: translateY(0); }
   50%       { transform: translateY(6px); }
@@ -99,18 +100,18 @@
 /* =====================================================
    PILLARS
    ===================================================== */
-.pillars-section {
+.pillarsSection {
   background: #f5f4ef;
   text-align: center;
   padding: 72px 24px;
 }
-.pillars-section h2 {
+.pillarsSection h2 {
   font-size: 30px;
   font-weight: 600;
   color: #111;
   margin-bottom: 16px;
 }
-.pillars-section p {
+.pillarsSection p {
   color: #555;
   font-size: 15px;
   max-width: 660px;
@@ -119,23 +120,14 @@
 }
 
 /* =====================================================
-   SERVICES GRID — DESKTOP LAYOUT
-   
-   .services-grid  → CSS Grid container (2 columns)
-   .sp             → each service pair — fills one FULL row
-   .sp-img-left    → [image | content]  on desktop
-   .sp-img-right   → [content | image]  on desktop
-                     (image still on top on mobile)
+   SERVICES GRID
    ===================================================== */
-
-/* Grid container: 9 pairs stacked, no gap */
-.services-grid {
+.servicesGrid {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-/* Each pair = one full-width row, 2 equal columns */
 .sp {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -145,15 +137,15 @@
 }
 
 /* image LEFT, content RIGHT */
-.sp-img-left  .sg-image   { grid-column: 1; grid-row: 1; }
-.sp-img-left  .sg-content { grid-column: 2; grid-row: 1; }
+.spImgLeft  .sgImage   { grid-column: 1; grid-row: 1; }
+.spImgLeft  .sgContent { grid-column: 2; grid-row: 1; }
 
-/* image RIGHT, content LEFT — swap columns */
-.sp-img-right .sg-image   { grid-column: 2; grid-row: 1; }
-.sp-img-right .sg-content { grid-column: 1; grid-row: 1; }
+/* image RIGHT, content LEFT */
+.spImgRight .sgImage   { grid-column: 2; grid-row: 1; }
+.spImgRight .sgContent { grid-column: 1; grid-row: 1; }
 
 /* ── Image cell ─────────────────────────────────────── */
-.sg-image {
+.sgImage {
   width: 100%;
   height: 100%;
   background-size: cover;
@@ -161,18 +153,18 @@
   background-repeat: no-repeat;
 }
 
-.page-1  { background-image: url("../../assets2/Services/2.png");  }
-.page-2  { background-image: url("../../assets2/Services/3.jpg");  }
-.page-3  { background-image: url("../../assets2/Services/4.jpg");  }
-.page-4  { background-image: url("../../assets2/Services/5.jpg");  }
-.page-5  { background-image: url("../../assets2/Services/6.jpg");  }
-.page-6  { background-image: url("../../assets2/Services/7.jpg");  }
-.page-7  { background-image: url("../../assets2/Services/8.jpg");  }
-.page-8  { background-image: url("../../assets2/Services/9.jpg");  }
-.page-9  { background-image: url("../../assets2/Services/10.jpg"); }
+.page1  { background-image: url("../../assets2/Services/2.png");  }
+.page2  { background-image: url("../../assets2/Services/3.jpg");  }
+.page3  { background-image: url("../../assets2/Services/4.jpg");  }
+.page4  { background-image: url("../../assets2/Services/5.jpg");  }
+.page5  { background-image: url("../../assets2/Services/6.jpg");  }
+.page6  { background-image: url("../../assets2/Services/7.jpg");  }
+.page7  { background-image: url("../../assets2/Services/8.jpg");  }
+.page8  { background-image: url("../../assets2/Services/9.jpg");  }
+.page9  { background-image: url("../../assets2/Services/10.jpg"); }
 
 /* ── Content cell ───────────────────────────────────── */
-.sg-content {
+.sgContent {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -185,16 +177,16 @@
 /* =====================================================
    SHARED TEXT STYLES
    ===================================================== */
-.service-subtitle {
+.serviceSubtitle {
   color: #b58a2f;
-  font-size: 11px;
+  font-size: 21px;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-bottom: 12px;
 }
 
-.service-title {
+.serviceTitle {
   font-size: 32px;
   font-weight: 700;
   color: #111;
@@ -202,14 +194,14 @@
   line-height: 1.2;
 }
 
-.service-desc {
+.serviceDesc {
   color: #444;
   font-size: 14.5px;
   line-height: 1.75;
   margin-bottom: 22px;
 }
 
-.service-list {
+.serviceList {
   list-style: none;
   font-size: 14px;
   color: #222;
@@ -217,13 +209,13 @@
   margin-bottom: 28px;
 }
 
-.service-list li::before {
+.serviceList li::before {
   content: "• ";
   color: #b58a2f;
   font-weight: bold;
 }
 
-.view-btn {
+.viewBtn {
   align-self: flex-start;
   background: #b58a2f;
   color: #fff;
@@ -239,39 +231,39 @@
   align-items: center;
   gap: 8px;
 }
-.view-btn:hover { background: #d1a650; color: #111; }
+.viewBtn:hover { background: #d1a650; color: #111; }
 
 /* =====================================================
    STATS
    ===================================================== */
-.stats-section {
+.statsSection {
   background-color: #f8f7f3;
   text-align: center;
   padding: 80px 24px;
 }
 
-.stats-top {
+.statsTop {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 60px 80px;
   margin-bottom: 72px;
 }
-.stats-top > div { min-width: 120px; }
-.stats-top h3 {
+.statsTop > div { min-width: 120px; }
+.statsTop h3 {
   color: #b58a2f;
   font-size: 34px;
   font-weight: 700;
   margin-bottom: 6px;
 }
-.stats-top p {
+.statsTop p {
   font-size: 12px;
   letter-spacing: 1.5px;
   color: #555;
   text-transform: uppercase;
 }
 
-.stats-icons {
+.statsIcons {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -294,14 +286,15 @@
   background: #f8f7f3;
 }
 
-.icon-card { width: 260px; text-align: center; }
-.icon-card h4 { font-size: 17px; font-weight: 600; color: #111; margin-bottom: 10px; }
-.icon-card p  { font-size: 14px; color: #555; line-height: 1.65; }
+.iconCard { width: 260px; text-align: center; }
+.iconCard h4 { font-size: 17px; font-weight: 600; color: #111; margin-bottom: 10px; }
+.iconCard p  { font-size: 14px; color: #555; line-height: 1.65; }
 
 .testimonial {
   background: #f5f4ef;
   padding: 56px 24px;
   border-radius: 8px;
+  /* text-align: center; */
 }
 .stars { display: flex; justify-content: center; gap: 6px; margin-bottom: 20px; }
 .star  { color: #b58a2f; font-size: 18px; }
@@ -313,39 +306,39 @@
   margin: 0 auto 22px;
   line-height: 1.8;
 }
-.author { font-size: 14px; color: #222; line-height: 1.6; }
+.author { font-size: 14px; color: #222; line-height: 1.6; text-align: center; }
 
 /* =====================================================
    JOURNEY
    ===================================================== */
-.journey-section {
+.journeySection {
   background: #f9f8f6;
   text-align: center;
   padding: 60px 24px 0;
 }
-.journey-subtitle {
+.journeySubtitle {
   color: #b58a2f;
   letter-spacing: 2px;
-  font-size: 13px;
+  font-size: 21px;
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 12px;
 }
-.journey-title {
+.journeyTitle {
   font-size: 40px;
   color: #111;
   font-weight: 700;
   margin-bottom: 18px;
   line-height: 1.2;
 }
-.journey-text {
+.journeyText {
   color: #444;
   font-size: 15px;
   max-width: 580px;
   margin: 0 auto 48px;
   line-height: 1.75;
 }
-.journey-contact {
+.journeyContact {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -353,21 +346,20 @@
   flex-wrap: wrap;
   margin-bottom: 36px;
 }
-.contact-item {
+.contactItem {
   display: flex;
   align-items: center;
   gap: 10px;
   color: #111;
   font-size: 15px;
 }
-.contact-icon {
+.contactIcon {
   border: 1px solid #111;
   border-radius: 4px;
   padding: 6px;
   background: #fff;
-  color: #111;
 }
-.journey-btn {
+.journeyBtn {
   background: #b58a2f;
   color: #fff;
   border: none;
@@ -379,7 +371,7 @@
   margin-bottom: 60px;
   transition: background 0.25s;
 }
-.journey-btn:hover { background: #d1a650; color: #111; }
+.journeyBtn:hover { background: #d1a650; color: #111; }
 
 .partners {
   display: flex;
@@ -395,39 +387,28 @@
 }
 
 /* =====================================================
-   RESPONSIVE — Laptop  (≤ 1024px)
+   RESPONSIVE — Laptop (≤ 1024px)
    ===================================================== */
 @media (max-width: 1024px) {
-  .services-hero-title { font-size: 54px; }
-
-  .sp                  { grid-template-rows: 460px; }
-  .sg-content          { padding: 44px 44px; }
-  .service-title       { font-size: 26px; }
-  .service-desc        { font-size: 14px; }
-
-  .stats-top           { gap: 40px 60px; }
-  .journey-title       { font-size: 34px; }
+  .servicesHeroTitle { font-size: 54px; }
+  .sp                { grid-template-rows: 460px; }
+  .sgContent         { padding: 44px 44px; }
+  .serviceTitle      { font-size: 26px; }
+  .serviceDesc       { font-size: 14px; }
+  .statsTop          { gap: 40px 60px; }
+  .journeyTitle      { font-size: 34px; }
 }
 
 /* =====================================================
-   RESPONSIVE — Tablet & Mobile  (≤ 768px)
-
-   KEY FIX:
-   Each .sp becomes flex-column.
-   sg-image always gets order:0 (top)
-   sg-content always gets order:1 (bottom)
-   → No matter if it's sp-img-left or sp-img-right,
-     image is ALWAYS on top on mobile. ✅
+   RESPONSIVE — Tablet & Mobile (≤ 768px)
    ===================================================== */
 @media (max-width: 768px) {
+  .servicesHeroTitle   { font-size: 42px; }
+  .servicesHeroTagline { font-size: 15px; }
+  .servicesHeroDesc    { font-size: 14px; }
+  .pillarsSection      { padding: 48px 20px; }
+  .pillarsSection h2   { font-size: 22px; }
 
-  .services-hero-title   { font-size: 42px; }
-  .services-hero-tagline { font-size: 15px; }
-  .services-hero-desc    { font-size: 14px; }
-  .pillars-section       { padding: 48px 20px; }
-  .pillars-section h2    { font-size: 22px; }
-
-  /* Each pair → vertical stack */
   .sp {
     display: flex;
     flex-direction: column;
@@ -435,8 +416,7 @@
     grid-template-rows: unset;
   }
 
-  /* Image ALWAYS on top — reset grid placement */
-  .sg-image {
+  .sgImage {
     order: 0;
     width: 100%;
     height: 280px;
@@ -445,8 +425,7 @@
     grid-row: unset;
   }
 
-  /* Content ALWAYS below */
-  .sg-content {
+  .sgContent {
     order: 1;
     height: auto;
     overflow-y: visible;
@@ -455,87 +434,87 @@
     grid-row: unset;
   }
 
-  .service-title { font-size: 22px; }
-  .service-desc  { font-size: 14px; }
-  .service-list  { font-size: 14px; }
+  .serviceTitle { font-size: 22px; }
+  .serviceDesc  { font-size: 14px; }
+  .serviceList  { font-size: 14px; }
 
-  .stats-top   { gap: 28px 40px; }
-  .stats-top h3{ font-size: 28px; }
-  .stats-icons { flex-direction: column; align-items: center; gap: 36px; }
-  .icon        { margin: 0 auto 12px; }
+  .statsTop   { gap: 28px 40px; }
+  .statsTop h3{ font-size: 28px; }
+  .statsIcons { flex-direction: column; align-items: center; gap: 36px; }
+  .icon       { margin: 0 auto 12px; }
 
-  .journey-title   { font-size: 28px; }
-  .journey-contact { gap: 18px; margin-bottom: 28px; }
-  .partners        { gap: 32px; }
-  .partners img    { width: 65px; }
+  .journeyTitle   { font-size: 28px; }
+  .journeyContact { gap: 18px; margin-bottom: 28px; }
+  .partners       { gap: 32px; }
+  .partners img   { width: 65px; }
 }
 
 /* =====================================================
-   RESPONSIVE — Mobile L  (≤ 480px)
+   RESPONSIVE — Mobile L (≤ 480px)
    ===================================================== */
 @media (max-width: 480px) {
-  .services-hero-section { height: 70vh; min-height: 420px; }
-  .services-hero-title   { font-size: 32px; }
-  .services-hero-subtitle{ font-size: 11px; }
-  .services-hero-tagline { font-size: 13px; }
-  .services-hero-desc    { font-size: 13px; }
+  .servicesHeroSection  { height: 70vh; min-height: 420px; }
+  .servicesHeroTitle    { font-size: 32px; }
+  .servicesHeroSubtitle { font-size: 11px; }
+  .servicesHeroTagline  { font-size: 13px; }
+  .servicesHeroDesc     { font-size: 13px; }
 
-  .pillars-section    { padding: 36px 16px; }
-  .pillars-section h2 { font-size: 19px; }
-  .pillars-section p  { font-size: 13.5px; }
+  .pillarsSection    { padding: 36px 16px; }
+  .pillarsSection h2 { font-size: 19px; }
+  .pillarsSection p  { font-size: 13.5px; }
 
-  .sg-image   { height: 240px; min-height: 240px; }
-  .sg-content { padding: 28px 18px; }
+  .sgImage   { height: 240px; min-height: 240px; }
+  .sgContent { padding: 28px 18px; }
 
-  .service-subtitle { font-size: 10px; }
-  .service-title    { font-size: 20px; margin-bottom: 10px; }
-  .service-desc     { font-size: 13.5px; margin-bottom: 16px; }
-  .service-list     { font-size: 13px; margin-bottom: 18px; }
-  .view-btn         { padding: 9px 18px; font-size: 12px; }
+  .serviceSubtitle { font-size: 10px; }
+  .serviceTitle    { font-size: 20px; margin-bottom: 10px; }
+  .serviceDesc     { font-size: 13.5px; margin-bottom: 16px; }
+  .serviceList     { font-size: 13px; margin-bottom: 18px; }
+  .viewBtn         { padding: 9px 18px; font-size: 12px; }
 
-  .stats-section { padding: 48px 16px; }
-  .stats-top     { gap: 18px 28px; }
-  .stats-top h3  { font-size: 24px; }
-  .stats-top p   { font-size: 11px; }
-  .stats-icons   { padding: 32px 16px; }
-  .icon-card     { width: 100%; max-width: 280px; }
-  .testimonial   { padding: 36px 16px; }
-  .quote         { font-size: 13.5px; }
+  .statsSection { padding: 48px 16px; }
+  .statsTop     { gap: 18px 28px; }
+  .statsTop h3  { font-size: 24px; }
+  .statsTop p   { font-size: 11px; }
+  .statsIcons   { padding: 32px 16px; }
+  .iconCard     { width: 100%; max-width: 280px; }
+  .testimonial  { padding: 36px 16px; }
+  .quote        { font-size: 13.5px; }
 
-  .journey-section  { padding: 36px 16px 0; }
-  .journey-title    { font-size: 24px; }
-  .journey-text     { font-size: 13.5px; margin-bottom: 28px; }
-  .contact-item     { font-size: 13px; }
-  .journey-btn      { padding: 10px 24px; font-size: 13px; margin-bottom: 44px; }
-  .partners img     { width: 54px; }
+  .journeySection  { padding: 36px 16px 0; }
+  .journeyTitle    { font-size: 24px; }
+  .journeyText     { font-size: 13.5px; margin-bottom: 28px; }
+  .contactItem     { font-size: 13px; }
+  .journeyBtn      { padding: 10px 24px; font-size: 13px; margin-bottom: 44px; }
+  .partners img    { width: 54px; }
 }
 
 /* =====================================================
-   RESPONSIVE — Mobile M  (≤ 390px)
+   RESPONSIVE — Mobile M (≤ 390px)
    ===================================================== */
 @media (max-width: 390px) {
-  .services-hero-title { font-size: 26px; }
-  .sg-image   { height: 210px; min-height: 210px; }
-  .sg-content { padding: 24px 16px; }
-  .service-title { font-size: 18px; }
-  .service-desc  { font-size: 13px; }
-  .stats-top h3  { font-size: 22px; }
-  .journey-title { font-size: 22px; }
-  .partners img  { width: 46px; }
+  .servicesHeroTitle { font-size: 26px; }
+  .sgImage   { height: 210px; min-height: 210px; }
+  .sgContent { padding: 24px 16px; }
+  .serviceTitle { font-size: 18px; }
+  .serviceDesc  { font-size: 13px; }
+  .statsTop h3  { font-size: 22px; }
+  .journeyTitle { font-size: 22px; }
+  .partners img { width: 46px; }
 }
 
 /* =====================================================
-   RESPONSIVE — Mobile S  (≤ 320px)
+   RESPONSIVE — Mobile S (≤ 320px)
    ===================================================== */
 @media (max-width: 320px) {
-  .services-hero-section { height: 65vh; min-height: 360px; }
-  .services-hero-title   { font-size: 22px; }
-  .sg-image   { height: 190px; min-height: 190px; }
-  .sg-content { padding: 20px 14px; }
-  .service-title { font-size: 17px; }
-  .service-desc  { font-size: 12.5px; }
-  .view-btn      { font-size: 11px; padding: 8px 14px; }
-  .stats-top h3  { font-size: 20px; }
-  .journey-title { font-size: 20px; }
-  .partners img  { width: 42px; }
+  .servicesHeroSection { height: 65vh; min-height: 360px; }
+  .servicesHeroTitle   { font-size: 22px; }
+  .sgImage   { height: 190px; min-height: 190px; }
+  .sgContent { padding: 20px 14px; }
+  .serviceTitle { font-size: 17px; }
+  .serviceDesc  { font-size: 12.5px; }
+  .viewBtn      { font-size: 11px; padding: 8px 14px; }
+  .statsTop h3  { font-size: 20px; }
+  .journeyTitle { font-size: 20px; }
+  .partners img { width: 42px; }
 }

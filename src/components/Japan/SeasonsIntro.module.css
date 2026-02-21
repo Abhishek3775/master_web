@@ -1,0 +1,117 @@
+.seasonSection {
+  background-color: #f9f8f5;
+  font-family: "Poppins", sans-serif;
+  color: #222;
+}
+
+.highlights {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+  background-color: #f0ede9;
+  padding: 40px 20px;
+  gap: 20px;
+}
+
+.highlightCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  color: #b48a36;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.text {
+  font-size: 13px;
+  color: #444;
+  line-height: 1.5;
+}
+
+.content {
+  position: relative;
+  padding: 80px 20px;
+  text-align: center;
+  overflow: hidden; /* hide rotated edges */
+}
+
+.content::before {
+  content: "";
+  position: absolute;
+  top: 90px;
+  left: 800px;
+  width: 900px;
+  height: 900px;
+  background-image: url("../../assets2/Services/background.png");
+  background-repeat: no-repeat;
+  background-size: contain; /* makes it full screen */
+  background-position: center center;
+  transform: rotate(90deg) scale(3); /* optional – only if you want vertical rotation */
+
+  opacity: 0.05; /* makes text readable */
+  z-index: 1; /* keeps it behind text */
+}
+
+.subtitle {
+  color: #b48a36;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+  font-size: clamp(21px, 1vw, 14px);
+}
+
+.mainTitle {
+  font-size: clamp(24px, 2.2vw, 36px);
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: clamp(14px, 1.1vw, 16px);
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto 30px;
+  text-align: center;
+  line-height: 1.8;
+}
+
+.quote {
+  font-weight: 600;
+  font-style: italic;
+  color: #222;
+  text-align: center;
+  font-size: clamp(14px, 1vw, 16px);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .highlights {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .content {
+    padding: 60px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .highlights {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .mainTitle {
+    font-size: 26px;
+  }
+}

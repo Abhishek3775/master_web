@@ -16,6 +16,8 @@
 .pj-subtitle {
   color: #c79b52;
   font-weight: 600;
+  font-size: 21px;
+  text-align: center;
   font-size: clamp(14px, 2vw, 18px);
   letter-spacing: 1px;
 }
@@ -28,6 +30,7 @@
 .pj-desc {
   color: #666;
   font-size: clamp(13px, 2vw, 15px);
+  text-align: center;
 }
 
 /* ================= GRID ================= */
@@ -130,7 +133,7 @@
 }
 
 .pj-tags span {
-  background: rgba(199,155,82,0.2);
+  background: rgba(221, 159, 58, 0.529);
   color: #fff;
   font-size: 10px;
   padding: 4px 8px;

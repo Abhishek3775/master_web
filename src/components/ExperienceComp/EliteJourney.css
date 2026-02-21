@@ -36,7 +36,7 @@
 .elite-journey-title {
   font-size: clamp(30px, 5vw, 54px);
   font-weight: 400;
-  font-family: "Playfair Display", "Georgia", serif;  /* serif — matches screenshot */
+  /* font-family: "Playfair Display", "Georgia", serif;  serif — matches screenshot */
   margin: 0 0 20px;
   color: #1a1a1a;
   line-height: 1.15;
@@ -46,6 +46,7 @@
   font-size: clamp(13px, 1.4vw, 15px);
   color: #666;
   line-height: 1.75;
+  text-align: center;
   max-width: 620px;
   margin: 0 auto 44px;
 }
