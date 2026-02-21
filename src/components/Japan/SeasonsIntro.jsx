@@ -1,25 +1,29 @@
 import React from "react";
 import styles from "./SeasonsIntro.module.css";
-import { FaStar, FaUserFriends, FaCalendarAlt, FaMapMarkerAlt } from "react-icons/fa";
+
+import star from "../../assets/star.png";
+import people2 from "../../assets/people2.png";
+import location from "../../assets/location.png";
+import calendar from "../../assets/calender.png";
 
 const highlights = [
   {
-    icon: <FaStar />,
+    icon: star,
     title: "BEST OVERALL",
     description: "March to May (Spring) & October to November (Autumn)",
   },
   {
-    icon: <FaUserFriends />,
+    icon: people2,
     title: "PEAK TOURIST SEASON",
     description: "Late March to Early April (Cherry Blossom) & November (Autumn Foliage)",
   },
   {
-    icon: <FaCalendarAlt />,
+    icon: calendar,
     title: "BUDGET-FRIENDLY",
     description: "June to August (Summer, excluding Obon) & January to February (Winter)",
   },
   {
-    icon: <FaMapMarkerAlt />,
+    icon: location,
     title: "FEWEST CROWDS",
     description: "January to February & June (Golden Week)",
   },
@@ -33,7 +37,7 @@ const SeasonsIntro = () => {
       <div className={styles.highlights}>
         {highlights.map((item, index) => (
           <div key={index} className={styles.highlightCard}>
-            <div className={styles.icon}>{item.icon}</div>
+            <img src={item.icon} alt={item.title}  style={{height:'15px',width:'15px'}} />
             <h4 className={styles.title}>{item.title}</h4>
             <p className={styles.text}>{item.description}</p>
           </div>
