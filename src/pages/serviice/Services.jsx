@@ -4,7 +4,7 @@ import { CiGlobe } from "react-icons/ci";
 import { LuShield } from "react-icons/lu";
 import { FiClock } from "react-icons/fi";
 import { FaStar } from "react-icons/fa";
-import { FaPhoneAlt } from "react-icons/fa";
+import {FiPhone } from "react-icons/fi";
 import { FaRegEnvelope } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import BrandStrip from "../../components/BrandStrip/BrandStrip";
@@ -294,11 +294,11 @@ export default function Services() {
         </p>
         <div className={styles.journeyContact}>
           <div className={styles.contactItem}>
-            <FaPhoneAlt size={25} className={styles.contactIcon} />
+            <FiPhone size={20} className={styles.contacIcon} />
             <span>+44 207 426 8988</span>
           </div>
           <div className={styles.contactItem}>
-            <FaRegEnvelope size={25} className={styles.contactIcon} />
+            <FaRegEnvelope size={20} className={styles.contacIcon} />
             <span>southafrica@eliteconcierge.com</span>
           </div>
         </div>

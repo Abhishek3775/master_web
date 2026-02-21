@@ -8,6 +8,9 @@
   margin: 0; padding: 0; box-sizing: border-box;
 }
 
+
+
+
 .servicesPage {
   width: 100%;
   overflow-x: hidden;
@@ -171,7 +174,7 @@
   padding: 56px 64px;
   background: #fff;
   height: 100%;
-  overflow-y: auto;
+  overflow-y: visible;
 }
 
 /* =====================================================
@@ -312,7 +315,7 @@
    JOURNEY
    ===================================================== */
 .journeySection {
-  background: #f9f8f6;
+  background: #fff;
   text-align: center;
   padding: 60px 24px 0;
 }
@@ -361,7 +364,7 @@
   background: #fff;
 }
 .journeyBtn {
-  background: #b58a2f;
+  background: #C09551;
   color: #fff;
   border: none;
   padding: 13px 36px;
