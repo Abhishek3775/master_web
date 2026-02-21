@@ -1,7 +1,6 @@
 import React from "react";
-import "./SeasonsIntro.css";
+import styles from "./SeasonsIntro.module.css";
 
-// import bgLines from "../../assets/linepattern.png";
 import icon1 from "../../assets/icon11.png";
 import icon2 from "../../assets/icon22.png";
 import icon3 from "../../assets/icon33.png";
@@ -36,35 +35,45 @@ const highlights = [
 
 const SeasonsIntro = () => {
   return (
-    <section className="season-wrapper">
-
-  {/* TOP BOX */}
-  <div className="season-top">
-    {highlights.map((item) => (
-      <div className="season-item" key={item.id}>
-        <img src={item.icon} alt="" />
-        <div>
-          <h4>{item.title}</h4>
-          <p>{item.text}</p>
-        </div>
+    <section className={styles.wrapper}>
+      
+      {/* TOP INFO GRID */}
+      <div className={styles.topGrid}>
+        {highlights.map((item) => (
+          <div key={item.id} className={styles.item}>
+            <img src={item.icon} alt="" />
+            <div>
+              <h4>{item.title}</h4>
+              <p>{item.text}</p>
+            </div>
+          </div>
+        ))}
       </div>
-    ))}
-  </div>
 
-  {/* BOTTOM CONTENT */}
-  <div className="season-bottom">
-    <p className="season-subtitle">UNDERSTANDING JAPAN'S SEASONS</p>
-    <h2>A Land of Eternal Seasons</h2>
-    <p className="season-desc">
-      Japan transforms with breathtaking drama throughout the year...
-    </p>
-    <p className="season-quote">
-      "The best time to visit Japan depends not on when, but on what moves your soul."
-    </p>
-  </div>
+      {/* BOTTOM CONTENT */}
+      <div className={styles.bottomSection}>
+        <p className={styles.subtitle}>
+          UNDERSTANDING JAPAN'S SEASONS
+        </p>
 
-</section>
+        <h2 className={styles.heading}>
+          A Land of Eternal Seasons
+        </h2>
 
+        <p className={styles.description}>
+          Japan transforms with breathtaking drama throughout the year, each season unveiling new wonders.
+          From the ethereal beauty of cherry blossoms painting the land in soft pink to fiery autumn
+          maples framing ancient temples, from snow-draped villages that seem frozen in time to vibrant
+          summer festivals that ignite the night—every moment in Japan offers something extraordinary.
+          Understanding these seasonal rhythms is the key to crafting your perfect journey.
+        </p>
+
+        <p className={styles.quote}>
+          "The best time to visit Japan depends not on when, but on what moves your soul."
+        </p>
+      </div>
+
+    </section>
   );
 };
 

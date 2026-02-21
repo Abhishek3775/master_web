@@ -7,6 +7,8 @@ import ClimateRegion from '../../components/Japan/ClimateRegion'
 import PlanActivities from '../../components/Japan/PlanActivities'
 import SeasonalSignature from '../../components/Japan/SeasonalSignature'
 import PackingEssentials from '../../components/Japan/PackingEssentials'
+import BrandStrip from '../../components/BrandStrip/BrandStrip'
+import PlanJourney from '../../components/Japan/PlanJourney'
 
 function JapanGuide() {
   return (
@@ -19,6 +21,8 @@ function JapanGuide() {
     {<PlanActivities/>}
     {<SeasonalSignature/>}
     {<PackingEssentials/>}
+    {<PlanJourney/>}
+    {<BrandStrip/>}
     </>
   )
 }

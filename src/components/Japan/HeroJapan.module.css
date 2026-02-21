@@ -1,6 +1,6 @@
 /* ================= HERO SECTION ================= */
 
-.hero-section {
+.heroSection {
   position: relative;
   height: 85vh;
   min-height: 700px;
@@ -8,17 +8,17 @@
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 0 100px;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: end;
+  padding: 0 100px 30px;
   color: #ffffff;
-  font-family: "Helvetica Neue", Arial, sans-serif;
   overflow: hidden;
 }
 
 /* ================= DARK OVERLAY ================= */
 
-.hero-overlay {
+.heroOverlay {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.55);
@@ -27,18 +27,16 @@
 
 /* ================= CONTENT ================= */
 
-.hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 900px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    justify-content: flex-end;
-    
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  /* background-color: red; */
 }
 
-.hero-subtitle {
+.heroSubtitle {
   font-size: 14px;
   letter-spacing: 4px;
   color: #C09551;
@@ -48,34 +46,31 @@
   text-align: left;
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 10px;
 }
 
-#line{
+.line {
   height: 4px;
   width: 100px;
   background-color: #C09551;
 }
 
-.hero-content h1 {
+.heroContent h1 {
   font-size: 78px;
   font-weight: 300;
   line-height: 1.05;
   margin-bottom: 28px;
 }
 
-.hero-desc {
+.heroDesc {
   font-size: 14px;
   opacity: 0.85;
   text-align: left;
-  min-width: 100%;
 }
-
-
 
 /* ================= RIGHT ICONS ================= */
 
-.hero-icons {
+.heroIcons {
   position: absolute;
   right: 60px;
   top: 50%;
@@ -86,7 +81,7 @@
   z-index: 2;
 }
 
-.hero-icons img {
+.heroIcons img {
   width: 42px;
   height: 42px;
   opacity: 0.85;
@@ -94,7 +89,7 @@
   transition: all 0.3s ease;
 }
 
-.hero-icons img:hover {
+.heroIcons img:hover {
   opacity: 1;
   transform: scale(1.15);
 }
@@ -102,55 +97,55 @@
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 1200px) {
-  .hero-content h1 {
+  .heroContent h1 {
     font-size: 64px;
   }
 }
 
 @media (max-width: 992px) {
-  .hero-section {
+  .heroSection {
     padding: 0 60px;
   }
 
-  .hero-content h1 {
+  .heroContent h1 {
     font-size: 48px;
   }
 
-  .hero-icons {
+  .heroIcons {
     right: 30px;
   }
 }
 
 @media (max-width: 768px) {
-  .hero-section {
+  .heroSection {
     height: 85vh;
     padding: 0 30px;
   }
 
-  .hero-content h1 {
+  .heroContent h1 {
     font-size: 36px;
   }
 
-  .hero-desc {
+  .heroDesc {
     font-size: 14px;
   }
 
-  .hero-icons img {
+  .heroIcons img {
     width: 30px;
     height: 30px;
   }
 }
 
 @media (max-width: 480px) {
-  .hero-section {
+  .heroSection {
     height: 75vh;
   }
 
-  .hero-content h1 {
+  .heroContent h1 {
     font-size: 28px;
   }
 
-  .hero-icons {
+  .heroIcons {
     display: none;
   }
 }
