@@ -1,210 +1,89 @@
-<<<<<<< HEAD
 .seasonSection {
-  background-color: #f9f8f5;
+  background-color: #F5F4EF;
   font-family: "Poppins", sans-serif;
   color: #222;
 }
+
+/* ================= TOP HIGHLIGHTS ================= */
 
 .highlights {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   text-align: center;
-  background-color: #f0ede9;
-  padding: 40px 20px;
-  gap: 20px;
+  padding: 50px 80px;
+  gap: 40px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .highlightCard {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 .icon {
-  color: #b48a36;
+  color: #C09551;
   font-size: 22px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .title {
   font-weight: 600;
-  font-size: 14px;
+  font-size: 12px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   margin-bottom: 6px;
 }
 
 .text {
   font-size: 13px;
-  color: #444;
-  line-height: 1.5;
-}
-
-.content {
-  position: relative;
-  padding: 80px 20px;
-  text-align: center;
-  overflow: hidden; /* hide rotated edges */
-}
-
-.content::before {
-  content: "";
-  position: absolute;
-  top: 90px;
-  left: 800px;
-  width: 900px;
-  height: 900px;
-  background-image: url("../../assets2/Services/background.png");
-  background-repeat: no-repeat;
-  background-size: contain; /* makes it full screen */
-  background-position: center center;
-  transform: rotate(90deg) scale(3); /* optional – only if you want vertical rotation */
-
-  opacity: 0.05; /* makes text readable */
-  z-index: 1; /* keeps it behind text */
-}
-
-.subtitle {
-  color: #b48a36;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  margin-bottom: 12px;
-  font-size: clamp(21px, 1vw, 14px);
-}
-
-.mainTitle {
-  font-size: clamp(24px, 2.2vw, 36px);
-  font-weight: 500;
-  margin-bottom: 20px;
-}
-
-.description {
-  font-size: clamp(14px, 1.1vw, 16px);
-  color: #555;
-  max-width: 800px;
-  margin: 0 auto 30px;
-  text-align: center;
-  line-height: 1.8;
-}
-
-.quote {
-  font-weight: 600;
-  font-style: italic;
-  color: #222;
-  text-align: center;
-  font-size: clamp(14px, 1vw, 16px);
-}
-
-/* Responsive */
-@media (max-width: 992px) {
-  .highlights {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .content {
-    padding: 60px 20px;
-  }
-}
-
-@media (max-width: 600px) {
-  .highlights {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .mainTitle {
-    font-size: 26px;
-=======
-/* ================= WRAPPER ================= */
-
-/* .wrapper { */
-  /* background-color: #F5F4EF; */
-  /* font-family: "Helvetica Neue", Arial, sans-serif; */
-/* } */
-
-/* ================= TOP GRID ================= */
-
-.topGrid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 60px;
-  padding: 45px 120px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-  background-color: #F5F4EF;
-
-}
-
-.item {
-  display: flex;
-  gap: 14px;
-  align-items: flex-start;
-}
-
-.item img {
-  width: 22px;
-  height: 22px;
-  margin-top: 4px;
-}
-
-.item h4 {
-  font-size: 12px;
-  letter-spacing: 1px;
-  font-weight: 600;
-  margin-bottom: 6px;
-}
-
-.item p {
-  font-size: 13px;
   color: #555;
   line-height: 1.6;
 }
 
-/* ================= BOTTOM SECTION ================= */
+/* ================= BOTTOM CONTENT ================= */
 
-.bottomSection {
+.content {
   position: relative;
+  padding: 120px 20px 140px;
   text-align: center;
-  padding: 140px 20px 160px;
   overflow: hidden;
-  /* background-color: #F5F4EF; */
 }
 
-/* Light abstract background lines */
-.bottomSection::before {
+/* subtle abstract background */
+.content::before {
   content: "";
   position: absolute;
   inset: 0;
-  /* background-image: url("../../assets/linepattern.png"); */
+  background-image: url("../../assets2/Services/background.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 1300px;
-  opacity: 0.06;
+  background-size: 1200px;
+  opacity: 0.05;
   z-index: 0;
 }
 
-.bottomSection > * {
+.content > * {
   position: relative;
   z-index: 2;
 }
 
 .subtitle {
-  font-size: 20px;
-  letter-spacing: 3px;
+  font-size: 14px;
+  letter-spacing: 2px;
   color: #C09551;
   margin-bottom: 20px;
-  text-align: center;
 }
 
-.heading {
-  font-size: 52px;
-  font-weight: 300;
+.mainTitle {
+  font-size: 48px;
+  font-weight: 400;
   margin-bottom: 30px;
   color: #222;
-
 }
 
 .description {
-  max-width: 720px;
+  max-width: 760px;
   margin: 0 auto 30px;
   font-size: 15px;
   line-height: 1.8;
@@ -221,29 +100,28 @@
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 1100px) {
-  .topGrid {
+  .highlights {
     grid-template-columns: repeat(2, 1fr);
     padding: 40px 60px;
   }
 }
 
 @media (max-width: 768px) {
-  .topGrid {
+  .highlights {
     grid-template-columns: 1fr;
     gap: 30px;
     padding: 40px 30px;
   }
 
-  .heading {
-    font-size: 34px;
+  .mainTitle {
+    font-size: 32px;
   }
 
   .description {
     font-size: 14px;
   }
 
-  .bottomSection {
+  .content {
     padding: 100px 20px 120px;
->>>>>>> 7bc4e262d09000103af5edbfd31c3ee7eff8428f
   }
 }

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .planSection {
   position: relative;
   background-color: #fff;
@@ -29,7 +28,7 @@
 .container {
   position: relative;
   z-index: 1;
-=======
+}
 /* SECTION */
 .section {
   width: 100%;
@@ -42,12 +41,11 @@
 
 /* CONTAINER */
 .container {
->>>>>>> 7bc4e262d09000103af5edbfd31c3ee7eff8428f
   max-width: 900px;
   margin: 0 auto;
 }
 
-<<<<<<< HEAD
+
 .subtitle {
   color: #b48a36;
   font-weight: 600;
@@ -77,7 +75,7 @@
   flex-wrap: wrap;
   gap: 40px;
   margin-bottom: 40px;
-=======
+}
 /* SUBTITLE */
 .subtitle {
   color: #C09551;
@@ -121,18 +119,20 @@
   justify-content: center;
   align-items: center;
   gap: 30px;
-  margin-bottom: 40px;
   flex-wrap: wrap;
->>>>>>> 7bc4e262d09000103af5edbfd31c3ee7eff8428f
+  margin: auto;
+    margin-bottom: 40px;
+  /* background-color: yellow; */
 }
 
 .contactItem {
   display: flex;
-<<<<<<< HEAD
   align-items: center;
   gap: 10px;
   font-size: 15px;
   color: #333;
+  width: 250px;
+  /* background-color: red; */
 }
 
 .iconBox {
@@ -171,7 +171,10 @@
 }
 
 @media (max-width: 600px) {
-=======
+  .contact {
+    flex-direction: column;
+    gap: 20px;
+  
   width: 250px;;
   align-items: center;
   gap: 15px;
@@ -213,6 +216,7 @@
   background: #a67d3f;
 }
 
+}
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 992px) {
@@ -245,12 +249,10 @@
 }
 
 @media (max-width: 480px) {
->>>>>>> 7bc4e262d09000103af5edbfd31c3ee7eff8428f
   .title {
     font-size: 24px;
   }
 
-<<<<<<< HEAD
   .description {
     margin-bottom: 30px;
   }
@@ -262,10 +264,5 @@
   .btn {
     width: 100%;
     max-width: 280px;
-=======
-  .button {
-    width: 100%;
-    max-width: 300px;
->>>>>>> 7bc4e262d09000103af5edbfd31c3ee7eff8428f
   }
 }
