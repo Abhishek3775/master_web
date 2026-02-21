@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .seasonSection {
   background-color: #f9f8f5;
   font-family: "Poppins", sans-serif;
@@ -113,5 +114,136 @@
 
   .mainTitle {
     font-size: 26px;
+=======
+/* ================= WRAPPER ================= */
+
+/* .wrapper { */
+  /* background-color: #F5F4EF; */
+  /* font-family: "Helvetica Neue", Arial, sans-serif; */
+/* } */
+
+/* ================= TOP GRID ================= */
+
+.topGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 60px;
+  padding: 45px 120px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  background-color: #F5F4EF;
+
+}
+
+.item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.item img {
+  width: 22px;
+  height: 22px;
+  margin-top: 4px;
+}
+
+.item h4 {
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.item p {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ================= BOTTOM SECTION ================= */
+
+.bottomSection {
+  position: relative;
+  text-align: center;
+  padding: 140px 20px 160px;
+  overflow: hidden;
+  /* background-color: #F5F4EF; */
+}
+
+/* Light abstract background lines */
+.bottomSection::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* background-image: url("../../assets/linepattern.png"); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1300px;
+  opacity: 0.06;
+  z-index: 0;
+}
+
+.bottomSection > * {
+  position: relative;
+  z-index: 2;
+}
+
+.subtitle {
+  font-size: 20px;
+  letter-spacing: 3px;
+  color: #C09551;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.heading {
+  font-size: 52px;
+  font-weight: 300;
+  margin-bottom: 30px;
+  color: #222;
+
+}
+
+.description {
+  max-width: 720px;
+  margin: 0 auto 30px;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #444;
+}
+
+.quote {
+  font-style: italic;
+  font-size: 16px;
+  color: #777;
+  text-align: center;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1100px) {
+  .topGrid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 40px 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .topGrid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 40px 30px;
+  }
+
+  .heading {
+    font-size: 34px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .bottomSection {
+    padding: 100px 20px 120px;
+>>>>>>> 7bc4e262d09000103af5edbfd31c3ee7eff8428f
   }
 }

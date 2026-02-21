@@ -42,6 +42,7 @@
   letter-spacing: 3px;
   margin-bottom: 20px;
   opacity: 0.9;
+  text-align: center;
 }
 
 /* Title */
@@ -56,9 +57,11 @@
 .japan-hero-description {
   font-size: clamp(14px, 2vw, 18px);
   line-height: 1.8;
-  max-width: 650px;
+  /* max-width: 650px; */
   margin: 0 auto 50px auto;
   opacity: 0.9;
+  text-align: center;
+
 }
 
 /* Button Wrap */
