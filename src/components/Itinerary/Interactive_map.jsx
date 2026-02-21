@@ -2,7 +2,7 @@ import React from "react";
 import "./Interactive_map.css";
 import mapImage from "../../assets2/Itinerary/INTERACTIVE MAP/img.png"; // 🔹 change path if needed
 
-const Interactive_map = () => {
+const Interactivemap = () => {
   return (
     <section className="interactive-map-section">
       <div className="interactive-map-container">
@@ -20,4 +20,4 @@ const Interactive_map = () => {
   );
 };
 
-export default Interactive_map;
+export default Interactivemap;

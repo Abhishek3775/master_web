@@ -83,7 +83,7 @@ const VesselStay = () => {
                   </ul>
                   <div className="vessel-suite-footer">
                     <p className="vessel-suite-price">From {suite.price}</p>
-                    <a href="#" className="vessel-suite-link">View →</a>
+                    <button  className="vessel-suite-link">View →</button>
                   </div>
                 </div>
               </div>

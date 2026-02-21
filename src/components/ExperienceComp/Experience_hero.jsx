@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from "./Experience_hero.module.css"
 
-const Experience_hero = () => {
+const Experiencehero = () => {
   return (
     <section className={styles.hero}>
       <div className={styles.overlay}>
@@ -38,4 +38,4 @@ const Experience_hero = () => {
   )
 }
 
-export default Experience_hero
+export default Experiencehero

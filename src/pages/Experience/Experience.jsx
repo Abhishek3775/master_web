@@ -1,5 +1,5 @@
 import React from 'react'
-import Experience_hero from "../../components/ExperienceComp/Experience_hero"
+import Experiencehero from "../../components/ExperienceComp/Experience_hero"
 import TravelerSection from '../../components/ExperienceComp/TravelerSection'
 import EGCRecommendations from '../../components/ExperienceComp/EGCRecommendations'
 import SeasonalInspiration from '../../components/ExperienceComp/SeasonalInspiration'
@@ -11,7 +11,7 @@ import BrandStrip from '../../components/BrandStrip/BrandStrip'
 const Experience = () => {
   return (
     <>
-    {<Experience_hero/>}
+    {<Experiencehero/>}
     {<TravelerSection/>}
     {<EGCRecommendations/>}
     {<SeasonalInspiration/>}

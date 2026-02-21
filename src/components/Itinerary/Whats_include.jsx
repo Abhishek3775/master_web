@@ -2,7 +2,7 @@ import React from "react";
 import "./Whats_include.css";
 import { FaCheckCircle } from "react-icons/fa";
 import dubrovnikImage from "../../assets2/Itinerary/What's Included/img.png"; // ← change path as needed
-const Whats_include = () => {
+const Whatsinclude = () => {
   return (
     <section className="voyage-included-section">
       <div className="voyage-included-container">
@@ -56,4 +56,4 @@ const Whats_include = () => {
   )
 }
 
-export default Whats_include
+export default Whatsinclude

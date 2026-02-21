@@ -3,7 +3,7 @@ import "./Itinerary_hero.css";
 import { FaStar, FaUserFriends } from "react-icons/fa";
 import { BsCalendar3, BsGeoAlt } from "react-icons/bs";
 
-const Itinerary_hero = () => {
+const Itineraryhero = () => {
   return (
     <section className="adriatic-hero">
       <div className="adriatic-overlay">
@@ -56,4 +56,4 @@ const Itinerary_hero = () => {
   );
 };
 
-export default Itinerary_hero;
+export default Itineraryhero;

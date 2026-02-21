@@ -3,7 +3,7 @@ import "./Journey_overview.css";
 import { FaShip, FaUtensils, FaWater } from "react-icons/fa";
 import { GiCompass } from "react-icons/gi";
 
-const Journey_overview = () => {
+const Journeyoverview = () => {
   return (
     <section className="J-O-section">
       <div className="J-O-container">
@@ -54,4 +54,4 @@ const Journey_overview = () => {
   );
 };
 
-export default Journey_overview;
+export default Journeyoverview;
