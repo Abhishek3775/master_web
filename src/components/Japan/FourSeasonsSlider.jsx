@@ -15,6 +15,7 @@ const seasonsData = [
   {
     id: 1,
     tag: "March - May",
+    name: "春 Haru",
     season: "Spring",
     temp: "8°C - 20°C",
     desc: "Spring in Japan is a symphony of renewal. Cherry blossoms (sakura) transform the landscape into a dream.",
@@ -24,6 +25,7 @@ const seasonsData = [
   {
     id: 2,
     tag: "June - August",
+    name: "夏 Natsu",
     season: "Summer",
     temp: "20°C - 35°C",
     desc: "Summer brings Japan alive with energy and tradition. While June ushers in the rainy season (tsuyu)...",
@@ -33,6 +35,7 @@ const seasonsData = [
   {
     id: 3,
     tag: "September - November",
+    name: "秋Aki",
     season: "Autumn",
     temp: "10°C - 22°C",
     desc: "Autumn is when Japan reveals its soul. The practice of momijigari autumn leaf hunting draws...",
@@ -93,6 +96,7 @@ const FourSeasonsSlider = () => {
                     <span className="fs-season-tag">{item.tag}</span>
 
                     <div className="fs-season-overlay">
+                      <p className="fs-name">{item.name}</p>
                       <p className="fs-season-name">{item.season}</p>
                       <p className="fs-season-temp">{item.temp}</p>
                     </div>

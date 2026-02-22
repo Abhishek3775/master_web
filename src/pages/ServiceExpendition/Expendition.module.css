@@ -35,7 +35,7 @@
 }
 
 .expeditionSubtitle {
-  color: #c6a75e;
+  color: #C09551;
   letter-spacing: 4px;
   font-size: clamp(21px, 1.2vw, 14px);
   font-weight: 500;
@@ -66,8 +66,8 @@
 }
 
 .sBtnGold {
-  background: #c6a75e;
-  border: 1px solid #c6a75e;
+  background: #C09551;
+  border: 1px solid #C09551;
   color: #ffffff;
   padding: clamp(10px, 1.3vh, 14px) clamp(18px, 2.5vw, 30px);
   font-size: clamp(10px, 0.85vw, 13px);
@@ -79,8 +79,8 @@
 }
 
 .sBtnGold:hover {
-  background: #b59348;
-  border-color: #b59348;
+  background: #C09551;
+  border-color: #C09551;
 }
 
 .sBtnOutline {
@@ -97,8 +97,8 @@
 }
 
 .sBtnOutline:hover {
-  background: #c6a75e;
-  border-color: #c6a75e;
+  background: #C09551;
+  border-color: #C09551;
 }
 
 .sliderLines {
@@ -117,7 +117,7 @@
 
 .line.active {
   width: 32px;
-  background: #c6a75e;
+  background: #C09551;
   opacity: 1;
 }
 
@@ -134,7 +134,7 @@
   transition: color 0.3s;
 }
 
-.sDiscover:hover { color: #c6a75e; }
+.sDiscover:hover { color: #C09551; }
 
 .sArrow {
   font-size: 18px;
@@ -242,19 +242,19 @@
 .ecIconCircle {
   width: 48px;
   height: 48px;
-  border: 1px solid #d4af37;
+  border: 1px solid #C09551;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #d4af37;
+  color: #C09551;
   margin-bottom: 20px;
   flex-shrink: 0;
 }
 
 .ecMiniTitle {
   font-size: 12px;
-  color: #d4af37;
+  color: #C09551;
   display: block;
   margin-bottom: 8px;
 }
@@ -293,7 +293,7 @@
 }
 
 .ecExploreLink {
-  color: #d4af37;
+  color: #C09551;
   text-decoration: none;
   cursor: pointer;
   transition: color 0.3s ease;
@@ -310,7 +310,7 @@
 }
 
 .ecJourneysSubtitle {
-  color: #b58a2f;
+  color: #C09551;
   font-size: 21px;
   font-weight: 600;
   letter-spacing: 1.5px;
@@ -328,7 +328,7 @@
   position: absolute;
   z-index: 10;
   background: rgba(255, 255, 255, 0.9);
-  color: #b58a2f;
+  color: #C09551;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -354,7 +354,7 @@
 }
 
 .ecJourneysNav:hover {
-  background: #b58a2f;
+  background: #C09551;
   color: #fff;
   transform: translateY(-50%) scale(1.1);
 }
@@ -366,7 +366,7 @@
   text-align: left;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
   transition: 0.3s ease;
-  border: 1px solid #b58a2f;
+  border: 1px solid #C09551;
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
@@ -394,7 +394,7 @@
   top: 15px;
   left: 15px;
   background: #fff;
-  color: #b58a2f;
+  color: #C09551;
   font-size: 13px;
   padding: 6px 12px;
   border-radius: 3px;
@@ -405,7 +405,7 @@
 
 .ecJourneyInfo .ecRegion {
   font-size: 13px;
-  color: #b58a2f;
+  color: #C09551;
   margin-bottom: 5px;
   display: flex;
   align-items: center;
@@ -429,7 +429,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid #b58a2f;
+  border-top: 1px solid #C09551;
   padding-top: 10px;
 }
 
@@ -448,7 +448,7 @@
 }
 
 .ecSmallTitle {
-  color: #b58a2f;
+  color: #C09551;
   font-size: 21px;
   font-weight: 600;
   letter-spacing: 1.5px;
@@ -500,13 +500,13 @@
 .ecSignatureRight .ecIconCircle {
   width: 50px;
   height: 50px;
-  border: 1px solid #c59d5f;
+  border: 1px solid #C09551;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 25px;
-  color: #c59d5f;
+  color: #C09551;
   font-size: 20px;
 }
 
@@ -570,8 +570,8 @@
 }
 
 .ecTabActive {
-  color: #c7a36a;
-  border-bottom: 2px solid #c7a36a;
+  color: #C09551;
+  border-bottom: 2px solid #C09551;
 }
 
 .ecVoyagesGrid {
@@ -583,7 +583,7 @@
 .ecVoyageCard {
   background: #fff;
   border: 1px solid #eaeaea;
-  border-bottom: 3px solid #c7a36a;
+  border-bottom: 3px solid #C09551;
   transition: all 0.3s ease;
 }
 
@@ -619,7 +619,7 @@
   top: 18px;
   left: 18px;
   background: #fff;
-  color: #c7a36a;
+  color: #C09551;
   font-size: 11px;
   padding: 6px 12px;
   letter-spacing: 1px;
@@ -629,7 +629,7 @@
   position: absolute;
   top: 18px;
   right: 18px;
-  background: #c7a36a;
+  background: #C09551;
   color: #fff;
   font-size: 11px;
   padding: 6px 12px;
@@ -640,7 +640,7 @@
 
 .ecRegion {
   font-size: 13px;
-  color: #c7a36a;
+  color: #C09551;
 }
 
 .ecVoyageContent h3 {
@@ -673,7 +673,7 @@
 
 .ecVoyageFooter .ecPrice {
   font-weight: 600;
-  color: #c7a36a;
+  color: #C09551;
 }
 
 /* ===== WHY SECTION ===== */
@@ -695,7 +695,7 @@
 .ecWhySmall {
   font-size: 21px;
   letter-spacing: 1.5px;
-  color: #b68c2f;
+  color: #C09551;
   font-weight: 600;
 }
 
@@ -722,7 +722,7 @@
 
 .ecWhyBox {
   background: #fff;
-  border: 1px solid #c9a24d;
+  border: 1px solid #C09551;
   padding: 40px 35px;
   transition: all 0.3s ease;
 }
@@ -761,7 +761,7 @@
 .ecExpJourneySmall {
   font-size: 21px;
   letter-spacing: 2px;
-  color: #b68c2f;
+  color: #C09551;
   font-weight: 600;
 }
 
@@ -813,7 +813,7 @@
 }
 
 .ecExpJourneyBtn {
-  background: #b68c2f;
+  background: #C09551;
   color: #fff;
   border: none;
   padding: 14px 40px;
@@ -824,7 +824,7 @@
 }
 
 .ecExpJourneyBtn:hover {
-  background: #a07825;
+  background: #C09551;
   transform: translateY(-2px);
 }
 
@@ -960,6 +960,7 @@
   .ecExpJourneySection h2 { font-size: 32px; }
   .ecExpJourneyLogos { gap: 30px; }
   .ecExpJourneyLogos img { width: 60px; }
+  .ecTopContent {margin-bottom: 20px;}
 }
 
 @media (max-width: 480px) {
@@ -1033,4 +1034,14 @@
   .sDiscover,
   .ecJourneysNav,
   .ecExpJourneyBtn { display: none; }
+}
+@media (max-width: 576px) {
+  .ecWaysCard { 
+    height: auto;
+    min-height: 420px;
+  }
+  
+  .ecTopContent { 
+    margin-top: 200px;
+  }
 }

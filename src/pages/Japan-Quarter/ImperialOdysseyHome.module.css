@@ -44,7 +44,7 @@
 }
 
 .impSubtitle {
-  color: #d1a650;
+  color: #C09551;
   font-size: clamp(14px, 1.5vw, 18px);
   letter-spacing: 2px;
   margin-bottom: 10px;
@@ -85,12 +85,12 @@
 }
 
 .impPricing span {
-  color: #d1a650;
+  color: #C09551;
   font-weight: 600;
 }
 
 .impBtn {
-  background-color: #c59a3f;
+  background-color: #C09551;
   color: #fff;
   font-size: clamp(13px, 1.3vw, 15px);
   padding: 14px 32px;
@@ -106,7 +106,7 @@
 }
 
 .impBtn:hover {
-  background-color: #e1b85f;
+  background-color: #C09551;
   color: #111;
 }
 
@@ -162,7 +162,7 @@
 }
 
 .sectionSubtitle {
-  color: #c6a75e;
+  color: #C09551;
   font-weight: 600;
   letter-spacing: 1px;
   font-size: clamp(21px, 1.3vw, 15px);
@@ -206,7 +206,7 @@
 
 .highlightsList li::before {
   content: "✓";
-  color: #c6a75e;
+  color: #C09551;
   position: absolute;
   left: 0;
   font-size: 18px;
@@ -215,13 +215,13 @@
 
 .bestTimeBox {
   background: #f8f6f0;
-  border-left: 4px solid #c6a75e;
+  border-left: 4px solid #C09551;
   padding: 20px;
   margin-top: 30px;
 }
 
 .bestTimeBox h4 {
-  color: #c6a75e;
+  color: #C09551;
   font-weight: 700;
   font-size: 16px;
   margin-bottom: 8px;
@@ -251,7 +251,7 @@
 }
 
 .routeTitle {
-  color: #c6a75e;
+  color: #C09551;
   font-size: 14px;
   font-weight: 600;
   margin-bottom: 15px;
@@ -269,7 +269,7 @@
   color: #ddd;
 }
 
-.routeLocations span { color: #c6a75e; }
+.routeLocations span { color: #C09551; }
 
 .includedBox {
   border: 1px solid #ddd;
@@ -300,14 +300,14 @@
 
 .includedBox li::before {
   content: "✓";
-  color: #c6a75e;
+  color: #C09551;
   position: absolute;
   left: 0;
   top: 0;
 }
 
 .viewLink {
-  color: #c6a75e;
+  color: #C09551;
   font-size: 14px;
   font-weight: 600;
   border: none;
@@ -346,7 +346,7 @@
 }
 
 .itinerarySubtitle {
-  color: #c6a75e;
+  color: #C09551;
   font-weight: 600;
   letter-spacing: 1px;
   font-size: clamp(21px, 1.3vw, 15px);
@@ -366,9 +366,9 @@
 
 .viewToggle button {
   background: transparent;
-  border: 1px solid #c6a75e;
+  border: 1px solid #C09551;
   padding: 8px 18px;
-  color: #c6a75e;
+  color: #C09551;
   cursor: pointer;
   transition: 0.3s;
   font-weight: 600;
@@ -378,7 +378,7 @@
 
 .viewToggle button.active,
 .viewToggle button:hover {
-  background: #c6a75e;
+  background: #C09551;
   color: #fff;
 }
 
@@ -410,14 +410,14 @@
 .dayItem:hover { background: #f5f4ef; }
 
 .dayItem.active {
-  border-left: 3px solid #c6a75e;
+  border-left: 3px solid #C09551;
   background: #faf9f5;
 }
 
 .dayNumber {
   font-weight: 700;
   font-size: 20px;
-  color: #c6a75e;
+  color: #C09551;
   width: 35px;
   flex-shrink: 0;
 }
@@ -426,7 +426,7 @@
 
 .dayCity {
   font-size: 13px;
-  color: #b58a2f;
+  color: #C09551;
   font-weight: 600;
 }
 
@@ -456,7 +456,7 @@
 
 .itineraryDetails h4 {
   font-size: 16px;
-  color: #b58a2f;
+  color: #C09551;
   font-weight: 600;
   margin-bottom: 10px;
 }
@@ -476,7 +476,7 @@
 
 .highlights h5 {
   font-size: 15px;
-  color: #b58a2f;
+  color: #C09551;
   font-weight: 700;
   margin-bottom: 10px;
 }
@@ -542,12 +542,12 @@
 .dayNum {
   font-size: 20px;
   font-weight: 600;
-  color: #b78a3e;
+  color: #C09551;
   width: 60px;
   flex-shrink: 0;
 }
 
-.quickviewCity { color: #b78a3e; font-size: 13px; letter-spacing: 1px; }
+.quickviewCity { color: #C09551; font-size: 13px; letter-spacing: 1px; }
 .quickviewTitle { font-size: 16px; color: #222; }
 
 .quickviewRight {
@@ -558,7 +558,7 @@
   font-size: 14px;
 }
 
-.hotelIcon { color: #b78a3e; }
+.hotelIcon { color: #C09551; }
 
 @media (max-width: 768px) {
   .quickviewCard { flex-direction: column; align-items: flex-start; gap: 8px; }
@@ -575,7 +575,7 @@
   color: #111;
 }
 
-.staysSubtitle { color: #c6a75e; font-weight: 600; letter-spacing: 1px; margin-bottom: 8px; font-size: 21px; }
+.staysSubtitle { color: #C09551; font-weight: 600; letter-spacing: 1px; margin-bottom: 8px; font-size: 21px; }
 .staysTitle { font-size: clamp(26px, 3vw, 36px); font-weight: 700; margin-bottom: 10px; }
 .staysDesc { color: #444; font-size: clamp(13px, 1.4vw, 15px); max-width: 600px;  }
 
@@ -589,8 +589,8 @@
 
 .cityTabs button {
   background: transparent;
-  border: 1px solid #c6a75e;
-  color: #c6a75e;
+  border: 1px solid #C09551;
+  color: #C09551;
   padding: 8px 18px;
   border-radius: 3px;
   cursor: pointer;
@@ -600,7 +600,7 @@
 }
 
 .cityTabs button.active,
-.cityTabs button:hover { background: #c6a75e; color: #fff; }
+.cityTabs button:hover { background: #C09551; color: #fff; }
 
 .stayContent {
   display: flex;
@@ -631,7 +631,7 @@
   min-width: 0;
 }
 
-.stayCity { color: #b78a3e; font-size: 14px; letter-spacing: 1px; margin-bottom: 10px; }
+.stayCity { color: #C09551; font-size: 14px; letter-spacing: 1px; margin-bottom: 10px; }
 .stayName { font-size: clamp(22px, 2.5vw, 28px); font-weight: 700; margin-bottom: 15px; }
 
 .stayDesc {
@@ -682,9 +682,9 @@
 
 .galleryItem:hover { transform: translateY(-6px); box-shadow: 0 6px 18px rgba(0,0,0,0.15); }
 
-.galleryItem.selected { border: 3px solid #c6a75e; }
+.galleryItem.selected { border: 3px solid #C09551; }
 
-.galleryCity { color: #b58a2f; font-size: 16px; font-weight: 600; margin-top: 12px; }
+.galleryCity { color: #C09551; font-size: 16px; font-weight: 600; margin-top: 12px; }
 .galleryNights { font-size: 15px; color: #555; margin-bottom: 14px; }
 
 @media (max-width: 992px) {
@@ -740,7 +740,7 @@
   font-size: 17px;
   font-weight: 700;
   letter-spacing: 2px;
-  color: #b58a2f;
+  color: #C09551;
   text-transform: uppercase;
   margin: 0 0 14px 0;
 }
@@ -773,7 +773,7 @@
   width: 20px;
   height: 20px;
   min-width: 20px;
-  border: 1.5px solid #b58a2f;
+  border: 1.5px solid #C09551;
   border-radius: 3px;
   margin-top: 1px;
   background: transparent;
@@ -785,7 +785,7 @@
   align-items: center;
   gap: 8px;
   margin-top: 30px;
-  color: #b58a2f;
+  color: #C09551;
   font-size: 12.5px;
   font-weight: 700;
   letter-spacing: 1.5px;
@@ -796,7 +796,7 @@
   background: none;
 }
 
-.incluDownloadLink:hover { color: #8a6620; cursor: pointer; }
+.incluDownloadLink:hover { color: #C09551; cursor: pointer; }
 
 .incluDownloadIcon { flex-shrink: 0; }
 
@@ -865,7 +865,7 @@
 }
 
 .impSubtitle {
-  color: #d1a650;
+  color: #C09551;
   font-size: clamp(14px, 1.5vw, 18px);
   letter-spacing: 2px;
   margin-bottom: 10px;
@@ -906,12 +906,12 @@
 }
 
 .impPricing span {
-  color: #d1a650;
+  color: #C09551;
   font-weight: 600;
 }
 
 .impBtn {
-  background-color: #c59a3f;
+  background-color: #C09551;
   color: #fff;
   font-size: clamp(13px, 1.3vw, 15px);
   padding: 14px 32px;
@@ -927,7 +927,7 @@
 }
 
 .impBtn:hover {
-  background-color: #e1b85f;
+  background-color: #C09551;
   color: #111;
 }
 
@@ -982,7 +982,7 @@
 }
 
 .sectionSubtitle {
-  color: #c6a75e;
+  color: #C09551;
   font-weight: 600;
   letter-spacing: 1px;
   font-size: clamp(13px, 1.3vw, 15px);
@@ -1026,7 +1026,7 @@
 
 .highlightsList li::before {
   content: "✓";
-  color: #c6a75e;
+  color: #C09551;
   position: absolute;
   left: 0;
   font-size: 18px;
@@ -1035,13 +1035,13 @@
 
 .bestTimeBox {
   background: #f8f6f0;
-  border-left: 4px solid #c6a75e;
+  border-left: 4px solid #C09551;
   padding: 20px;
   margin-top: 30px;
 }
 
 .bestTimeBox h4 {
-  color: #c6a75e;
+  color: #C09551;
   font-weight: 700;
   font-size: 16px;
   margin-bottom: 8px;
@@ -1071,7 +1071,7 @@
 }
 
 .routeTitle {
-  color: #c6a75e;
+  color: #C09551;
   font-size: 14px;
   font-weight: 600;
   margin-bottom: 15px;
@@ -1089,7 +1089,7 @@
   color: #ddd;
 }
 
-.routeLocations span { color: #c6a75e; }
+.routeLocations span { color: #C09551; }
 
 .includedBox {
   border: 1px solid #ddd;
@@ -1120,14 +1120,14 @@
 
 .includedBox li::before {
   content: "✓";
-  color: #c6a75e;
+  color: #C09551;
   position: absolute;
   left: 0;
   top: 0;
 }
 
 .viewLink {
-  color: #c6a75e;
+  color: #C09551;
   font-size: 14px;
   font-weight: 600;
   border: none;
@@ -1166,7 +1166,7 @@
 }
 
 .itinerarySubtitle {
-  color: #c6a75e;
+  color: #C09551;
   font-weight: 600;
   letter-spacing: 1px;
   font-size: clamp(13px, 1.3vw, 15px);
@@ -1186,9 +1186,9 @@
 
 .viewToggle button {
   background: transparent;
-  border: 1px solid #c6a75e;
+  border: 1px solid #C09551;
   padding: 8px 18px;
-  color: #c6a75e;
+  color: #C09551;
   cursor: pointer;
   transition: 0.3s;
   font-weight: 600;
@@ -1198,7 +1198,7 @@
 
 .viewToggle button.active,
 .viewToggle button:hover {
-  background: #c6a75e;
+  background: #C09551;
   color: #fff;
 }
 
@@ -1230,14 +1230,14 @@
 .dayItem:hover { background: #f5f4ef; }
 
 .dayItem.active {
-  border-left: 3px solid #c6a75e;
+  border-left: 3px solid #C09551;
   background: #faf9f5;
 }
 
 .dayNumber {
   font-weight: 700;
   font-size: 20px;
-  color: #c6a75e;
+  color: #C09551;
   width: 35px;
   flex-shrink: 0;
 }
@@ -1246,7 +1246,7 @@
 
 .dayCity {
   font-size: 13px;
-  color: #b58a2f;
+  color: #C09551;
   font-weight: 600;
 }
 
@@ -1276,7 +1276,7 @@
 
 .itineraryDetails h4 {
   font-size: 16px;
-  color: #b58a2f;
+  color: #C09551;
   font-weight: 600;
   margin-bottom: 10px;
 }
@@ -1296,7 +1296,7 @@
 
 .highlights h5 {
   font-size: 15px;
-  color: #b58a2f;
+  color: #C09551;
   font-weight: 700;
   margin-bottom: 10px;
 }
@@ -1362,12 +1362,12 @@
 .dayNum {
   font-size: 20px;
   font-weight: 600;
-  color: #b78a3e;
+  color: #C09551;
   width: 60px;
   flex-shrink: 0;
 }
 
-.quickviewCity { color: #b78a3e; font-size: 13px; letter-spacing: 1px; }
+.quickviewCity { color: #C09551; font-size: 13px; letter-spacing: 1px; }
 .quickviewTitle { font-size: 16px; color: #222; }
 
 .quickviewRight {
@@ -1378,7 +1378,7 @@
   font-size: 14px;
 }
 
-.hotelIcon { color: #b78a3e; }
+.hotelIcon { color: #C09551; }
 
 @media (max-width: 768px) {
   .quickviewCard { flex-direction: column; align-items: flex-start; gap: 8px; }
@@ -1395,7 +1395,7 @@
   color: #111;
 }
 
-.staysSubtitle { color: #c6a75e; font-weight: 600; letter-spacing: 1px; margin-bottom: 8px; }
+.staysSubtitle { color: #C09551; font-weight: 600; letter-spacing: 1px; margin-bottom: 8px; }
 .staysTitle { font-size: clamp(26px, 3vw, 36px); font-weight: 700; margin-bottom: 10px; }
 .staysDesc { color: #444; font-size: clamp(13px, 1.4vw, 15px); max-width: 600px; }
 
@@ -1409,8 +1409,8 @@
 
 .cityTabs button {
   background: transparent;
-  border: 1px solid #c6a75e;
-  color: #c6a75e;
+  border: 1px solid #C09551;
+  color: #C09551;
   padding: 8px 18px;
   border-radius: 3px;
   cursor: pointer;
@@ -1420,7 +1420,7 @@
 }
 
 .cityTabs button.active,
-.cityTabs button:hover { background: #c6a75e; color: #fff; }
+.cityTabs button:hover { background: #C09551; color: #fff; }
 
 .stayContent {
   display: flex;
@@ -1451,7 +1451,7 @@
   min-width: 0;
 }
 
-.stayCity { color: #b78a3e; font-size: 14px; letter-spacing: 1px; margin-bottom: 10px; }
+.stayCity { color: #C09551; font-size: 14px; letter-spacing: 1px; margin-bottom: 10px; }
 .stayName { font-size: clamp(22px, 2.5vw, 28px); font-weight: 700; margin-bottom: 15px; }
 
 .stayDesc {
@@ -1502,10 +1502,10 @@
 
 .galleryItem:hover { transform: translateY(-6px); box-shadow: 0 6px 18px rgba(0,0,0,0.15); }
 
-.galleryItem.selected { border: 3px solid #c6a75e; }
+.galleryItem.selected { border: 3px solid #C09551; }
 
-.galleryCity { color: #b58a2f; font-size: 16px; font-weight: 600; margin-top: 12px; }
-.galleryNights { font-size: 15px; color: #555; margin-bottom: 14px; }
+.galleryCity { color: #C09551; font-size: 16px; font-weight: 600; margin-top: 12px; text-align: center; }
+.galleryNights { font-size: 15px; color: #555; margin-bottom: 14px; text-align: center;}
 
 @media (max-width: 992px) {
   .stayGallery { justify-content: flex-start; }
@@ -1593,7 +1593,7 @@
   width: 20px;
   height: 20px;
   min-width: 20px;
-  border: 1.5px solid #b58a2f;
+  border: 1.5px solid #C09551;
   border-radius: 3px;
   margin-top: 1px;
   background: transparent;
@@ -1605,7 +1605,7 @@
   align-items: center;
   gap: 8px;
   margin-top: 30px;
-  color: #b58a2f;
+  color: #C09551;
   font-size: 12.5px;
   font-weight: 700;
   letter-spacing: 1.5px;
@@ -1616,7 +1616,7 @@
   background: none;
 }
 
-.incluDownloadLink:hover { color: #8a6620; cursor: pointer; }
+.incluDownloadLink:hover { color: #C09551; cursor: pointer; }
 
 .incluDownloadIcon { flex-shrink: 0; }
 
@@ -1652,7 +1652,7 @@
 .datesHeader { margin-bottom: 50px; }
 
 .datesSubtitle {
-  color: #b58a2f;
+  color: #C09551;
   font-weight: 700;
   font-size: clamp(21px, 1.3vw, 15px);
   text-align: center;
@@ -1660,7 +1660,7 @@
 }
 
 .datesTitle { font-size: clamp(28px, 4vw, 42px); font-weight: 500; margin: 12px 0; }
-.datesDesc { font-size: clamp(13px, 1.4vw, 15px); color: #555; line-height: 1.6; }
+.datesDesc { font-size: clamp(13px, 1.4vw, 15px); color: #555; line-height: 1.6; text-align: center; }
 
 .datesList { display: flex; flex-direction: column; gap: 15px; margin-top: 30px; }
 
@@ -1676,7 +1676,7 @@
   gap: 12px;
 }
 
-.dateCard:hover { border-color: #b58a2f; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
+.dateCard:hover { border-color: #C09551; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
 
 .dateInfo {
   display: flex;
@@ -1687,11 +1687,11 @@
   min-width: 0;
 }
 
-.calendarIcon { font-size: 22px; color: #b58a2f; flex-shrink: 0; }
+.calendarIcon { font-size: 22px; color: #C09551; flex-shrink: 0; }
 
 .dateInfo h4 { font-size: clamp(15px, 1.5vw, 17px); margin-bottom: 3px; color: #111; }
 
-.dateLabel { font-size: 13px; color: #b58a2f; letter-spacing: 0.5px; font-weight: 600; }
+.dateLabel { font-size: 13px; color: #C09551; letter-spacing: 0.5px; font-weight: 600; }
 
 .datePrice { text-align: right; flex: 0 1 auto; }
 
@@ -1708,7 +1708,7 @@
 }
 
 .statusBadge {
-  border: 1px solid #b58a2f;
+  border: 1px solid #C09551;
   font-size: 12px;
   padding: 6px 10px;
   letter-spacing: 0.5px;
@@ -1716,11 +1716,11 @@
   white-space: nowrap;
 }
 
-.statusBadge.available { color: #b58a2f; background: #fff; }
+.statusBadge.available { color: #C09551; background: #fff; }
 .statusBadge.limited { background: #fff; color: #000000; }
 
 .enquireBtn {
-  background: #b58a2f;
+  background: #C09551;
   color: #fff;
   border: none;
   padding: 8px 20px;
@@ -1732,10 +1732,10 @@
   white-space: nowrap;
 }
 
-.enquireBtn:hover { background: #d1a64f; color: #111; }
+.enquireBtn:hover { background: #C09551; color: #111; }
 
 .customDateSection {
-  background: #f1efea;
+  background: #F5F4EE;
   padding: 40px 20px;
   margin-top: 50px;
   text-align: center;
@@ -1747,14 +1747,14 @@
 .customDateBtn {
   background: transparent;
   border: none;
-  color: #c8a24c;
+  color: #C09551;
   font-weight: 700;
   font-size: 14px;
   letter-spacing: 0.5px;
   cursor: pointer;
 }
 
-.customDateBtn:hover { color: #9b7b31; }
+.customDateBtn:hover { color: #C09551; }
 
 @media (max-width: 768px) {
   .dateCard {
@@ -1806,13 +1806,13 @@
    ============================ */
 
 .srvFaqSection {
-  background-color: #f9f8f6;
+  background-color: #F5F4EE;
   text-align: center;
   padding: clamp(40px, 6vw, 80px) clamp(5%, 5vw, 20px);
 }
 
 .srvFaqSubtitle {
-  color: #b58a2f;
+  color: #C09551;
   letter-spacing: 1.5px;
   font-size: clamp(14px, 1.5vw, 17px);
   font-weight: 600;
@@ -1835,7 +1835,7 @@
   transition: all 0.3s ease;
 }
 
-.srvFaqItem.active { border: 1px solid #d1a650; }
+.srvFaqItem.active { border: 1px solid #C09551; }
 
 .srvFaqQuestion {
   width: 100%;
@@ -1854,9 +1854,9 @@
   gap: 10px;
 }
 
-.srvFaqQuestion:hover { background-color: #f5f4ef; }
+.srvFaqQuestion:hover { background-color: #F5F4EE; }
 
-.srvFaqIcon { color: #b58a2f; font-size: 18px; flex-shrink: 0; }
+.srvFaqIcon { color: #C09551; font-size: 18px; flex-shrink: 0; }
 
 .srvFaqAnswer {
   background-color: #fff;
@@ -1873,14 +1873,14 @@
 
 .rjSection {
   padding: clamp(50px, 7vw, 90px) clamp(5%, 5vw, 70px);
-  background-color: #f3f3f3;
+  background-color: #F5F4EE;
   text-align: center;
 }
 
 .rjLabel {
   font-size: clamp(14px, 1.5vw, 17px);
   letter-spacing: 2px;
-  color: #b58a2f;
+  color: #C09551;
   margin-bottom: 12px;
   font-weight: 600;
 }
@@ -1928,7 +1928,7 @@
   padding: 20px;
 }
 
-.rjDuration { font-size: 12px; letter-spacing: 1px; opacity: 0.85; color: #b58a2f; }
+.rjDuration { font-size: 12px; letter-spacing: 1px; opacity: 0.85; color: #C09551; }
 .rjTitle { font-size: clamp(16px, 1.8vw, 22px); font-weight: 400; margin: 8px 0; }
 .rjPrice { font-size: 14px; opacity: 0.9; }
 
@@ -1947,13 +1947,13 @@
    ============================ */
 
 .journeySection {
-  background: #f9f8f6;
+  background: #F5F4EE;
   text-align: center;
   padding: 60px 24px 0;
 }
 
 .journeySubtitle {
-  color: #b58a2f;
+  color: #C09551;
   letter-spacing: 2px;
   font-size: 13px;
   font-weight: 700;
@@ -2003,7 +2003,7 @@
 }
 
 .journeyBtn {
-  background: #b58a2f;
+  background: #C09551;
   color: #fff;
   border: none;
   padding: 13px 36px;
@@ -2015,20 +2015,20 @@
   transition: background 0.25s;
 }
 
-.journeyBtn:hover { background: #d1a650; color: #111; }
+.journeyBtn:hover { background: #C09551; color: #111; }
 
 /* ============================
    FAQ SECTION
    ============================ */
 
 .srvFaqSection {
-  background-color: #f9f8f6;
+  background-color: #F5F4EE;
   text-align: center;
   padding: clamp(40px, 6vw, 80px) clamp(5%, 5vw, 20px);
 }
 
 .srvFaqSubtitle {
-  color: #b58a2f;
+  color: #C09551;
   letter-spacing: 1.5px;
   font-size: clamp(21px, 1.5vw, 17px);
   font-weight: 600;
@@ -2051,7 +2051,7 @@
   transition: all 0.3s ease;
 }
 
-.srvFaqItem.active { border: 1px solid #d1a650; }
+.srvFaqItem.active { border: 1px solid #C09551; }
 
 .srvFaqQuestion {
   width: 100%;
@@ -2070,9 +2070,9 @@
   gap: 10px;
 }
 
-.srvFaqQuestion:hover { background-color: #f5f4ef; }
+.srvFaqQuestion:hover { background-color: #F5F4EE; }
 
-.srvFaqIcon { color: #b58a2f; font-size: 18px; flex-shrink: 0; }
+.srvFaqIcon { color: #C09551; font-size: 18px; flex-shrink: 0; }
 
 .srvFaqAnswer {
   background-color: #fff;
@@ -2089,7 +2089,7 @@
 
 .rjSection {
   padding: clamp(50px, 7vw, 90px) clamp(5%, 5vw, 70px);
-  background-color: #f3f3f3;
+  background-color: #F5F4EE;
   text-align: center;
 }
 
@@ -2097,7 +2097,7 @@
   font-size: clamp(21px, 1.5vw, 17px);
   letter-spacing: 2px;
   text-align: center;
-  color: #b58a2f;
+  color: #C09551;
   margin-bottom: 12px;
   font-weight: 600;
 }
@@ -2145,7 +2145,7 @@
   padding: 20px;
 }
 
-.rjDuration { font-size: 12px; letter-spacing: 1px; opacity: 0.85; color: #b58a2f; }
+.rjDuration { font-size: 12px; letter-spacing: 1px; opacity: 0.85; color: #C09551; }
 .rjTitle { font-size: clamp(16px, 1.8vw, 22px); font-weight: 400; margin: 8px 0; }
 .rjPrice { font-size: 14px; opacity: 0.9; }
 
@@ -2164,13 +2164,13 @@
    ============================ */
 
 .journeySection {
-  background: #f9f8f6;
+  background: #F5F4EE;
   text-align: center;
   padding: 60px 24px 0;
 }
 
 .journeySubtitle {
-  color: #b58a2f;
+  color: #C09551;
   letter-spacing: 2px;
   font-size: 21px;
   font-weight: 700;
@@ -2220,7 +2220,7 @@
 }
 
 .journeyBtn {
-  background: #b58a2f;
+  background: #C09551;
   color: #fff;
   border: none;
   padding: 13px 36px;
@@ -2232,4 +2232,4 @@
   transition: background 0.25s;
 }
 
-.journeyBtn:hover { background: #d1a650; color: #111; }
+.journeyBtn:hover { background: #C09551 ; color: #111; }

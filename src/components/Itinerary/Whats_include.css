@@ -71,6 +71,7 @@
 
 .voyage-included-list {
   list-style: none;
+
   padding: 0;
   margin: 0;
 }
@@ -111,6 +112,12 @@
 
   .voyage-included-list li {
     justify-content: center;
+  }
+}
+
+@media (max-width: 992px) {
+  .voyage-included-list li {
+    justify-content: flex-start;  /* center se flex-start */
   }
 }
 

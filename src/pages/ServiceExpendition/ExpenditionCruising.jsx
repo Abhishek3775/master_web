@@ -38,10 +38,10 @@ import { LuUsers } from "react-icons/lu";
 import { FaRegCompass } from "react-icons/fa";
 import { MdWaves } from "react-icons/md";
 import { IoBoatOutline } from "react-icons/io5";
-import { FiPhone } from "react-icons/fi";
+import { FaPhoneAlt } from "react-icons/fa";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { CiLocationOn } from "react-icons/ci";
-import { FaRegEnvelope } from "react-icons/fa";
+import { FaEnvelope } from "react-icons/fa";
 
 import BrandStrip from '../../components/BrandStrip/BrandStrip';
 
@@ -420,17 +420,24 @@ const ExpenditionCruising = () => {
             Every extraordinary journey begins with a conversation. Our Japan
             specialists await to craft your bespoke itinerary, tailored to your every desire.
           </p>
-          <div className={styles.ecExpJourneyContact}>
-            <div className={styles.ecContactBox}>
-              <span className={styles.ecContactIcon}><FiPhone size={15}/></span>
-              <span>+442074269888</span>
-            </div>
-            <div className={styles.ecDivider}></div>
-            <div className={styles.ecContactBox}>
-              <span className={styles.ecContactIcon}><FaRegEnvelope size={15}/></span>
-              <span>southafrica@eliteconcierge.com</span>
-            </div>
-          </div>
+          {/* Contact Row */}
+                  <div className="journey-contact">
+                      <div className="contact-item">
+                        <div className="icon-box">
+                          <FaPhoneAlt />
+                        </div>
+                        <span>+44 2074269888</span>
+                      </div>
+            
+                      <div className="divider"></div>
+            
+                      <div className="contact-item">
+                        <div className="icon-box">
+                          <FaEnvelope />
+                        </div>
+                        <span>southafrica@eliteconcierge.com</span>
+                      </div>
+                  </div>
           <button className={styles.ecExpJourneyBtn}>BEGIN YOUR JOURNEY →</button>
         </div>
         <BrandStrip/>
