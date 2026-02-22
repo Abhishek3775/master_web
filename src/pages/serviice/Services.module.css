@@ -341,27 +341,53 @@
   margin: 0 auto 48px;
   line-height: 1.75;
 }
-.journeyContact {
+/* ================= CONTACT ================= */
+
+.journey-contact {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 32px;
+  gap: 40px;
+  margin-bottom: 50px;
   flex-wrap: wrap;
-  margin-bottom: 36px;
+  /* background-color: red; */
 }
-.contactItem {
+
+.contact-item {
   display: flex;
   align-items: center;
-  gap: 10px;
-  color: #111;
+  gap: 15px;
+  color: #131313;
   font-size: 15px;
-  width: 250px;
+  /* width: 300px;;
+  background-color: blue; */
 }
-.contactIcon {
-  border: 1px solid #111;
-  border-radius: 4px;
-  padding: 6px;
-  background: #fff;
+
+.icon-box {
+  width: 48px;
+  height: 48px;
+  border: 1px solid #d8d3cb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  color: #131313;
+  transition: 0.3s ease;
+}
+
+.icon-box svg {
+  font-size: 16px;
+}
+
+.icon-box:hover {
+  border-color: #b48a45;
+  color: #b48a45;
+}
+
+.divider {
+  width: 1px;
+  height: 45px;
+  background: #d8d3cb;
 }
 .journeyBtn {
   background: #C09551;
