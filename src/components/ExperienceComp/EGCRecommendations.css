@@ -91,7 +91,7 @@
 }
 
 .egc-recom-active {
-  background: #b88a44;
+  background: #C09551;
   color: #fff;
 }
 
@@ -150,7 +150,7 @@
 }
 
 .egc-recom-badge {
-  background: #b88a44;
+  background: #C09551;
   position: absolute;
   top: clamp(14px, 2vw, 25px);
   left: clamp(14px, 2vw, 25px);
