@@ -1,3 +1,6 @@
+/* html , body {
+  overflow: hidden;
+} */
 .dates-section {
   background: #f3f1ed;
   padding: 80px 5%;
@@ -33,6 +36,11 @@
 }
 
 .legend {
+  display: flex;
+  justify-content: center;
+}
+
+.legend2 {
   display: flex;
   justify-content: center;
   gap: 25px;
@@ -97,6 +105,7 @@ tbody tr {
   font-size: 12px;
   background: #f4e7c2;
   padding: 4px 8px;
+  margin-left: 10px;
   border-radius: 4px;
 }
 
@@ -195,7 +204,12 @@ tbody tr {
   }
 
   .legend {
+    align-items: center;
+  }
+
+  .legend2 {
     flex-direction: column;
+    align-items:flex-start ;
     gap: 10px;
   }
 
@@ -217,6 +231,11 @@ tbody tr {
 
   .description {
     font-size: 13px;
+  }
+
+  .dot{
+    align-items: flex-start;
+    
   }
 
   table {

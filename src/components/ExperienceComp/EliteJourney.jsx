@@ -1,7 +1,7 @@
 import React from "react";
 import "./EliteJourney.css";
-import { FiPhone} from "react-icons/fi";
-import { FaRegEnvelope } from "react-icons/fa";
+import { FaPhoneAlt} from "react-icons/fa";
+import { FaEnvelope } from "react-icons/fa";
 
 
 const EliteJourney = () => {
@@ -17,20 +17,24 @@ const EliteJourney = () => {
           every desire.
         </p>
 
-        {/* CONTACT INFO */}
-        <div className="b-j-contact-row">
-                  <div className="b-j-contact-item">
-                    <FiPhone size={30 } className="b-j-icon" />
-                    <span>+44 2074269888</span>
-                  </div>
-        
-                  <div className="divider"></div>
-        
-                  <div className="b-j-contact-item">
-                    <FaRegEnvelope size={30} className="b-j-icon" />
-                    <span>southafrica@eliteconcierge.com</span>
-                  </div>
-                </div>
+        {/* Contact Row */}
+        <div className="journey-contact">
+            <div className="contact-item">
+              <div className="icon-box">
+                <FaPhoneAlt />
+              </div>
+              <span>+44 2074269888</span>
+            </div>
+  
+            <div className="divider"></div>
+  
+            <div className="contact-item">
+              <div className="icon-box">
+                <FaEnvelope />
+              </div>
+              <span>southafrica@eliteconcierge.com</span>
+            </div>
+        </div>
 
         {/* BUTTON */}
         <button className="elite-journey-btn">

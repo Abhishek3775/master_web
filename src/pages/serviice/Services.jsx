@@ -4,8 +4,12 @@ import { CiGlobe } from "react-icons/ci";
 import { LuShield } from "react-icons/lu";
 import { FiClock } from "react-icons/fi";
 import { FaStar } from "react-icons/fa";
-import { FaPhoneAlt } from "react-icons/fa";
+import {FiPhone } from "react-icons/fi";
+import { SlEnvolope } from "react-icons/sl";
 import { FaRegEnvelope } from "react-icons/fa";
+import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+
+
 import { useNavigate } from "react-router-dom";
 import BrandStrip from "../../components/BrandStrip/BrandStrip";
 
@@ -292,15 +296,23 @@ export default function Services() {
           Every extraordinary journey begins with a conversation. Our specialists await to craft
           your bespoke itinerary, tailored to your every desire.
         </p>
-        <div className={styles.journeyContact}>
-          <div className={styles.contactItem}>
-            <FaPhoneAlt size={25} className={styles.contactIcon} />
-            <span>+44 207 426 8988</span>
-          </div>
-          <div className={styles.contactItem}>
-            <FaRegEnvelope size={25} className={styles.contactIcon} />
-            <span>southafrica@eliteconcierge.com</span>
-          </div>
+        {/* Contact Row */}
+        <div className="journey-contact">
+            <div className="contact-item">
+              <div className="icon-box">
+                <FaPhoneAlt />
+              </div>
+              <span>+44 2074269888</span>
+            </div>
+  
+            <div className="divider"></div>
+  
+            <div className="contact-item">
+              <div className="icon-box">
+                <FaEnvelope />
+              </div>
+              <span>southafrica@eliteconcierge.com</span>
+            </div>
         </div>
         <button className={styles.journeyBtn}>BEGIN YOUR JOURNEY →</button>
         <BrandStrip />

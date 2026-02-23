@@ -205,9 +205,23 @@
 @media (max-width: 480px) {
   .j-d-faq-question {
     font-size: 13px;
+    word-spacing: normal;  /* add karo */
+    text-align: left;      /* add karo */
+  }
+
+  .j-d-info-item {
+    word-spacing: normal; 
+  }
+
+  .j-d-info-item p,
+  .j-d-info-item strong {
+    text-align: left;
+    word-spacing: normal;
   }
 
   .j-d-faq-answer {
     font-size: 12px;
+    word-spacing: normal;
+    text-align: left;
   }
 }

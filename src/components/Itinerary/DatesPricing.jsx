@@ -18,9 +18,11 @@ const DatesPricing = () => {
 
         {/* Availability Legend */}
         <div className="legend">
+          <div className="legend2">
           <span><span className="dot available"></span> Available</span>
           <span><span className="dot limited"></span> Limited Availability</span>
           <span><span className="dot sold"></span> Sold Out / Waitlist</span>
+          </div>
         </div>
 
         {/* Table */}

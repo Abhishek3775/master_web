@@ -77,8 +77,8 @@ const SeasonalSignature = () => {
               swiper.navigation.init();
               swiper.navigation.update();
             }}
-            breakpoints={{
-              0: { slidesPerView: 1 },
+             breakpoints={{
+              0: { slidesPerView: 1, spaceBetween: 0 },  // spaceBetween: 0 karo mobile pe
               768: { slidesPerView: 2 },
               1100: { slidesPerView: 3 },
             }}

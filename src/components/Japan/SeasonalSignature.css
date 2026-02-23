@@ -49,7 +49,7 @@
 
 .sse-card {
   background: transparent;
-  text-align: left;
+  text-align: center;
 }
 
 /* ================= IMAGE ================= */
@@ -210,6 +210,38 @@
   }
 }
 
+@media (max-width: 767px) {
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+  }
+
+  .sse-card {
+    width: 100%;
+  }
+
+  .sse-image {
+    width: 100%;
+  }
+
+  .sse-footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .sse-price {
+    width: 100%;
+    text-align: center;
+  }
+
+  .sse-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 @media (max-width: 480px) {
   .sse-image {
     height: 300px;
@@ -218,6 +250,30 @@
   .sse-footer {
     flex-direction: column;
     gap: 10px;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .sse-price {
+    text-align: center;
+    width: 100%;
+  }
+
+  .sse-btn {
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .sse-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sse-desc {
+    text-align: center;
   }
 }

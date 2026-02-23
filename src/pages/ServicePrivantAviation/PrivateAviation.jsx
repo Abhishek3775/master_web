@@ -189,14 +189,17 @@ export default function PrivateAviation() {
             </div>
 
             <div className={styles.features}>
-              {activeJet.features.map((col, i) => (
-                <ul key={i}>
-                  {col.map((item, j) => (
-                    <li key={j}>{item}</li>
-                  ))}
-                </ul>
-              ))}
-            </div>
+  <p className={styles.featuresLabel}>Features</p>
+  <div className={styles.featuresGrid}>
+    {activeJet.features.map((col, i) => (
+      <ul key={i}>
+        {col.map((item, j) => (
+          <li key={j}>{item}</li>
+        ))}
+      </ul>
+    ))}
+  </div>
+</div>
           </div>
         </div>
       </section>

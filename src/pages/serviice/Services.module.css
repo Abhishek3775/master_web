@@ -8,6 +8,9 @@
   margin: 0; padding: 0; box-sizing: border-box;
 }
 
+
+
+
 .servicesPage {
   width: 100%;
   overflow-x: hidden;
@@ -43,7 +46,7 @@
 }
 
 .servicesHeroSubtitle {
-  color: #d1a650;
+  color: #C09551;
   font-size: 14px;
   letter-spacing: 3px;
   margin-bottom: 14px;
@@ -59,7 +62,7 @@
 }
 
 .servicesHeroTagline {
-  color: #d1a650;
+  color: #C09551;
   font-size: 18px;
   margin-bottom: 20px;
 }
@@ -115,6 +118,7 @@
   color: #555;
   font-size: 15px;
   max-width: 660px;
+  text-align: center;
   margin: 0 auto;
   line-height: 1.75;
 }
@@ -171,14 +175,14 @@
   padding: 56px 64px;
   background: #fff;
   height: 100%;
-  overflow-y: auto;
+  overflow-y: visible;
 }
 
 /* =====================================================
    SHARED TEXT STYLES
    ===================================================== */
 .serviceSubtitle {
-  color: #b58a2f;
+  color: #C09551;
   font-size: 21px;
   font-weight: 700;
   letter-spacing: 2px;
@@ -211,13 +215,13 @@
 
 .serviceList li::before {
   content: "• ";
-  color: #b58a2f;
+  color: #C09551;
   font-weight: bold;
 }
 
 .viewBtn {
   align-self: flex-start;
-  background: #b58a2f;
+  background: #C09551;
   color: #fff;
   border: none;
   padding: 12px 28px;
@@ -231,7 +235,7 @@
   align-items: center;
   gap: 8px;
 }
-.viewBtn:hover { background: #d1a650; color: #111; }
+.viewBtn:hover { background: #C09551; color: #111; }
 
 /* =====================================================
    STATS
@@ -251,7 +255,7 @@
 }
 .statsTop > div { min-width: 120px; }
 .statsTop h3 {
-  color: #b58a2f;
+  color: #C09551;
   font-size: 34px;
   font-weight: 700;
   margin-bottom: 6px;
@@ -276,7 +280,7 @@
 
 .icon {
   display: flex;
-  color: #b58a2f;
+  color: #C09551;
   height: 44px;
   width: 44px;
   margin: 0 auto 14px;
@@ -297,7 +301,7 @@
   /* text-align: center; */
 }
 .stars { display: flex; justify-content: center; gap: 6px; margin-bottom: 20px; }
-.star  { color: #b58a2f; font-size: 18px; }
+.star  { color: #C09551; font-size: 18px; }
 .quote {
   font-size: 15px;
   color: #333;
@@ -312,12 +316,12 @@
    JOURNEY
    ===================================================== */
 .journeySection {
-  background: #f9f8f6;
+  background: #fff;
   text-align: center;
   padding: 60px 24px 0;
 }
 .journeySubtitle {
-  color: #b58a2f;
+  color: #C09551;
   letter-spacing: 2px;
   font-size: 21px;
   font-weight: 700;
@@ -338,30 +342,56 @@
   margin: 0 auto 48px;
   line-height: 1.75;
 }
-.journeyContact {
+/* ================= CONTACT ================= */
+
+.journey-contact {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 32px;
+  gap: 40px;
+  margin-bottom: 50px;
   flex-wrap: wrap;
-  margin-bottom: 36px;
+  /* background-color: red; */
 }
-.contactItem {
+
+.contact-item {
   display: flex;
   align-items: center;
-  gap: 10px;
-  color: #111;
+  gap: 15px;
+  color: #131313;
   font-size: 15px;
-  width: 250px;
+  /* width: 300px;;
+  background-color: blue; */
 }
-.contactIcon {
-  border: 1px solid #111;
-  border-radius: 4px;
-  padding: 6px;
-  background: #fff;
+
+.icon-box {
+  width: 48px;
+  height: 48px;
+  border: 1px solid #d8d3cb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  color: #131313;
+  transition: 0.3s ease;
+}
+
+.icon-box svg {
+  font-size: 16px;
+}
+
+.icon-box:hover {
+  border-color: #C09551;
+  color: #C09551;
+}
+
+.divider {
+  width: 1px;
+  height: 45px;
+  background: #d8d3cb;
 }
 .journeyBtn {
-  background: #b58a2f;
+  background: #C09551;
   color: #fff;
   border: none;
   padding: 13px 36px;
@@ -372,7 +402,7 @@
   margin-bottom: 60px;
   transition: background 0.25s;
 }
-.journeyBtn:hover { background: #d1a650; color: #111; }
+.journeyBtn:hover { background: #C09551; color: #111; }
 
 .partners {
   display: flex;

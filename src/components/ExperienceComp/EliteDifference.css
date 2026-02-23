@@ -11,7 +11,7 @@
 
 /* ── SECTION BASE ── */
 .elite-diff-section {
-  background-color: #f9f8f5;
+  background-color: #ffffff;
   padding: clamp(50px, 8vw, 90px) clamp(16px, 5%, 60px);
   font-family: "Poppins", sans-serif;
   color: #222;

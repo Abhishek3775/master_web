@@ -22,7 +22,7 @@ import { FaBed } from "react-icons/fa";
 import { FiCalendar } from "react-icons/fi";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 import { FaPhoneAlt } from "react-icons/fa";
-import { FaRegEnvelope } from "react-icons/fa";
+import { FaEnvelope } from "react-icons/fa";
 import BrandStrip from "../../components/BrandStrip/BrandStrip";
 
 const ImperialOdysseyHome = () => {
@@ -377,16 +377,24 @@ const ImperialOdysseyHome = () => {
         <p className={styles.journeyText}>
           Every extraordinary journey begins with a conversation. Our Japan specialists await to craft your bespoke itinerary, tailored to your every desire.
         </p>
-        <div className={styles.journeyContact}>
-          <div className={styles.contactItem}>
-            <FaPhoneAlt size={25} className={styles.contactIcon} />
-            <span>+44 207 426 8988</span>
-          </div>
-          <div className={styles.contactItem}>
-            <FaRegEnvelope size={25} className={styles.contactIcon} />
-            <span>southafrica@eliteconcierge.com</span>
-          </div>
-        </div>
+        {/* Contact Row */}
+                        <div className="journey-contact">
+                                  <div className="contact-item">
+                                    <div className="icon-box">
+                                      <FaPhoneAlt />
+                                    </div>
+                                    <span>+44 2074269888</span>
+                                  </div>
+                        
+                                  <div className="divider"></div>
+                        
+                                  <div className="contact-item">
+                                    <div className="icon-box">
+                                      <FaEnvelope />
+                                    </div>
+                                    <span>southafrica@eliteconcierge.com</span>
+                                  </div>
+                                </div>
         <button className={styles.journeyBtn}>BEGIN YOUR JOURNEY →</button>
         <BrandStrip />
       </section>
