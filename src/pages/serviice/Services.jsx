@@ -4,9 +4,6 @@ import { CiGlobe } from "react-icons/ci";
 import { LuShield } from "react-icons/lu";
 import { FiClock } from "react-icons/fi";
 import { FaStar } from "react-icons/fa";
-import {FiPhone } from "react-icons/fi";
-import { SlEnvolope } from "react-icons/sl";
-import { FaRegEnvelope } from "react-icons/fa";
 import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
 
