@@ -26,6 +26,7 @@ import Experience from './pages/Experience/Experience';
 
 import Calender from './pages/Calender/Calender';
 import MarchCalender from './pages/Calender/MarchCalender';
+// import Accomodation from './pages/gaurav-accomodation/Accomodation';
 
 
 
@@ -85,6 +86,8 @@ function App() {
 
             <Route path="/calender" element={<Calender/>} />
             <Route path="/calender/march" element={<MarchCalender/>} />
+            {/* <Route path="/accommodation" element={<Accomodation/>} /> */}
+
 
           </Routes>
         </main>
