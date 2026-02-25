@@ -1,0 +1,116 @@
+.evoSection {
+  background-color: #F5F4EF;
+  padding: 90px 5%;
+}
+
+.evoContainer {
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+/* LEFT SIDE */
+.evoContent {
+  flex: 1;
+  max-width: 600px;
+}
+
+.evoTopRow {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.evoSubtitle {
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #C09551;
+}
+
+.evoLine {
+  flex: 1;
+  height: 1px;
+  background-color: #C09551;
+}
+
+.evoTitle {
+  font-size: 38px;
+  font-weight: 500;
+  margin-bottom: 25px;
+  color: #1A1A1A;
+  letter-spacing: 1px;
+}
+
+.evoDescription {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+}
+
+/* RIGHT SIDE */
+.evoImageWrapper {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.evoImage {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px;
+  transition: transform 0.5s ease;
+}
+
+.evoImage:hover {
+  transform: scale(1.03);
+}
+
+/* ========================== */
+/* RESPONSIVE DESIGN */
+/* ========================== */
+
+@media (max-width: 1024px) {
+  .evoContainer {
+    gap: 50px;
+  }
+
+  .evoTitle {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .evoContainer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .evoImageWrapper {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .evoImage {
+    width: 90%;
+    max-width: 500px;
+  }
+
+  .evoContent {
+    max-width: 100%;
+  }
+
+  .evoLine {
+    display: none;
+  }
+
+  .evoTitle {
+    font-size: 24px;
+  }
+}

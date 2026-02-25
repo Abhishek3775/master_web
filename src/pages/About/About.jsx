@@ -7,15 +7,33 @@ import OurPromiseSection from '../../components/AboutCompo/EliteGlobalPromise'
 import ValuesSection from '../../components/AboutCompo/ValuesSection'
 import JourneyCTA from '../../components/AboutCompo/JourneyCTA'
 import BrandStrip from '../../components/BrandStrip/BrandStrip'
+import WhoWeAre from '../../components/AboutCompo/WhoWeAre'
+import BeginningSection from '../../components/AboutCompo/BeginningSection'
+import EvolutionSection from '../../components/AboutCompo/EvolutionSection'
+import ValuesIntro from '../../components/AboutCompo/ValuesIntro'
+import PrincipleDiscreet from '../../components/AboutCompo/PrincipleDiscreet'
+import PrincipleRelentless from '../../components/AboutCompo/PrincipleRelentless'
+import PrincipleIntuitive from '../../components/AboutCompo/PrincipleIntuitive'
+import AboutJourneySection from '../../components/AboutCompo/AboutJourneySection'
+import AboutServicesShowcase from '../../components/AboutCompo/AboutServicesShowcase'
 
 function About() {
   return (
     <>
+    {<WhoWeAre/>}
     {<AboutTimeline/>}
+    {<BeginningSection/>}
+    {<EvolutionSection/>}
+     {<ExperienceSection/>}
+    {<OurPromiseSection/>}
+    {<ValuesIntro/>}
+    {<PrincipleDiscreet/>}
+    {<PrincipleRelentless/>}
+    {<PrincipleIntuitive/>}
+    {<AboutServicesShowcase/>}
+    {<AboutJourneySection/>}
     {<TeamSection/>}
     {<FounderSection/>}
-    {<ExperienceSection/>}
-    {<OurPromiseSection/>}
     {<ValuesSection/>}
     {<JourneyCTA/>}
     {<BrandStrip/>}
