@@ -21,7 +21,7 @@ const ValuesIntro = () => {
         </h2>
 
         <p className={styles.description}>
-          These keep us on course—whatever we do, wherever in the world we
+          These keep us on course—whatever we do, wherever in the world we <br />
           find ourselves
         </p>
 

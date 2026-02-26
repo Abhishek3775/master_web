@@ -11,7 +11,10 @@
   gap: 70px;
 }
 
+/* ========================= */
 /* IMAGE SIDE */
+/* ========================= */
+
 .imageWrapper {
   flex: 1;
   display: flex;
@@ -31,7 +34,10 @@
   transform: scale(1.03);
 }
 
+/* ========================= */
 /* CONTENT SIDE */
+/* ========================= */
+
 .content {
   flex: 1;
   max-width: 600px;
@@ -45,9 +51,10 @@
 }
 
 .subtitle {
-  font-size: 14px;
+  font-size: 21px;
   letter-spacing: 2px;
   color: #C09551;
+  white-space: nowrap;
 }
 
 .line {
@@ -71,7 +78,7 @@
 }
 
 /* ========================= */
-/* RESPONSIVE */
+/* RESPONSIVE — TABLET */
 /* ========================= */
 
 @media (max-width: 1024px) {
@@ -84,12 +91,20 @@
   }
 }
 
+/* ========================= */
+/* RESPONSIVE — MOBILE */
+/* ========================= */
+
 @media (max-width: 768px) {
+  .section {
+    padding: 60px 5%;
+  }
 
   .container {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 30px;
   }
 
   .imageWrapper {
@@ -106,11 +121,81 @@
     max-width: 100%;
   }
 
+  .topRow {
+    justify-content: center;
+  }
+
   .line {
     display: none;
   }
 
   .title {
     font-size: 24px;
+  }
+}
+
+/* ========================= */
+/* RESPONSIVE — PHONE */
+/* ========================= */
+
+@media (max-width: 480px) {
+  .section {
+    padding: 40px 4%;
+  }
+
+  .container {
+    gap: 22px;
+  }
+
+  .image {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 3px;
+  }
+
+  .topRow {
+    margin-bottom: 14px;
+    gap: 12px;
+  }
+
+  .subtitle {
+    font-size: 17px;
+    letter-spacing: 1.8px;
+  }
+
+  .title {
+    font-size: 20px;
+    margin-bottom: 14px;
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+  }
+
+  .description {
+    font-size: 14px;
+    line-height: 1.75;
+    color: #666;
+  }
+}
+
+/* ========================= */
+/* RESPONSIVE — SMALL PHONE */
+/* ========================= */
+
+@media (max-width: 360px) {
+  .section {
+    padding: 35px 4%;
+  }
+
+  .subtitle {
+    font-size: 21px;
+    letter-spacing: 1.5px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .description {
+    font-size: 13px;
   }
 }

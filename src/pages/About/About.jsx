@@ -30,11 +30,11 @@ function About() {
     {<PrincipleDiscreet/>}
     {<PrincipleRelentless/>}
     {<PrincipleIntuitive/>}
-    {<AboutServicesShowcase/>}
     {<AboutJourneySection/>}
-    {<TeamSection/>}
-    {<FounderSection/>}
-    {<ValuesSection/>}
+    {<AboutServicesShowcase/>}
+    {/* {<TeamSection/>} */}
+    {/* {<FounderSection/>} */}
+    {/* {<ValuesSection/>} */}
     {<JourneyCTA/>}
     {<BrandStrip/>}
     </>

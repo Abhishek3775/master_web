@@ -44,6 +44,7 @@
   letter-spacing: 2px;
   color: #C09551;
   margin-top: 10px;
+  white-space: nowrap;
 }
 
 .topLine {
@@ -134,7 +135,7 @@
   border: 1px solid #C09551;
 }
 
-/* ================= RESPONSIVE ================= */
+/* ================= RESPONSIVE — TABLET ================= */
 
 @media (max-width: 1024px) {
   .mainHeading {
@@ -150,16 +151,21 @@
   }
 }
 
+/* ================= RESPONSIVE — MOBILE ================= */
+
 @media (max-width: 768px) {
   .relentlessContainer {
     flex-direction: column;
   }
 
+  /* IMAGE FIRST on mobile */
   .imageSide {
+    order: 1;
     height: 400px;
   }
 
   .relentlessContent {
+    order: 2;
     padding: 60px 25px;
     text-align: center;
     align-items: center;
@@ -186,17 +192,74 @@
   }
 }
 
+/* ================= RESPONSIVE — PHONE ================= */
+
 @media (max-width: 480px) {
+  .imageSide {
+    height: 280px;
+  }
+
+  .relentlessContainer {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .relentlessContent {
+    padding: 40px 20px;
+  }
+
   .mainHeading {
     font-size: 28px;
+    margin-bottom: 18px;
   }
 
   .badge {
     font-size: 11px;
     padding: 8px 16px;
+    margin-bottom: 20px;
+  }
+
+  .smallLabel {
+    font-size: 11px;
+    letter-spacing: 1.8px;
+  }
+
+  .description {
+    font-size: 14px;
+    line-height: 1.75;
+    margin-bottom: 28px;
   }
 
   .bigNumber {
     font-size: 120px;
+  }
+
+  .cornerBorder {
+    inset: 10px;
+  }
+}
+
+/* ================= RESPONSIVE — SMALL PHONE ================= */
+
+@media (max-width: 360px) {
+  .imageSide {
+    height: 240px;
+  }
+
+  .relentlessContent {
+    padding: 32px 16px;
+  }
+
+  .mainHeading {
+    font-size: 24px;
+  }
+
+  .description {
+    font-size: 13px;
+  }
+
+  .badge {
+    font-size: 10px;
+    padding: 7px 13px;
   }
 }

@@ -16,8 +16,13 @@
   flex: 1;
 }
 
+.top {
+  display: flex;
+  gap: 10px;
+}
+
 .smallLabel {
-  font-size: 14px;
+  font-size: 21px;
   letter-spacing: 2px;
   color: #C09551;
   margin-bottom: 20px;

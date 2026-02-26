@@ -12,7 +12,10 @@
   gap: 80px;
 }
 
+/* ========================= */
 /* LEFT SIDE */
+/* ========================= */
+
 .evoContent {
   flex: 1;
   max-width: 600px;
@@ -26,9 +29,10 @@
 }
 
 .evoSubtitle {
-  font-size: 14px;
+  font-size: 21px;
   letter-spacing: 2px;
   color: #C09551;
+  white-space: nowrap;
 }
 
 .evoLine {
@@ -51,7 +55,10 @@
   color: #555;
 }
 
+/* ========================= */
 /* RIGHT SIDE */
+/* ========================= */
+
 .evoImageWrapper {
   flex: 1;
   display: flex;
@@ -71,9 +78,9 @@
   transform: scale(1.03);
 }
 
-/* ========================== */
-/* RESPONSIVE DESIGN */
-/* ========================== */
+/* ========================= */
+/* RESPONSIVE — TABLET */
+/* ========================= */
 
 @media (max-width: 1024px) {
   .evoContainer {
@@ -85,16 +92,31 @@
   }
 }
 
+/* ========================= */
+/* RESPONSIVE — MOBILE */
+/* ========================= */
+
 @media (max-width: 768px) {
+  .evoSection {
+    padding: 60px 5%;
+  }
+
   .evoContainer {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 30px;
+  }
+
+  .evoContent {
+    max-width: 100%;
+    order: 1;
   }
 
   .evoImageWrapper {
     justify-content: center;
     width: 100%;
+    order: 2;
   }
 
   .evoImage {
@@ -102,8 +124,8 @@
     max-width: 500px;
   }
 
-  .evoContent {
-    max-width: 100%;
+  .evoTopRow {
+    justify-content: center;
   }
 
   .evoLine {
@@ -112,5 +134,71 @@
 
   .evoTitle {
     font-size: 24px;
+  }
+}
+
+/* ========================= */
+/* RESPONSIVE — PHONE */
+/* ========================= */
+
+@media (max-width: 480px) {
+  .evoSection {
+    padding: 40px 4%;
+  }
+
+  .evoContainer {
+    gap: 22px;
+  }
+
+  .evoImage {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 3px;
+  }
+
+  .evoTopRow {
+    margin-bottom: 14px;
+    gap: 12px;
+  }
+
+  .evoSubtitle {
+    font-size: 17px;
+    letter-spacing: 1.8px;
+  }
+
+  .evoTitle {
+    font-size: 20px;
+    margin-bottom: 14px;
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+  }
+
+  .evoDescription {
+    font-size: 14px;
+    line-height: 1.75;
+    color: #666;
+  }
+}
+
+/* ========================= */
+/* RESPONSIVE — SMALL PHONE */
+/* ========================= */
+
+@media (max-width: 360px) {
+  .evoSection {
+    padding: 35px 4%;
+  }
+
+  .evoSubtitle {
+    font-size: 15px;
+    letter-spacing: 1.5px;
+  }
+
+  .evoTitle {
+    font-size: 18px;
+  }
+
+  .evoDescription {
+    font-size: 13px;
   }
 }

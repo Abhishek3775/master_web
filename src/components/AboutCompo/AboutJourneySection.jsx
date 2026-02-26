@@ -36,8 +36,10 @@ const AboutJourneySection = () => {
 
         {/* LEFT CONTENT */}
         <div className={styles.leftContent}>
+          <div className={styles.top}>
+            <div className="topLine"></div>
           <p className={styles.smallLabel}>OUR JOURNEY</p>
-
+          </div>
           <h2 className={styles.mainHeading}>
             WHY ELITE GLOBAL CONCIERGE?
           </h2>

@@ -32,7 +32,7 @@
 
 /* Subtitle */
 .subtitle {
-  font-size: 14px;
+  font-size: 21px;
   letter-spacing: 2px;
   color: #C09551;
   margin-bottom: 20px;
@@ -53,6 +53,7 @@
   font-size: 16px;
   color: #666;
   line-height: 1.7;
+  text-align: center;
   margin-bottom: 40px;
 }
 

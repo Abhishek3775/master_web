@@ -15,8 +15,20 @@
   min-width: 280px;
 }
 
+.abt-top {
+  display: flex;
+  gap: 10px;
+}
+
+.topLine {
+  width: 100px;
+  height: 1px;
+  margin-top: 10px;
+  background-color: #C09551;
+}
+
 .abt-small-heading {
-  font-size: 14px;
+  font-size: 21px;
   letter-spacing: 2px;
   color: #C09551;
   margin-bottom: 10px;

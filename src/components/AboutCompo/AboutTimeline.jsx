@@ -8,7 +8,10 @@ const AboutTimeline = () => {
         
         {/* LEFT */}
         <div className="abt-left">
+          <div className="abt-top">
+            <div className="topLine"></div>
           <p className="abt-small-heading">HOW IT BEGAN</p>
+          </div>
           <h1 className="abt-big-year">2025</h1>
 
           <ul className="abt-timeline-list">
@@ -53,13 +56,15 @@ const AboutTimeline = () => {
           </p>
 
           <p className="abt-paragraph">
-            They envisioned something different — a service without boundaries,
-            without the word "impossible" in its vocabulary.
+            They envisioned something different-a service without boundaries, without the word
+            'impossible' in its vocabulary. A team that would move mountains, cross oceans, and bend time
+            itself to fulfill every request.
           </p>
 
           <p className="abt-paragraph">
-            What began as a bespoke service has evolved into a global network
-            of excellence.
+            What began as a bespoke service for a handful of discerning clients has evolved into a global
+            network of excellence, yet our founding principle remains unchanged: every client deserves a
+            world tailored precisely to their desires.
           </p>
 
           <div className="abt-quote">
