@@ -41,9 +41,9 @@ const JournalSection = () => {
             <h2 className={styles.heading}>Travel Insights</h2>
           </div>
 
-          <a href="#" className={styles.viewAll}>
+          <p className={styles.viewAll}>
             View All Articles →
-          </a>
+          </p>
         </div>
 
         {/* Articles */}
