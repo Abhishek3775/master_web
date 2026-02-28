@@ -147,27 +147,6 @@ const CuratedCollection = () => {
     { key: "grade", label: "GRADE", options: gradeOptions },
   ];
 
-  // ── Build render groups: pairs of [normal, normal] with spotlight after every pair ──
-  // This avoids duplicates by tracking which indices have been rendered
-  const renderGroups = [];
-  let i = 0;
-  while (i < filtered.length) {
-    const group = [];
-    // Take up to 2 hotels for normal cards
-    group.push({ hotel: filtered[i], isSpotlight: false });
-    i++;
-    if (i < filtered.length) {
-      group.push({ hotel: filtered[i], isSpotlight: false });
-      i++;
-      // After every pair, show the NEXT unrendered hotel as spotlight
-      if (i < filtered.length) {
-        group.push({ hotel: filtered[i], isSpotlight: true });
-        i++;
-      }
-    }
-    renderGroups.push(group);
-  }
-
   const renderHotelCard = (hotel, isReversed) => (
     <div className={`${styles.card} ${isReversed ? styles.cardReverse : ""}`} key={hotel.id}>
       {/* Image Block */}
@@ -209,43 +188,7 @@ const CuratedCollection = () => {
     </div>
   );
 
-  const renderSpotlightCard = (hotel) => (
-    <div className={styles.spotlightCard} key={`spotlight-${hotel.id}`}>
-      <div className={styles.spotlightImageWrapper}>
-        <span className={styles.badge}>{hotel.grade}</span>
-        <button
-          className={`${styles.wishlistBtn} ${wishlist.includes(hotel.id) ? styles.wishlisted : ""}`}
-          onClick={() => toggleWishlist(hotel.id)}
-        >
-          <FiHeart />
-        </button>
-        <img src={hotel.image} alt={hotel.name} />
-      </div>
-      <div className={styles.spotlightContent}>
-        <span className={styles.location}><FaMapMarkerAlt className={styles.pinIcon} /> {hotel.location}</span>
-        <h3 className={styles.spotlightTitle}>{hotel.name}</h3>
-        <div className={styles.rating}>{"★".repeat(hotel.stars)} <span>{hotel.stars}-Star Luxury</span></div>
-        <p className={styles.description}>{hotel.description}</p>
-        <div className={styles.tags}>{hotel.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
-        <div className={styles.benefit}>
-          <LuShield className={styles.benefitIcon} />
-          <div>
-            <span className={styles.benefitLabel}>EXCLUSIVE MEMBER BENEFIT</span>
-            <p>{hotel.benefit}</p>
-          </div>
-        </div>
-        <div className={styles.priceRow}>
-          <div>
-            <span className={styles.from}>FROM</span>
-            <h4 className={styles.price}>${hotel.price.toLocaleString()}<span>/night</span></h4>
-          </div>
-          <button className={styles.btn} onClick={() => { setSelectedHotel(hotel); setModalImgIndex(0); }}>
-            View Details →
-          </button>
-        </div>
-      </div>
-    </div>
-  );
+
 
   return (
     <section className={styles.wrapper} onClick={() => setOpenDropdown(null)}>
