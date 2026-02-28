@@ -22,7 +22,7 @@
   display: block;
   font-size: 21px;
   letter-spacing: 2px;
-  color: #b88a44;
+  color: #C09551;
   font-weight: 600;
   margin-bottom: 20px;
 }
@@ -37,7 +37,7 @@
 }
 
 .heading span {
-  color: #b88a44;
+  color: #C09551;
   font-weight: 500;
 }
 
@@ -55,16 +55,16 @@
 .buttons {
   display: flex;
   justify-content: center;
-  gap: 25px;
+  /* gap: 25px; */
   flex-wrap: wrap;
 }
 
 /* Primary Button */
 .primaryBtn {
-  background: #b88a44;
+  background: #C09551;
   color: #fff;
   border: none;
-  padding: 14px 32px;
+  padding: 12px 40px;
   font-size: 14px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -77,9 +77,9 @@
 /* Secondary Button */
 .secondaryBtn {
   background: transparent;
-  border: 1px solid #b88a44;
-  color: #b88a44;
-  padding: 14px 32px;
+  border: 1px solid #C09551;
+  color: #C09551;
+  padding: 12px 40px;
   font-size: 14px;
   cursor: pointer;
   transition: all 0.3s ease;

@@ -95,7 +95,7 @@ const hotelsData = [
     benefit: "Exclusive access to private tea ceremony & cultural tour",
     highlights: ["Panoramic City Views", "Traditional Spa", "Private Dining", "Cultural Experiences"],
   },
-]
+];
 
 const countryOptions = ["All Countries", "Maldives", "Caribbean", "Greece", "Switzerland", "Japan", "France", "Italy", "UAE"];
 const destinationOptions = ["All Destinations", "Indian Ocean", "Caribbean", "Mediterranean", "Europe", "Asia Pacific", "Middle East"];
@@ -110,14 +110,12 @@ const CuratedCollection = () => {
   const [selectedHotel, setSelectedHotel] = useState(null);
   const [modalImgIndex, setModalImgIndex] = useState(0);
 
-  // Close modal on Escape key
   useEffect(() => {
     const handleKey = (e) => { if (e.key === "Escape") setSelectedHotel(null); };
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
   }, []);
 
-  // Prevent body scroll when modal open
   useEffect(() => {
     document.body.style.overflow = selectedHotel ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
@@ -131,53 +129,163 @@ const CuratedCollection = () => {
   const toggleDropdown = (name) => setOpenDropdown(openDropdown === name ? null : name);
   const toggleWishlist = (id) => setWishlist((prev) => prev.includes(id) ? prev.filter((i) => i !== id) : [...prev, id]);
 
-  const filtered = hotelsData.filter((h) => {
-    return (
-      h.name.toLowerCase().includes(search.toLowerCase()) &&
-      (!filters.country || h.country === filters.country) &&
-      (!filters.destination || h.destination === filters.destination) &&
-      (!filters.type || h.type === filters.type) &&
-      (!filters.grade || h.grade === filters.grade)
-    );
-  });
+  const filtered = hotelsData.filter((h) =>
+    h.name.toLowerCase().includes(search.toLowerCase()) &&
+    (!filters.country || h.country === filters.country) &&
+    (!filters.destination || h.destination === filters.destination) &&
+    (!filters.type || h.type === filters.type) &&
+    (!filters.grade || h.grade === filters.grade)
+  );
 
   const getLabel = (key, options) => (filters[key] ? filters[key] : options[0]);
-
-  // Fake multiple images for modal slider using same image
   const modalImages = selectedHotel ? [selectedHotel.image, selectedHotel.image, selectedHotel.image] : [];
+
+  const filterConfig = [
+    { key: "country", label: "COUNTRY", options: countryOptions },
+    { key: "destination", label: "DESTINATION", options: destinationOptions },
+    { key: "type", label: "HOTEL TYPE", options: typeOptions },
+    { key: "grade", label: "GRADE", options: gradeOptions },
+  ];
+
+  // ── Build render groups: pairs of [normal, normal] with spotlight after every pair ──
+  // This avoids duplicates by tracking which indices have been rendered
+  const renderGroups = [];
+  let i = 0;
+  while (i < filtered.length) {
+    const group = [];
+    // Take up to 2 hotels for normal cards
+    group.push({ hotel: filtered[i], isSpotlight: false });
+    i++;
+    if (i < filtered.length) {
+      group.push({ hotel: filtered[i], isSpotlight: false });
+      i++;
+      // After every pair, show the NEXT unrendered hotel as spotlight
+      if (i < filtered.length) {
+        group.push({ hotel: filtered[i], isSpotlight: true });
+        i++;
+      }
+    }
+    renderGroups.push(group);
+  }
+
+  const renderHotelCard = (hotel, isReversed) => (
+    <div className={`${styles.card} ${isReversed ? styles.cardReverse : ""}`} key={hotel.id}>
+      {/* Image Block */}
+      <div className={styles.imageWrapper}>
+        <span className={styles.badge}>{hotel.grade}</span>
+        <button
+          className={`${styles.wishlistBtn} ${wishlist.includes(hotel.id) ? styles.wishlisted : ""}`}
+          onClick={() => toggleWishlist(hotel.id)}
+        >
+          <FiHeart />
+        </button>
+        <img src={hotel.image} alt={hotel.name} />
+      </div>
+
+      {/* Content Block */}
+      <div className={styles.cardContent}>
+        <span className={styles.location}><FaMapMarkerAlt className={styles.pinIcon} /> {hotel.location}</span>
+        <h3 className={styles.hotelName}>{hotel.name}</h3>
+        <div className={styles.rating}>{"★".repeat(hotel.stars)} <span>{hotel.stars}-Star Luxury</span></div>
+        <p className={styles.description}>{hotel.description}</p>
+        <div className={styles.tags}>{hotel.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
+        <div className={styles.benefit}>
+          <LuShield className={styles.benefitIcon} />
+          <div>
+            <span className={styles.benefitLabel}>EXCLUSIVE MEMBER BENEFIT</span>
+            <p>{hotel.benefit}</p>
+          </div>
+        </div>
+        <div className={styles.priceRow}>
+          <div>
+            <span className={styles.from}>FROM</span>
+            <h4 className={styles.price}>${hotel.price.toLocaleString()}<span>/night</span></h4>
+          </div>
+          <button className={styles.btn} onClick={() => { setSelectedHotel(hotel); setModalImgIndex(0); }}>
+            View Details →
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+
+  const renderSpotlightCard = (hotel) => (
+    <div className={styles.spotlightCard} key={`spotlight-${hotel.id}`}>
+      <div className={styles.spotlightImageWrapper}>
+        <span className={styles.badge}>{hotel.grade}</span>
+        <button
+          className={`${styles.wishlistBtn} ${wishlist.includes(hotel.id) ? styles.wishlisted : ""}`}
+          onClick={() => toggleWishlist(hotel.id)}
+        >
+          <FiHeart />
+        </button>
+        <img src={hotel.image} alt={hotel.name} />
+      </div>
+      <div className={styles.spotlightContent}>
+        <span className={styles.location}><FaMapMarkerAlt className={styles.pinIcon} /> {hotel.location}</span>
+        <h3 className={styles.spotlightTitle}>{hotel.name}</h3>
+        <div className={styles.rating}>{"★".repeat(hotel.stars)} <span>{hotel.stars}-Star Luxury</span></div>
+        <p className={styles.description}>{hotel.description}</p>
+        <div className={styles.tags}>{hotel.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
+        <div className={styles.benefit}>
+          <LuShield className={styles.benefitIcon} />
+          <div>
+            <span className={styles.benefitLabel}>EXCLUSIVE MEMBER BENEFIT</span>
+            <p>{hotel.benefit}</p>
+          </div>
+        </div>
+        <div className={styles.priceRow}>
+          <div>
+            <span className={styles.from}>FROM</span>
+            <h4 className={styles.price}>${hotel.price.toLocaleString()}<span>/night</span></h4>
+          </div>
+          <button className={styles.btn} onClick={() => { setSelectedHotel(hotel); setModalImgIndex(0); }}>
+            View Details →
+          </button>
+        </div>
+      </div>
+    </div>
+  );
 
   return (
     <section className={styles.wrapper} onClick={() => setOpenDropdown(null)}>
-      <div className={styles.container}>
 
-        {/* Header */}
+      {/* ── Header ── */}
+      <div className={styles.header}>
         <span className={styles.smallTitle}>DISCOVER</span>
         <h2 className={styles.heading}>Our Curated Collection</h2>
         <p className={styles.subText}>Filter through 500+ handpicked properties to find your perfect retreat</p>
-
-        {/* Search */}
         <div className={styles.searchBox}>
           <FiSearch className={styles.searchIcon} />
-          <input type="text" placeholder="Search by name" value={search} onChange={(e) => setSearch(e.target.value)} />
+          <input
+            type="text"
+            placeholder="Search by name"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
         </div>
+      </div>
 
-        {/* Filters */}
-        <div className={styles.filters} onClick={(e) => e.stopPropagation()}>
-          {[
-            { key: "country", label: "COUNTRY", options: countryOptions },
-            { key: "destination", label: "DESTINATION", options: destinationOptions },
-            { key: "type", label: "HOTEL TYPE", options: typeOptions },
-            { key: "grade", label: "GRADE", options: gradeOptions },
-          ].map(({ key, label, options }) => (
+      {/* ── Filters Strip ── */}
+      <div className={styles.filtersStrip} onClick={(e) => e.stopPropagation()}>
+        <div className={styles.filtersInner}>
+          {filterConfig.map(({ key, label, options }) => (
             <div className={styles.filterItem} key={key}>
               <label>{label}</label>
-              <div className={`${styles.customSelect} ${openDropdown === key ? styles.open : ""}`} onClick={() => toggleDropdown(key)}>
+              <div
+                className={`${styles.customSelect} ${openDropdown === key ? styles.open : ""}`}
+                onClick={() => toggleDropdown(key)}
+              >
                 <span className={filters[key] ? styles.activeFilter : ""}>{getLabel(key, options)}</span>
                 <FiChevronDown className={`${styles.chevron} ${openDropdown === key ? styles.rotated : ""}`} />
                 {openDropdown === key && (
                   <ul className={styles.dropdown}>
                     {options.map((opt) => (
-                      <li key={opt} className={`${styles.dropdownItem} ${filters[key] === opt || (!filters[key] && opt.startsWith("All")) ? styles.selected : ""}`} onClick={() => handleFilter(key, opt)}>
+                      <li
+                        key={opt}
+                        className={`${styles.dropdownItem} ${filters[key] === opt || (!filters[key] && opt.startsWith("All")) ? styles.selected : ""}`}
+                        onClick={() => handleFilter(key, opt)}
+                      >
                         {opt}
                       </li>
                     ))}
@@ -187,53 +295,18 @@ const CuratedCollection = () => {
             </div>
           ))}
         </div>
+      </div>
 
-        {/* Results */}
+      {/* ── Results ── */}
+      <div className={styles.resultsArea}>
         <div className={styles.results}>
           {filtered.length === 0 ? (
             <div className={styles.noResults}><p>No properties match your filters. Try adjusting your search.</p></div>
           ) : (
+            // Simple approach: render each hotel exactly once, alternating layout
             filtered.map((hotel, index) => {
-              const isEven = index % 2 !== 0;
-              const imageBlock = (
-                <div className={styles.imageWrapper} key="img">
-                  <span className={styles.badge}>{hotel.grade}</span>
-                  <button className={`${styles.wishlistBtn} ${wishlist.includes(hotel.id) ? styles.wishlisted : ""}`} onClick={() => toggleWishlist(hotel.id)}>
-                    <FiHeart />
-                  </button>
-                  <img src={hotel.image} alt={hotel.name} />
-                </div>
-              );
-              const contentBlock = (
-                <div className={styles.cardContent} key="content">
-                  <span className={styles.location}><FaMapMarkerAlt className={styles.pinIcon} /> {hotel.location}</span>
-                  <h3 className={styles.hotelName}>{hotel.name}</h3>
-                  <div className={styles.rating}>{"★".repeat(hotel.stars)} <span>{hotel.stars}-Star Luxury</span></div>
-                  <p className={styles.description}>{hotel.description}</p>
-                  <div className={styles.tags}>{hotel.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
-                  <div className={styles.benefit}>
-                    <LuShield className={styles.benefitIcon} />
-                    <div>
-                      <span className={styles.benefitLabel}>EXCLUSIVE MEMBER BENEFIT</span>
-                      <p>{hotel.benefit}</p>
-                    </div>
-                  </div>
-                  <div className={styles.priceRow}>
-                    <div>
-                      <span className={styles.from}>FROM</span>
-                      <h4 className={styles.price}>${hotel.price.toLocaleString()}<span>/night</span></h4>
-                    </div>
-                    <button className={styles.btn} onClick={() => { setSelectedHotel(hotel); setModalImgIndex(0); }}>
-                      View Details →
-                    </button>
-                  </div>
-                </div>
-              );
-              return (
-                <div className={`${styles.card} ${isEven ? styles.cardReverse : ""}`} key={hotel.id}>
-                  {imageBlock}{contentBlock}
-                </div>
-              );
+              const isReversed = index % 2 !== 0;
+              return renderHotelCard(hotel, isReversed);
             })
           )}
         </div>
@@ -243,48 +316,33 @@ const CuratedCollection = () => {
       {selectedHotel && (
         <div className={styles.modalOverlay} onClick={() => setSelectedHotel(null)}>
           <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
-
-            {/* Close */}
             <button className={styles.modalClose} onClick={() => setSelectedHotel(null)}><FiX /></button>
-
-            {/* Modal Body */}
             <div className={styles.modalBody}>
-
-              {/* Image Slider */}
               <div className={styles.modalImageSection}>
                 <span className={styles.modalBadge}>{selectedHotel.grade}</span>
                 <img src={modalImages[modalImgIndex]} alt={selectedHotel.name} className={styles.modalMainImage} />
-                {/* Slider controls */}
                 <button className={`${styles.sliderBtn} ${styles.sliderLeft}`} onClick={() => setModalImgIndex((modalImgIndex - 1 + modalImages.length) % modalImages.length)}>
                   <FiChevronLeft />
                 </button>
                 <button className={`${styles.sliderBtn} ${styles.sliderRight}`} onClick={() => setModalImgIndex((modalImgIndex + 1) % modalImages.length)}>
                   <FiChevronRight />
                 </button>
-                {/* Dots */}
                 <div className={styles.sliderDots}>
                   {modalImages.map((_, i) => (
                     <span key={i} className={`${styles.dot} ${i === modalImgIndex ? styles.dotActive : ""}`} onClick={() => setModalImgIndex(i)} />
                   ))}
                 </div>
               </div>
-
-              {/* Modal Content */}
               <div className={styles.modalContent}>
                 <span className={styles.modalLocation}><FaMapMarkerAlt className={styles.pinIcon} /> {selectedHotel.location}</span>
                 <h2 className={styles.modalTitle}>{selectedHotel.name}</h2>
                 <div className={styles.modalRating}>{"★".repeat(selectedHotel.stars)} <span>{selectedHotel.stars}-Star Luxury</span></div>
-
                 <p className={styles.modalDesc}>{selectedHotel.longDescription}</p>
-
-                {/* Highlights */}
                 <div className={styles.modalHighlights}>
                   {selectedHotel.highlights.map((h) => (
                     <span key={h} className={styles.highlightTag}>{h}</span>
                   ))}
                 </div>
-
-                {/* Exclusive Benefit */}
                 <div className={styles.modalBenefit}>
                   <LuShield className={styles.benefitIcon} />
                   <div>
@@ -292,21 +350,16 @@ const CuratedCollection = () => {
                     <p>{selectedHotel.benefit}</p>
                   </div>
                 </div>
-
-                {/* Speak to Expert */}
                 <div className={styles.expertBox}>
                   <div className={styles.expertLeft}>
                     <FaPhone className={styles.expertIcon} />
                     <div>
                       <p className={styles.expertTitle}>SPEAK TO AN EXPERT</p>
-                      <p className={styles.expertSub}>
-                        Contact us to speak to Subashish Dutta, an APA curator to book your retreat
-                      </p>
+                      <p className={styles.expertSub}>Contact us to speak to Subashish Dutta, an APA curator to book your retreat</p>
                     </div>
                   </div>
                   <button className={styles.enquireBtn}>ENQUIRE →</button>
                 </div>
-
               </div>
             </div>
           </div>

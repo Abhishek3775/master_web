@@ -45,7 +45,7 @@
 }
 
 .heroTitle span {
-  color: #c89c5d;
+  color: #C09551;
 }
 
 .heroSubtitle {
@@ -65,12 +65,12 @@
 }
 
 .primaryBtn {
-  background-color: #c89c5d;
+  background-color: #C09551;
   color: #fff;
   padding: 12px 30px;
   border: none;
   cursor: pointer;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   font-weight: 600;
   font-size: 1rem;
   transition: background 0.3s;
@@ -83,11 +83,11 @@
 
 .secondaryBtn {
   background: transparent;
-  border: 2px solid #c89c5d;
-  color: #fff;
+  border: 2px solid #C09551;
+  color: #C09551;
   padding: 12px 30px;
   cursor: pointer;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   font-weight: 600;
   font-size: 1rem;
   transition: all 0.3s;
@@ -124,7 +124,7 @@
 }
 
 .statBox h2 {
-  color: #c89c5d;
+  color: #C09551;
   font-size: 2rem;
   margin-bottom: 5px;
 }

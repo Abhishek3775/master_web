@@ -14,7 +14,7 @@
 }
 
 .subtitle {
-  color: #c89c5d;
+  color: #C09551;
   font-weight: 600;
   letter-spacing: 2px;
   font-size: 1.15rem;
@@ -49,7 +49,7 @@
 /* ─── Card ─── */
 
 .benefitCard {
-  background: #f5f4ef;
+  background: #F5F4EF;
   padding: 40px 25px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: 100%;
@@ -73,7 +73,7 @@
   border-radius: 50%;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
   font-size: 1.8rem;
-  color: #c89c5d;
+  color: #C09551;
 }
 
 .benefitCard h3 {
