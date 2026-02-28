@@ -357,7 +357,7 @@
   /* border-radius: 4px; */
   font-size: 13px;
   font-weight: 500;
-  font-family: "Poppins", sans-serif;
+  font-family:inherit;
   transition: background 0.3s;
   white-space: nowrap;
 }
