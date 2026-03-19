@@ -85,7 +85,7 @@ export default function Services() {
               <li>Empty leg flight opportunities</li>
               <li>Global concierge coordination</li>
             </ul>
-            <button onClick={() => navigate('/privent-aviation')} className={styles.viewBtn}>VIEW ALL →</button>
+            <button onClick={() => navigate('/private-aviation')} className={styles.viewBtn}>VIEW ALL →</button>
           </div>
         </div>
 

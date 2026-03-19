@@ -5,6 +5,7 @@ import "./Header.css";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
   const toggleMenu = () => {
@@ -15,17 +16,21 @@ const Header = () => {
     return location.pathname === path ? "active" : "";
   };
 
-//   const closeMenu = () => {
-//   setMenuOpen(false);
-// };
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [location.pathname]);
 
-useEffect(() => {
-  setMenuOpen(false);
-}, [location.pathname]);
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
 
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className="main-header">
+    <header className={`main-header ${scrolled ? "scrolled" : ""}`}>
       <div className="header-container">
         {/* Logo */}
         <Link to="/" className="logo">
@@ -43,12 +48,6 @@ useEffect(() => {
           <Link to="/about" className={`nav-link ${isActive("/about")}`}>
             ABOUT
           </Link>
-          {/* <Link to="/services" className={`nav-link ${isActive('/services')}`}>
-            SERVICES
-          </Link>
-          <Link to="/destinations" className={`nav-link ${isActive('/destinations')}`}>
-            DESTINATIONS
-          </Link> */}
 
           {/* Services Dropdown */}
           <div className="nav-item dropdown">
@@ -58,7 +57,6 @@ useEffect(() => {
             >
               SERVICES
             </Link>
-
             <div className="dropdown-menu">
               <Link to="/private-aviation" className="dropdown-link">
                 Private Aviation
@@ -77,7 +75,6 @@ useEffect(() => {
             >
               DESTINATIONS
             </Link>
-
             <div className="dropdown-menu">
               <Link to="/south-africa" className="dropdown-link">
                 South Africa
