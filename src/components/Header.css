@@ -151,6 +151,7 @@
   cursor: pointer;
   padding: 8px;
   transition: all 0.3s ease;
+  flex-shrink: 0;
 }
 
 .icon-btn:hover {
@@ -185,6 +186,7 @@
   cursor: pointer;
   padding: 8px;
   transition: color 0.3s ease;
+  flex-shrink: 0;
 }
 
 /* Responsive Design */
@@ -207,6 +209,24 @@
     display: block;
   }
 
+  /* FIX: header-actions icons scroll pe hide hone ki problem */
+  .header-actions {
+    position: relative;
+    z-index: 1001;
+    flex-shrink: 0;
+  }
+
+  .icon-btn {
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .enquire-btn {
+    padding: 10px 20px;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+  }
+
   .main-nav {
     position: fixed;
     top: 70px;
@@ -226,29 +246,31 @@
     transform: translateX(0);
   }
 
-  .nav-link {
+  /* FIX: Mobile sidebar links hamesha white rahein — isLightPage ka dark color override */
+  .main-nav .nav-link,
+  .main-header.scrolled .main-nav .nav-link {
+    color: #ffffff !important;
     width: 100%;
     padding: 15px 20px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
+  .main-nav .nav-link:hover,
+  .main-nav .nav-link.active,
+  .main-header.scrolled .main-nav .nav-link:hover,
+  .main-header.scrolled .main-nav .nav-link.active {
+    color: #c9a961 !important;
+  }
+
   .nav-link::after {
     display: none;
-  }
-
-  .icon-btn {
-    font-size: 1rem;
-  }
-
-  .enquire-btn {
-    padding: 10px 20px;
-    font-size: 0.8rem;
   }
 }
 
 @media (max-width: 640px) {
   .header-container {
     padding: 0 15px;
+    overflow: visible;
   }
 
   .logo-text {
@@ -256,11 +278,12 @@
   }
 
   .header-actions {
-    gap: 12px;
+    gap: 8px;
   }
 
+  /* FIX: search icon visible rahega */
   .icon-btn:first-child {
-    display: none;
+    display: flex;
   }
 }
 

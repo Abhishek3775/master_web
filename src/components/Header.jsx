@@ -8,6 +8,10 @@ const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
+  const isLightPage = [
+    "/about",
+  ].includes(location.pathname);
+
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
@@ -30,7 +34,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className={`main-header ${scrolled ? "scrolled" : ""}`}>
+    <header className={`main-header ${scrolled || isLightPage ? "scrolled" : ""}`}>
       <div className="header-container">
         {/* Logo */}
         <Link to="/" className="logo">
@@ -77,7 +81,7 @@ const Header = () => {
           {/* Destinations Dropdown */}
           <div className="nav-item dropdown">
             <Link
-              to="/destinations"
+              // to="/destinations"
               className={`nav-link ${isActive("/destinations")}`}
             >
               DESTINATIONS
