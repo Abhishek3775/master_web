@@ -1,26 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaInstagram, FaFacebookF, FaPhone, FaEnvelope } from 'react-icons/fa';
+import { FaInstagram, FaFacebookF } from 'react-icons/fa';
 import './Footer.css';
 
 const Footer = () => {
   return (
     <footer className="main-footer">
+      {/* Main Grid */}
       <div className="footer-content">
         <div className="footer-container">
-          {/* Company Info */}
+
+          {/* Column 1 — Logo + Description + Social */}
           <div className="footer-column">
             <div className="footer-logo">
               <div className="logo-circle">
                 <span className="logo-icon">E</span>
               </div>
-              <div className="logo-text">
-                <span className="logo-title">ELITE GLOBAL</span>
-                <span className="logo-subtitle">LUXURY TRAVEL</span>
-              </div>
+              <span className="logo-name">ELITE GLOBAL</span>
             </div>
             <p className="footer-description">
-              Crafting extraordinary journeys for discerning travellers since 2005.
+              Crafting extraordinary journeys for<br />
+              discerning travellers since 2005.
             </p>
             <div className="social-links">
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
@@ -32,9 +32,9 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Destinations */}
+          {/* Column 2 — Destinations */}
           <div className="footer-column">
-            <h3>DESTINATIONS</h3>
+            <h3>Destinations</h3>
             <ul className="footer-links">
               <li><Link to="/destinations/south-africa">South Africa</Link></li>
               <li><Link to="/destinations/tanzania">Tanzania</Link></li>
@@ -45,51 +45,49 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Experiences */}
+          {/* Column 3 — Experiences */}
           <div className="footer-column">
-            <h3>EXPERIENCES</h3>
+            <h3>Experiences</h3>
             <ul className="footer-links">
-              <li><Link to="/experiences/safari">Safari & Wildlife</Link></li>
-              <li><Link to="/experiences/wine">Wine & Culinary</Link></li>
+              <li><Link to="/experiences/safari">Safari &amp; Wildlife</Link></li>
+              <li><Link to="/experiences/wine">Wine &amp; Culinary</Link></li>
               <li><Link to="/experiences/adventure">Adventure</Link></li>
-              <li><Link to="/experiences/beach">Beach & Coast</Link></li>
+              <li><Link to="/experiences/beach">Beach &amp; Coast</Link></li>
               <li><Link to="/experiences/cultural">Cultural</Link></li>
               <li><Link to="/experiences/honeymoon">Honeymoon</Link></li>
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* Column 4 — Contact */}
           <div className="footer-column">
-            <h3>CONTACT</h3>
+            <h3>Contact</h3>
             <div className="footer-contact">
               <div className="contact-item">
-                <FaPhone />
                 <a href="tel:+442012345678">+44 (0) 20 1234 5678</a>
               </div>
               <div className="contact-item">
-                <FaEnvelope />
                 <a href="mailto:info@eliteconcierge.com">info@eliteconcierge.com</a>
               </div>
               <div className="contact-locations">
-                <p><strong>South Africa · Japan</strong></p>
+                <p>South Africa · Japan</p>
               </div>
             </div>
           </div>
+
         </div>
       </div>
 
-      {/* Bottom Bar */}
+      {/* Bottom — CTA + Legal */}
       <div className="footer-bottom">
-        <div className="footer-container">
-          <div className="footer-bottom-content">
-            <div className="footer-cta">
-              <h2>GET IN TOUCH NOW</h2>
-            </div>
-            <div className="footer-legal">
-              <Link to="/privacy-policy">Privacy Policy</Link>
-              <Link to="/terms-of-service">Terms of Service</Link>
-              <Link to="/cookie-policy">Cookie Policy</Link>
-            </div>
+        <div className="footer-bottom-inner">
+          <div className="footer-cta">
+            <h2>Get in Touch Now</h2>
+          </div>
+          <hr className="footer-divider" />
+          <div className="footer-legal">
+            <Link to="/privacy-policy">Privacy Policy</Link>
+            <Link to="/terms-of-service">Terms of Service</Link>
+            <Link to="/cookie-policy">Cookie Policy</Link>
           </div>
         </div>
       </div>
