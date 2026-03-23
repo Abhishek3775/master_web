@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaInstagram, FaFacebookF } from 'react-icons/fa';
 import './Footer.css';
 
 const Footer = () => {
+  const [email, setEmail] = useState('');
+
+  const handleSubscribe = (e) => {
+    e.preventDefault();
+    if (email) {
+      console.log('Subscribed:', email);
+      setEmail('');
+    }
+  };
+
   return (
     <footer className="main-footer">
       {/* Main Grid */}
@@ -58,7 +68,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Column 4 — Contact */}
+          {/* Column 4 — Contact + Stay Inspired */}
           <div className="footer-column">
             <h3>Contact</h3>
             <div className="footer-contact">
@@ -71,6 +81,26 @@ const Footer = () => {
               <div className="contact-locations">
                 <p>South Africa · Japan</p>
               </div>
+            </div>
+
+            {/* Stay Inspired Newsletter */}
+            <div className="footer-newsletter">
+              <h3>Stay Inspired</h3>
+              <form className="newsletter-form" onSubmit={handleSubscribe}>
+                <div className="newsletter-input-wrap">
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="newsletter-input"
+                    required
+                  />
+                  <button type="submit" className="newsletter-btn">
+                    SUBSCRIBE
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
 
