@@ -7,6 +7,7 @@ import ReadyForAdventure from '../../components/CalenderCompo/ReadyForAdventure'
 import StayInspired from '../../components/CalenderCompo/StayInspired'
 import BrandStrip from '../../components/BrandStrip/BrandStrip'
 
+
 function Calender() {
   return (
     <>

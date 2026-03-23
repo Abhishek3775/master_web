@@ -2,6 +2,7 @@ import React from "react";
 import "./ChooseMonth.css";
 
 import locationIcon from "../../assets/locate.png";
+import { useNavigate } from "react-router-dom";
 
 import jan from "../../assets/january.jpg";
 import feb from "../../assets/february.jpg";
@@ -32,6 +33,13 @@ const monthData = [
 ];
 
 const ChooseMonth = () => {
+    const navigate = useNavigate();
+
+const handleClick = (month) => {
+  if (month.toLowerCase() === "march") {
+    navigate("/calender/march");
+  }
+};
   return (
     <section className="cym-section">
       <div className="cym-container">
@@ -44,7 +52,7 @@ const ChooseMonth = () => {
 
         <div className="cym-grid">
           {monthData.map((item, index) => (
-            <div key={index} className="cym-card">
+            <div key={index} className="cym-card"      onClick={() => handleClick(item.month)} style={{ cursor: "pointer" }}>
               <img
                 src={item.image}
                 alt={item.month}
