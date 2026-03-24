@@ -8,7 +8,7 @@ import Contact from './pages/Contact';
 import Blog from './pages/Blog';
 import BlogSingle from './pages/BlogSingle';
 import './App.css';
-import Home from './pages/Home';
+// import Home from './pages/Home';
 import SouthAfrica from './pages/South Africa/SouthAfrica';
 import RahinoDetails from './pages/RahinoDetails';
 import JapanHome from './pages/Japan/Japan';
@@ -27,6 +27,7 @@ import Experience from './pages/Experience/Experience';
 import Calender from './pages/Calender/Calender';
 import MarchCalender from './pages/Calender/MarchCalender';
 import Accommodation from './pages/Accommodation/Accommodation';
+import NewHome from './pages/NewHome/NewHome';
 // import Accomodation from './pages/gaurav-accomodation/Accomodation';
 
 
@@ -53,7 +54,8 @@ function App() {
         <main>
           <ScrollToTop />
           <Routes>
-            <Route path="/" element={<Home />} />
+            {/* <Route path="/" element={<Home />} /> */}
+            <Route path="/" element={<NewHome/>} />
             {/* <Route path="/" element={<Contact />} /> */}
             <Route path="/contact" element={<Contact />} />
             <Route path="/blog/:slug" element={<BlogSingle />} />
